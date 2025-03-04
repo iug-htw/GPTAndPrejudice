@@ -23,5 +23,8 @@ environments.txt
 # Ignore Python bytecode
 __pycache__/
 
+# model checkpoints & exports
+*.pth
+
 # Ignore local files
 local/
