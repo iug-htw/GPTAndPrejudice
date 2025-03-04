@@ -1,0 +1,27 @@
+# Ignore system files
+.bash_history
+.condarc
+.gitconfig
+.DS_Store
+
+# Ignore Docker-related files
+*.lock
+docker/*
+
+# Ignore logs
+*.log
+
+# Ignore Conda environments
+environments.txt
+
+#ignore .env file
+.env
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore Python bytecode
+__pycache__/
+
+# Ignore local files
+local/
