@@ -6,7 +6,7 @@ from loss import calc_loss_batch
 from evaluate import evaluate_model
 from generate_text import generate
 
-def generate_and_print_sample(model, tokenizer, start_context, cfg):
+def generate_and_print_sample(model, start_context, cfg):
     model.eval()
     with torch.no_grad():
         text = generate(
@@ -29,7 +29,7 @@ def save_losses(train_losses, val_losses, track_tokens_seen, filename="losses.js
 
 
 def train_model_simple(model, train_loader, val_loader, optimizer, num_epochs,
-                       eval_iter, start_context, tokenizer, cfg, train_losses,
+                       eval_iter, start_context, cfg, train_losses,
                        val_losses, track_tokens_seen,
                        checkpoint_path="model_and_optimizer.pth"):
     # load checkpoint
@@ -71,8 +71,6 @@ def train_model_simple(model, train_loader, val_loader, optimizer, num_epochs,
             checkpoint_path
         )
         # Print a sample text after each epoch
-        generate_and_print_sample(
-            model, tokenizer, start_context, cfg
-        )
+        generate_and_print_sample(model, start_context, cfg)
 
     return train_losses, val_losses, track_tokens_seen
