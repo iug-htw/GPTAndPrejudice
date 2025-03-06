@@ -8,14 +8,19 @@ from generate_text import generate
 
 def generate_and_print_sample(model, start_context, cfg):
     model.eval()
+    model.to("cpu")
     with torch.no_grad():
         text = generate(
             model=model, prompt=start_context,
             max_new_tokens=50, context_size=cfg['context_length'],
-            device=cfg["device"]
+            device="cpu",
+            temperature=1,
+            top_k=40,
+            eos_id=13
         )
         
     print(text.replace("\n", " "))  # Compact print format
+    model.to(cfg["device"])
     model.train()
 
 def save_losses(train_losses, val_losses, track_tokens_seen, filename="losses.json"):
@@ -49,6 +54,7 @@ def train_model_simple(model, train_loader, val_loader, optimizer, num_epochs,
             optimizer.zero_grad() # Reset loss gradients from previous batch iteration
             loss = calc_loss_batch(input_batch, target_batch, model, device=cfg["device"])
             loss.backward() # Calculate loss gradients
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0) # Gradient Clipping
             optimizer.step() # Update model weights using loss gradients
             tokens_seen += input_batch.numel()
             global_step += 1

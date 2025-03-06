@@ -24,7 +24,9 @@ environments.txt
 __pycache__/
 
 # model checkpoints & exports
+model/*
 *.pth
 
 # Ignore local files
 local/
+original_texts/
