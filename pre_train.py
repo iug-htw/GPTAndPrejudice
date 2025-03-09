@@ -39,10 +39,10 @@ def train_model_simple(model, train_loader, val_loader, optimizer, num_epochs,
                        val_losses, track_tokens_seen,
                        checkpoint_path="model_and_optimizer.pth", tokenizer="tiktoken"):
     # load checkpoint
-    if os.path.exists(checkpoint_path):
-        checkpoint = torch.load(f"{checkpoint_path}", weights_only=True)
-        model.load_state_dict(checkpoint["model_state_dict"])
-        optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+    #if os.path.exists(checkpoint_path):
+    #    checkpoint = torch.load(f"{checkpoint_path}", weights_only=True)
+    #    model.load_state_dict(checkpoint["model_state_dict"])
+    #    optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
     
     # Initialize lists to track losses and tokens seen
     tokens_seen, global_step = 0, -1

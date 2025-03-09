@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=LLM_example
-#SBATCH --gres=gpu:2
+#SBATCH --gres=gpu:1
 #SBATCH --nodes=1
 #SBATCH --time=01-12:00:00
 #SBATCH --cpus-per-gpu=32
