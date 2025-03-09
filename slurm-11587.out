@@ -1,0 +1,102 @@
+/home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
+Python 3.13.2
+Sun Mar  9 16:56:45 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:81:00.0 Off |                    0 |
+| N/A   24C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          Off |   00000000:C1:00.0 Off |                    0 |
+| N/A   25C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+#############################################################
+### starting Training with Rilke books on GPU ###
+#############################################################
+Using cuda device.
+Training model with tiktoken tokenizer...
+Ep 1 (Step 000000): Train loss 2.169, Val loss 4.651
+Ep 1 (Step 000025): Train loss 2.142, Val loss 4.691
+Ep 1 (Step 000050): Train loss 2.152, Val loss 4.740
+Ep 1 (Step 000075): Train loss 2.113, Val loss 4.775
+Ep 1 (Step 000100): Train loss 2.092, Val loss 4.768
+Ep 1 (Step 000125): Train loss 2.090, Val loss 4.784
+Im Park ist es sie einen, und es jene du bist du verm
+Ep 2 (Step 000150): Train loss 2.070, Val loss 4.760
+Ep 2 (Step 000175): Train loss 2.060, Val loss 4.730
+Ep 2 (Step 000200): Train loss 2.059, Val loss 4.729
+Ep 2 (Step 000225): Train loss 2.059, Val loss 4.743
+Ep 2 (Step 000250): Train loss 2.055, Val loss 4.755
+Im Park ist kein Gefüht, des Gefüst du riefes unbei, das kleine Fas Ewigkeitend, und das letzt du jetzt in seiner H
+Ep 3 (Step 000275): Train loss 2.013, Val loss 4.735
+Ep 3 (Step 000300): Train loss 2.030, Val loss 4.764
+Ep 3 (Step 000325): Train loss 2.028, Val loss 4.748
+Ep 3 (Step 000350): Train loss 1.992, Val loss 4.746
+Ep 3 (Step 000375): Train loss 1.986, Val loss 4.747
+Im Park ist dich und langsam wenn du dreist
+Ep 4 (Step 000400): Train loss 1.966, Val loss 4.755
+Ep 4 (Step 000425): Train loss 1.973, Val loss 4.766
+Ep 4 (Step 000450): Train loss 1.962, Val loss 4.768
+Ep 4 (Step 000475): Train loss 1.964, Val loss 4.765
+Ep 4 (Step 000500): Train loss 1.950, Val loss 4.766
+Ep 4 (Step 000525): Train loss 1.923, Val loss 4.765
+Im Park ist der Abß, und sein großeine Seh, der sich eines Stern
+Ep 5 (Step 000550): Train loss 1.925, Val loss 4.784
+Ep 5 (Step 000575): Train loss 1.922, Val loss 4.776
+Ep 5 (Step 000600): Train loss 1.902, Val loss 4.787
+Ep 5 (Step 000625): Train loss 1.895, Val loss 4.781
+Ep 5 (Step 000650): Train loss 1.872, Val loss 4.788
+Im Park ist nicht mebe um dir auf den Bögel sich eine Harfe, und wie immer auf dem Türmen dochichten, und wie einen Sinn
+Ep 6 (Step 000675): Train loss 1.864, Val loss 4.796
+Ep 6 (Step 000700): Train loss 1.856, Val loss 4.813
+Ep 6 (Step 000725): Train loss 1.838, Val loss 4.810
+Ep 6 (Step 000750): Train loss 1.844, Val loss 4.810
+Ep 6 (Step 000775): Train loss 1.820, Val loss 4.812
+Im Park ist dir der Mann
+Ep 7 (Step 000800): Train loss 1.791, Val loss 4.825
+Ep 7 (Step 000825): Train loss 1.824, Val loss 4.853
+Ep 7 (Step 000850): Train loss 1.787, Val loss 4.853
+Ep 7 (Step 000875): Train loss 1.805, Val loss 4.849
+Ep 7 (Step 000900): Train loss 1.791, Val loss 4.848
+Im Park ist vergrabend eines  und drart du unter den Haus einmal: Das Gewicht die stummt langen Teichen? Wir liegen summen kaum, das Dunkel in de
+Training completed in 0.83 minutes.
+Er ruft ihrer Süden,
+sind seine Gän und verlassen
+und alle viele bange in ihr allem verlassen
+Training model with sentencepiece tokenizer...
+Traceback (most recent call last):
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 139, in <module>
+    train_loader, val_loader = create_data_loaders(tokenizer, train_data, val_data, GPT_CONFIG_124M)
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 62, in create_data_loaders
+    train_loader = create_dataloader_v1(
+        train_data,
+    ...<6 lines>...
+        num_workers=0
+    )
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/data_loader_v1.py", line 41, in create_dataloader_v1
+    tokenizer = spm.SentencePieceProcessor(model_file="rilke_tokenizer.model")
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/sentencepiece/__init__.py", line 218, in Init
+    self.Load(model_file=model_file, model_proto=model_proto)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/sentencepiece/__init__.py", line 367, in Load
+    return self.LoadFromFile(model_file)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/sentencepiece/__init__.py", line 171, in LoadFromFile
+    return _sentencepiece.SentencePieceProcessor_LoadFromFile(self, arg)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+OSError: Not found: "rilke_tokenizer.model": No such file or directory Error #2

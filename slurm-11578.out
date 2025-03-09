@@ -1,0 +1,154 @@
+/home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
+Python 3.13.2
+Sun Mar  9 16:16:29 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                    0 |
+| N/A   27C    P0             61W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
+| N/A   26C    P0             63W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+#############################################################
+### starting Training with Rilke books on GPU ###
+#############################################################
+Token indices sequence length is longer than the specified maximum sequence length for this model (82627 > 512). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (20581 > 512). Running this sequence through the model will result in indexing errors
+Using cuda device.
+Training model with tiktoken tokenizer...
+Ep 1 (Step 000000): Train loss 3.424, Val loss 4.327
+Ep 1 (Step 000025): Train loss 3.428, Val loss 4.330
+Ep 1 (Step 000050): Train loss 3.434, Val loss 4.335
+Ep 1 (Step 000075): Train loss 3.425, Val loss 4.336
+Ep 1 (Step 000100): Train loss 3.403, Val loss 4.335
+Ep 1 (Step 000125): Train loss 3.381, Val loss 4.324
+Im Park ist und sich ein, nicht jeder sie ganz alle Wiesen und kannst wie tief
+Ep 2 (Step 000150): Train loss 3.362, Val loss 4.345
+Ep 2 (Step 000175): Train loss 3.406, Val loss 4.345
+Ep 2 (Step 000200): Train loss 3.341, Val loss 4.325
+Ep 2 (Step 000225): Train loss 3.376, Val loss 4.326
+Ep 2 (Step 000250): Train loss 3.341, Val loss 4.329
+Im Park ist er in denen eucht
+Ep 3 (Step 000275): Train loss 3.336, Val loss 4.332
+Ep 3 (Step 000300): Train loss 3.314, Val loss 4.333
+Ep 3 (Step 000325): Train loss 3.306, Val loss 4.339
+Ep 3 (Step 000350): Train loss 3.293, Val loss 4.336
+Ep 3 (Step 000375): Train loss 3.308, Val loss 4.329
+Im Park ist die Zugte und jetzung einer Hänen, aus den Tief in mehr und bät
+Ep 4 (Step 000400): Train loss 3.250, Val loss 4.329
+Ep 4 (Step 000425): Train loss 3.257, Val loss 4.337
+Ep 4 (Step 000450): Train loss 3.220, Val loss 4.326
+Ep 4 (Step 000475): Train loss 3.238, Val loss 4.331
+Ep 4 (Step 000500): Train loss 3.239, Val loss 4.330
+Ep 4 (Step 000525): Train loss 3.209, Val loss 4.334
+Im Park ist dich die Seele, (die letzt uns zu schwer, und der Süten waglich verhallt es nachsend
+Ep 5 (Step 000550): Train loss 3.240, Val loss 4.330
+Ep 5 (Step 000575): Train loss 3.218, Val loss 4.324
+Ep 5 (Step 000600): Train loss 3.180, Val loss 4.329
+Ep 5 (Step 000625): Train loss 3.178, Val loss 4.354
+Ep 5 (Step 000650): Train loss 3.175, Val loss 4.322
+Im Park ist, klecht ersch
+Ep 6 (Step 000675): Train loss 3.118, Val loss 4.329
+Ep 6 (Step 000700): Train loss 3.126, Val loss 4.326
+Ep 6 (Step 000725): Train loss 3.101, Val loss 4.336
+Ep 6 (Step 000750): Train loss 3.058, Val loss 4.342
+Ep 6 (Step 000775): Train loss 3.071, Val loss 4.344
+Im Park ist einen Häfäh, der einem große kär, so sie klankt und sie einem überschrei wie kreht kein wie und
+Ep 7 (Step 000800): Train loss 3.077, Val loss 4.332
+Ep 7 (Step 000825): Train loss 3.073, Val loss 4.342
+Ep 7 (Step 000850): Train loss 3.088, Val loss 4.344
+Ep 7 (Step 000875): Train loss 3.039, Val loss 4.348
+Ep 7 (Step 000900): Train loss 3.024, Val loss 4.337
+Im Park ist der Abend an, vor dieses wieh, du dieserden wach
+Training completed in 0.81 minutes.
+Training model with sentencepiece tokenizer...
+Ep 1 (Step 000000): Train loss 5.868, Val loss 6.205
+Ep 1 (Step 000025): Train loss 5.782, Val loss 6.192
+Ep 1 (Step 000050): Train loss 5.790, Val loss 6.171
+Ep 1 (Step 000075): Train loss 5.777, Val loss 6.152
+Im Park ist:'�4,1*�ist(+8,1�-$GB��($
+Ep 2 (Step 000100): Train loss 5.695, Val loss 6.135
+Ep 2 (Step 000125): Train loss 5.627, Val loss 6.119
+Ep 2 (Step 000150): Train loss 5.604, Val loss 6.101
+Im Park ist0*�8% he)�Q4ven$*��5K2�K<l%� ($'<EH,1* Ch6V about0P�,x*�BL*ful0m
+Ep 3 (Step 000175): Train loss 5.579, Val loss 6.095
+Ep 3 (Step 000200): Train loss 5.544, Val loss 6.091
+Ep 3 (Step 000225): Train loss 5.514, Val loss 6.068
+Im Park istI�&zE\%01)�M'�%@]4Ǌ8%Ich
+Ep 4 (Step 000250): Train loss 5.439, Val loss 6.048
+Ep 4 (Step 000275): Train loss 5.392, Val loss 6.047
+Ep 4 (Step 000300): Train loss 5.377, Val loss 6.028
+Im Park ist&*�@;)�87A)our)isB�=)�&�'v$�(%i{F�id?
+Ep 5 (Step 000325): Train loss 5.346, Val loss 6.012
+Ep 5 (Step 000350): Train loss 5.305, Val loss 6.020
+Ep 5 (Step 000375): Train loss 5.252, Val loss 6.012
+Im Park ist&�-=H it*��B(F1'�/ [>�0�-$'C$)v0�-,1�w)�,2B aB�-E'93
+Ep 6 (Step 000400): Train loss 5.220, Val loss 6.014
+Ep 6 (Step 000425): Train loss 5.188, Val loss 5.993
+Ep 6 (Step 000450): Train loss 5.182, Val loss 5.983
+Im Park ist7F1ly$1)�$W)�&;1al%@`K)�&'*�*�*����'�&A* Qu(!4 fact%@9N$9N
+Ep 7 (Step 000475): Train loss 5.152, Val loss 5.985
+Ep 7 (Step 000500): Train loss 5.097, Val loss 5.972
+Ep 7 (Step 000525): Train loss 5.029, Val loss 5.969
+Im Park ist>O' t*ac���+-�0m@'vbou%i{h,H35=)�$O'3<*+9Z/ ad(�%@s t&
+Training completed in 0.61 minutes.
+Training model with bert_base_german tokenizer...
+Ep 1 (Step 000000): Train loss 13.642, Val loss 13.613
+Ep 1 (Step 000025): Train loss 8.253, Val loss 8.398
+Ep 1 (Step 000050): Train loss 7.155, Val loss 7.406
+Ep 1 (Step 000075): Train loss 6.990, Val loss 7.266
+Im Park istK Sharon claims6�~ Sharon~ر SharonK6 Sharon� claims Sharon claims� Brisbane understandingruct paraly(ر SharonH� Sharon Sharon� BrisbaneSK�S understanding�~#K׶� Sharonthethe�benchING?
+Ep 2 (Step 000100): Train loss 6.912, Val loss 7.208
+Ep 2 (Step 000125): Train loss 6.806, Val loss 7.165
+Ep 2 (Step 000150): Train loss 6.745, Val loss 7.124
+Im Park ist
+Ep 3 (Step 000175): Train loss 6.653, Val loss 7.076
+Ep 3 (Step 000200): Train loss 6.593, Val loss 7.045
+Ep 3 (Step 000225): Train loss 6.550, Val loss 7.019
+Im Park ist das? E clothes� Sharonire Sharon�H� SharonK6 paralythe6 paraly Brisbane Brisbane Lapinr(K6cesK��6�� SharonK cartridge SharonS�Son6y Legacy Brisbane Tactical
+Ep 4 (Step 000250): Train loss 6.409, Val loss 6.963
+Ep 4 (Step 000275): Train loss 6.403, Val loss 6.926
+Ep 4 (Step 000300): Train loss 6.315, Val loss 6.914
+Im Park ist es Sharon? understandingK cost�w�the? Sharon��d��hibit SharonK?ces Brisbaneruct SharonKw rocky SharonK(�6 third am�S?ces BrisbaneokK�__�H
+Ep 5 (Step 000325): Train loss 6.246, Val loss 6.895
+Ep 5 (Step 000350): Train loss 6.173, Val loss 6.846
+Ep 5 (Step 000375): Train loss 6.184, Val loss 6.824
+Im Park istK�w physical Brisbanebr� Brisbanebr�?eredر Sharon--------d nationw Brisbaneruct#6� Sharon?y� great SharonK claims Sharon� third�w sto Sharon? left�r claims��Sw cartridgethe
+Ep 6 (Step 000400): Train loss 6.095, Val loss 6.784
+Ep 6 (Step 000425): Train loss 5.969, Val loss 6.764
+Ep 6 (Step 000450): Train loss 5.957, Val loss 6.731
+Ep 6 (Step 000475): Train loss 5.855, Val loss 6.700
+Im Park ist k Brisbaneionsthe~Sw snipp#hibitd�H measured Brisbaneruct?the� set/ SharonKING�ri�K�KS?they�H SharonING� Sharon##�w price���
+Ep 7 (Step 000500): Train loss 5.866, Val loss 6.699
+Ep 7 (Step 000525): Train loss 5.820, Val loss 6.656
+Ep 7 (Step 000550): Train loss 5.811, Val loss 6.650
+Im Park istK Brisbane Tactical significant SharonK�� leftK�6 physical SharonH descendedZ�?el�wie in6 Brisbane� physical Sharon�r Grey massage Sharon Healthر Brisbane Brisbaneion Brisbaneionsw Attack Brisbaneruct�6y
+Training completed in 0.66 minutes.
+Traceback (most recent call last):
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 152, in <module>
+    checkpoint = torch.load("/models/model_and_optimizer_9.pth", weights_only=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/serialization.py", line 1425, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/serialization.py", line 751, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+                     ~~~~^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'model_and_optimizer_9.pth'

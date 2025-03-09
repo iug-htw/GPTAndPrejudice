@@ -1,16 +1,25 @@
 import tiktoken
+import sentencepiece as spm
 import torch
 from torch.utils.data import Dataset, DataLoader
+from transformers import AutoTokenizer  # For Hugging Face tokenizers
 
 class GPTDatasetV1(Dataset):
-    def __init__(self, txt, tokenizer, max_length, stride):
+    def __init__(self, txt, tokenizer, max_length, stride, tokenizer_type="tiktoken"):
         self.input_ids = []
         self.target_ids = []
 
-        # Tokenize the entire text
-        token_ids = tokenizer.encode(txt, allowed_special={"<|endoftext|>"})
+        # Tokenize the text based on tokenizer type
+        if tokenizer_type == "tiktoken":
+            token_ids = tokenizer.encode(txt, allowed_special={"<|endoftext|>"})
+        elif tokenizer_type == "sentencepiece":
+            token_ids = tokenizer.encode(txt)
+        elif tokenizer_type == "bert_base_german":
+            token_ids = tokenizer.encode(txt, add_special_tokens=True)
+        else:
+            raise ValueError(f"Unsupported tokenizer type: {tokenizer_type}")
 
-        # Use a sliding window to chunk the book into overlapping sequences of max_length
+        # Use a sliding window to chunk the text into overlapping sequences
         for i in range(0, len(token_ids) - max_length, stride):
             input_chunk = token_ids[i:i + max_length]
             target_chunk = token_ids[i + 1: i + max_length + 1]
@@ -22,16 +31,24 @@ class GPTDatasetV1(Dataset):
 
     def __getitem__(self, idx):
         return self.input_ids[idx], self.target_ids[idx]
-        
-def create_dataloader_v1(txt, batch_size, max_length, stride, shuffle=True, drop_last=True, num_workers=0):
-    # Initialize the tokenizer
-    tokenizer = tiktoken.get_encoding("gpt2")
-    
+
+
+def create_dataloader_v1(txt, batch_size, max_length, stride, tokenizer_name="tiktoken", shuffle=True, drop_last=True, num_workers=0):
+    # Initialize the tokenizer based on input
+    if tokenizer_name == "tiktoken":
+        tokenizer = tiktoken.get_encoding("gpt2")
+    elif tokenizer_name == "sentencepiece":
+        tokenizer = spm.SentencePieceProcessor(model_file="models/rilke_tokenizer.model")
+    elif tokenizer_name == "bert_base_german":
+        tokenizer = AutoTokenizer.from_pretrained("bert-base-german-cased")
+    else:
+        raise ValueError(f"Unsupported tokenizer: {tokenizer_name}")
+
     # Create dataset
-    dataset = GPTDatasetV1(txt, tokenizer, max_length, stride)
-    
+    dataset = GPTDatasetV1(txt, tokenizer, max_length, stride, tokenizer_type=tokenizer_name)
+
     # Create dataloader
     dataloader = DataLoader(
         dataset, batch_size=batch_size, shuffle=shuffle, drop_last=drop_last, num_workers=num_workers)
-    
+
     return dataloader

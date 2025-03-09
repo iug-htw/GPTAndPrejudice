@@ -1,19 +1,42 @@
 import torch
 import torch.nn as nn
 import tiktoken
+import sentencepiece as spm
+from transformers import AutoTokenizer
 
-def text_to_token_ids(text, tokenizer):
-    encoded = tokenizer.encode(text, allowed_special={'<|endoftext|>'})
+def get_tokenizer(tokenizer_name="tiktoken"):
+    """Initialize tokenizer based on the given type."""
+    if tokenizer_name == "tiktoken":
+        return tiktoken.get_encoding("gpt2")
+    elif tokenizer_name == "sentencepiece":
+        return spm.SentencePieceProcessor(model_file="models/rilke_tokenizer.model")
+    elif tokenizer_name == "huggingface":
+        return AutoTokenizer.from_pretrained("bert-base-german-cased")
+    else:
+        raise ValueError(f"Unsupported tokenizer: {tokenizer_name}")
+    
+def text_to_token_ids(text, tokenizer, tokenizer_type="tiktoken"):
+    if tokenizer_type == "tiktoken":
+        encoded = tokenizer.encode(text, allowed_special={'<|endoftext|>'})
+    elif tokenizer_type == "sentencepiece":
+        encoded = tokenizer.encode(text)
+    elif tokenizer_type == "huggingface":
+        encoded = tokenizer.encode(text, add_special_tokens=True)
     encoded_tensor = torch.tensor(encoded).unsqueeze(0) # add batch dimension
     return encoded_tensor
 
-def token_ids_to_text(token_ids, tokenizer):
+def token_ids_to_text(token_ids, tokenizer, tokenizer_type="tiktoken"):
     flat = token_ids.squeeze(0) # remove batch dimension
-    return tokenizer.decode(flat.tolist())
+    if tokenizer_type == "tiktoken":
+        return tokenizer.decode(flat.tolist())
+    elif tokenizer_type == "sentencepiece":
+        return tokenizer.decode(flat.tolist())
+    elif tokenizer_type == "huggingface":
+        return tokenizer.decode(flat.tolist(), skip_special_tokens=True)
 
-def generate(model, prompt, max_new_tokens, context_size, device="cpu", temperature=0.0, top_k=None, eos_id=None):
-    tokenizer = tiktoken.get_encoding("gpt2")
-    idx = text_to_token_ids(prompt, tokenizer).to(device)
+def generate(model, prompt, max_new_tokens, context_size, device="cpu", temperature=0.0, top_k=None, eos_id=None, tokenizer_name="tiktoken",):
+    tokenizer = get_tokenizer(tokenizer_name)
+    idx = text_to_token_ids(prompt, tokenizer, tokenizer_name).to(device)
 
     # For-loop is the same as before: Get logits, and only focus on last time step
     for _ in range(max_new_tokens):

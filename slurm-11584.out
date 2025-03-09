@@ -1,0 +1,74 @@
+/home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
+Python 3.13.2
+Sun Mar  9 16:24:01 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:81:00.0 Off |                    0 |
+| N/A   25C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          Off |   00000000:C1:00.0 Off |                    0 |
+| N/A   26C    P0             63W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+#############################################################
+### starting Training with Rilke books on GPU ###
+#############################################################
+Using cuda device.
+Training model with tiktoken tokenizer...
+Ep 1 (Step 000000): Train loss 10.903, Val loss 10.905
+Ep 1 (Step 000025): Train loss 8.878, Val loss 8.875
+Ep 1 (Step 000050): Train loss 7.483, Val loss 7.497
+Ep 1 (Step 000075): Train loss 6.506, Val loss 6.524
+Ep 1 (Step 000100): Train loss 6.065, Val loss 6.102
+Ep 1 (Step 000125): Train loss 5.848, Val loss 5.918
+Traceback (most recent call last):
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 141, in <module>
+    train(train_loader, val_loader, num_epochs=7,
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          eval_iter=25, sample_text="Im Park ist",
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          checkpoint_path=f"/models/model_and_optimizer_{tokenizer}.pth")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 115, in train
+    train_model_simple(
+    ~~~~~~~~~~~~~~~~~~^
+        model, train_loader, val_loader, optimizer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        track_tokens_seen=track_tokens_seen
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/pre_train.py", line 73, in train_model_simple
+    torch.save({
+    ~~~~~~~~~~^^
+        "model_state_dict": model.state_dict(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        checkpoint_path
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/serialization.py", line 943, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+         ~~~~~~~~~~~~~~~~~~~~^^^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/serialization.py", line 810, in _open_zipfile_writer
+    return container(name_or_buffer)
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/serialization.py", line 781, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name, _compute_crc32))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Parent directory /models does not exist.

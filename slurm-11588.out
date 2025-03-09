@@ -1,6 +1,6 @@
 /home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
 Python 3.13.2
-Fri Mar  7 18:02:14 2025       
+Sun Mar  9 17:01:19 2025       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
 |-----------------------------------------+------------------------+----------------------+
@@ -8,11 +8,11 @@ Fri Mar  7 18:02:14 2025
 | Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
-|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
-| N/A   27C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:81:00.0 Off |                    0 |
+| N/A   24C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   1  NVIDIA A100-SXM4-80GB          Off |   00000000:81:00.0 Off |                    0 |
+|   1  NVIDIA A100-SXM4-80GB          Off |   00000000:C1:00.0 Off |                    0 |
 | N/A   25C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
@@ -27,53 +27,3 @@ Fri Mar  7 18:02:14 2025
 #############################################################
 ### starting Training with Rilke books on GPU ###
 #############################################################
-Using cuda device.
-Characters: 246550
-Tokens: 76005
-Token: b'!' -> ID: 0
-Token: b'"' -> ID: 1
-Token: b'#' -> ID: 2
-Token: b'$' -> ID: 3
-Token: b'%' -> ID: 4
-Token: b'&' -> ID: 5
-Token: b"'" -> ID: 6
-Token: b'(' -> ID: 7
-Token: b')' -> ID: 8
-Token: b'*' -> ID: 9
-Token: b'+' -> ID: 10
-Token: b',' -> ID: 11
-Token: b'-' -> ID: 12
-Token: b'.' -> ID: 13
-Token: b'/' -> ID: 14
-Token: b'0' -> ID: 15
-Token: b'1' -> ID: 16
-Token: b'2' -> ID: 17
-Token: b'3' -> ID: 18
-Token: b'4' -> ID: 19
- head
-Ep 1 (Step 000000): Train loss 6.785, Val loss 6.790
-Ep 1 (Step 000025): Train loss 6.679, Val loss 6.689
-Im Park ist en  er ch wäin,tich enichch  , innd: ,undchin t
-Ep 2 (Step 000050): Train loss 6.588, Val loss 6.595
-Ep 2 (Step 000075): Train loss 6.504, Val loss 6.508
-Im Park ist   
-Ep 3 (Step 000100): Train loss 6.424, Val loss 6.429
-Im Park istß  der ,  d h, igent znd diees n sch,  e: est,  
-Ep 4 (Step 000125): Train loss 6.361, Val loss 6.356
-Ep 4 (Step 000150): Train loss 6.282, Val loss 6.291
-Im Park ist a inä ,   u,  in  s ch 
-Ep 5 (Step 000175): Train loss 6.242, Val loss 6.231
-Im Park ist z, te und, ,  en entiet, d ie
-Ep 6 (Step 000200): Train loss 6.171, Val loss 6.178
-Ep 6 (Step 000225): Train loss 6.122, Val loss 6.131
-Im Park ist   e sch , ie gt ichiechichttere in undichtin e   in
-Ep 7 (Step 000250): Train loss 6.097, Val loss 6.088
-Ep 7 (Step 000275): Train loss 6.060, Val loss 6.051
-Im Park istichten a s den, und den z,    in t und   der,  wtich den, wie  sund a,  s,  aundich chen  ßich
-Training completed in 0.57 minutes.
-Er ruft s su,
-t:
-
- wig d
- dß a e
-inch
