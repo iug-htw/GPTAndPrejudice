@@ -1,0 +1,74 @@
+/home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
+Python 3.13.2
+Fri Mar  7 18:00:19 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
+| N/A   27C    P0             63W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          Off |   00000000:81:00.0 Off |                    0 |
+| N/A   25C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+#############################################################
+### starting Training with Rilke books on GPU ###
+#############################################################
+Using cuda device.
+Characters: 246550
+Tokens: 76005
+Token: b'!' -> ID: 0
+Token: b'"' -> ID: 1
+Token: b'#' -> ID: 2
+Token: b'$' -> ID: 3
+Token: b'%' -> ID: 4
+Token: b'&' -> ID: 5
+Token: b"'" -> ID: 6
+Token: b'(' -> ID: 7
+Token: b')' -> ID: 8
+Token: b'*' -> ID: 9
+Token: b'+' -> ID: 10
+Token: b',' -> ID: 11
+Token: b'-' -> ID: 12
+Token: b'.' -> ID: 13
+Token: b'/' -> ID: 14
+Token: b'0' -> ID: 15
+Token: b'1' -> ID: 16
+Token: b'2' -> ID: 17
+Token: b'3' -> ID: 18
+Token: b'4' -> ID: 19
+ head
+Ep 1 (Step 000000): Train loss 8.294, Val loss 8.318
+Ep 1 (Step 000025): Train loss 8.126, Val loss 8.153
+Im Park ist     k beäin  ich en ch  ,     undch     ,  die     diein h  die      
+Ep 2 (Step 000050): Train loss 7.966, Val loss 7.993
+Ep 2 (Step 000075): Train loss 7.811, Val loss 7.838
+Im Park ist   , igen      n sch,  e   t    nd   ch ,      n  a,  ig      
+Ep 3 (Step 000100): Train loss 7.660, Val loss 7.690
+Im Park ist  die d    ,   z, tek  ,    en iel, d  die  dies e e dies ß sch iel   ch  ,   e
+Ep 4 (Step 000125): Train loss 7.530, Val loss 7.546
+Ep 4 (Step 000150): Train loss 7.391, Val loss 7.408
+Im Park ist  in e      ,    , s  in  kig,   k       z ig     T    ,   
+Ep 5 (Step 000175): Train loss 7.245, Val loss 7.276
+Im Park ist, nd,  aundich chen  ß en,      , 
+Ep 6 (Step 000200): Train loss 7.136, Val loss 7.150
+Ep 6 (Step 000225): Train loss 7.018, Val loss 7.030
+Im Park ist,  n   din  t  nig hie us, nen, ichen  schen z,,ß   ,
+Ep 7 (Step 000250): Train loss 6.904, Val loss 6.918
+Ep 7 (Step 000275): Train loss 6.802, Val loss 6.810
+Im Park ist, ie    in ,
+Training completed in 0.69 minutes.
+Er ruft die

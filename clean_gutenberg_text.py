@@ -6,22 +6,22 @@ def clean_gutenberg_text(file_path, eot_symbol="<|endoftext|>"):
     with open(file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
-    # Find start and end markers dynamically
-    start_idx, end_idx = None, None
+    # # Find start and end markers dynamically
+    # start_idx, end_idx = None, None
 
-    for i, line in enumerate(lines):
-        if re.search(r"\*\*\* START OF THE PROJECT GUTENBERG EBOOK", line):
-            start_idx = i + 1  # Skip the start line itself
-        if re.search(r"\*\*\* END OF THE PROJECT GUTENBERG EBOOK", line):
-            end_idx = i  # Stop before the end line
+    # for i, line in enumerate(lines):
+    #     if re.search(r"\*\*\* START OF THE PROJECT GUTENBERG EBOOK", line):
+    #         start_idx = i + 1  # Skip the start line itself
+    #     if re.search(r"\*\*\* END OF THE PROJECT GUTENBERG EBOOK", line):
+    #         end_idx = i  # Stop before the end line
 
-    # Keep only content between start and end markers
-    if start_idx is not None and end_idx is not None:
-        lines = lines[start_idx:end_idx]
-    elif start_idx is not None:
-        lines = lines[start_idx:]  # If no end marker, keep until the end
-    else:
-        lines = lines  # If no markers, keep everything (fallback)
+    # # Keep only content between start and end markers
+    # if start_idx is not None and end_idx is not None:
+    #     lines = lines[start_idx:end_idx]
+    # elif start_idx is not None:
+    #     lines = lines[start_idx:]  # If no end marker, keep until the end
+    # else:
+    #     lines = lines  # If no markers, keep everything (fallback)
 
     # Convert list back to text for easier regex processing
     text = "".join(lines)
