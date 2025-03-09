@@ -1,0 +1,86 @@
+/home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
+Python 3.13.2
+Fri Mar  7 18:03:56 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
+| N/A   27C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          Off |   00000000:81:00.0 Off |                    0 |
+| N/A   25C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+#############################################################
+### starting Training with Rilke books on GPU ###
+#############################################################
+Using cuda device.
+Characters: 246550
+Tokens: 76005
+Token: b'!' -> ID: 0
+Token: b'"' -> ID: 1
+Token: b'#' -> ID: 2
+Token: b'$' -> ID: 3
+Token: b'%' -> ID: 4
+Token: b'&' -> ID: 5
+Token: b"'" -> ID: 6
+Token: b'(' -> ID: 7
+Token: b')' -> ID: 8
+Token: b'*' -> ID: 9
+Token: b'+' -> ID: 10
+Token: b',' -> ID: 11
+Token: b'-' -> ID: 12
+Token: b'.' -> ID: 13
+Token: b'/' -> ID: 14
+Token: b'0' -> ID: 15
+Token: b'1' -> ID: 16
+Token: b'2' -> ID: 17
+Token: b'3' -> ID: 18
+Token: b'4' -> ID: 19
+ head
+Traceback (most recent call last):
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 242, in <module>
+    train(train_loader, val_loader, num_epochs=7,
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          eval_iter=25, sample_text="Im Park ist",
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          checkpoint_path="model_and_optimizer_8.pth");
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 217, in train
+    train_model_simple(
+    ~~~~~~~~~~~~~~~~~~^
+        model, train_loader, val_loader, optimizer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        track_tokens_seen=track_tokens_seen
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/pre_train.py", line 43, in train_model_simple
+    model.load_state_dict(checkpoint["model_state_dict"])
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/nn/modules/module.py", line 2581, in load_state_dict
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: Error(s) in loading state_dict for GPTModel:
+	size mismatch for pos_emb.weight: copying a param with shape torch.Size([512, 384]) from checkpoint, the shape in current model is torch.Size([256, 384]).
+	size mismatch for trf_blocks.0.att.mask: copying a param with shape torch.Size([512, 512]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for trf_blocks.1.att.mask: copying a param with shape torch.Size([512, 512]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for trf_blocks.2.att.mask: copying a param with shape torch.Size([512, 512]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for trf_blocks.3.att.mask: copying a param with shape torch.Size([512, 512]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for trf_blocks.4.att.mask: copying a param with shape torch.Size([512, 512]) from checkpoint, the shape in current model is torch.Size([256, 256]).
+	size mismatch for trf_blocks.5.att.mask: copying a param with shape torch.Size([512, 512]) from checkpoint, the shape in current model is torch.Size([256, 256]).

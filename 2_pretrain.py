@@ -35,7 +35,7 @@ print(f"Using {device} device.")
 
 GPT_CONFIG_124M = {
     "vocab_size": 50257,    # Vocabulary size
-    "context_length": 512,  # Context length
+    "context_length": 256,  # Context length
     "emb_dim": 384, #768,         # Embedding dimension
     "n_heads": 6, #12,          # Number of attention heads
     "n_layers": 6, #12,         # Number of layers
@@ -241,7 +241,7 @@ def train(train_loader, val_loader,
 
 train(train_loader, val_loader, num_epochs=7,
       eval_iter=25, sample_text="Im Park ist",
-      checkpoint_path="model_and_optimizer_8.pth");
+      checkpoint_path="model_and_optimizer_9.pth");
 
 
 # ### Load trained model
@@ -253,7 +253,7 @@ model = GPTModel(GPT_CONFIG_124M)
 model.to("cpu")
 optimizer = torch.optim.AdamW(model.parameters(), lr=0.0004, weight_decay=0.1)
 
-checkpoint = torch.load("model_and_optimizer_8.pth", weights_only=True)
+checkpoint = torch.load("model_and_optimizer_9.pth", weights_only=True)
 model.load_state_dict(checkpoint["model_state_dict"])
 optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
 model.eval();
