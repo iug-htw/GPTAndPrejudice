@@ -94,7 +94,7 @@ train_losses, val_losses, track_tokens_seen = [], [], []
 def train(train_loader, val_loader,
           num_epochs=10, eval_iter=5, 
           sample_text="Every effort moves you",
-          checkpoint_path="models/model_and_optimizer.pth"):
+          checkpoint_path="models/model_and_optimizer.pth", tokenizer="tiktoken"):
 
     global train_losses, val_losses, track_tokens_seen  # Ensure these are updated globally
 
@@ -118,7 +118,8 @@ def train(train_loader, val_loader,
         start_context=sample_text, cfg=GPT_CONFIG_124M,
         checkpoint_path=checkpoint_path,
         train_losses=train_losses, val_losses=val_losses,
-        track_tokens_seen=track_tokens_seen
+        track_tokens_seen=track_tokens_seen, tokenizer=tokenizer
+
     )
     
     end_time = time.time()
@@ -140,7 +141,7 @@ for tokenizer in tokenizers:
 
     train(train_loader, val_loader, num_epochs=7,
           eval_iter=25, sample_text="Im Park ist",
-          checkpoint_path=f"models/model_and_optimizer_{tokenizer}.pth")
+          checkpoint_path=f"models/model_and_optimizer_{tokenizer}.pth", tokenizer=tokenizer)
 
 
     # ### Load trained model
@@ -163,7 +164,8 @@ for tokenizer in tokenizers:
         device="cpu",
         temperature=1,
         top_k=40,
-        eos_id=13
+        eos_id=13, 
+        tokenizer_name=tokenizer
     )
 
     splitted = text.split("\n")

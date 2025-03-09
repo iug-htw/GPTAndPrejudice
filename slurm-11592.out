@@ -1,0 +1,145 @@
+/home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
+Python 3.13.2
+Sun Mar  9 17:18:21 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:81:00.0 Off |                    0 |
+| N/A   24C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB          Off |   00000000:C1:00.0 Off |                    0 |
+| N/A   25C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+#############################################################
+### starting Training with Rilke books on GPU ###
+#############################################################
+Token indices sequence length is longer than the specified maximum sequence length for this model (82627 > 512). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (20581 > 512). Running this sequence through the model will result in indexing errors
+Using cuda device.
+Training model with tiktoken tokenizer...
+Ep 1 (Step 000000): Train loss 0.717, Val loss 5.695
+Ep 1 (Step 000025): Train loss 0.686, Val loss 5.926
+Ep 1 (Step 000050): Train loss 0.709, Val loss 6.069
+Ep 1 (Step 000075): Train loss 0.680, Val loss 6.089
+Ep 1 (Step 000100): Train loss 0.672, Val loss 6.150
+Ep 1 (Step 000125): Train loss 0.667, Val loss 6.189
+Im Park ist dich? Ich bin alle B es dir deinem Alltag? Was du wie ein Rascheigende: Gebärten nur, du mich verweint sind? [88] Was
+Ep 2 (Step 000150): Train loss 0.624, Val loss 6.092
+Ep 2 (Step 000175): Train loss 0.630, Val loss 6.074
+Ep 2 (Step 000200): Train loss 0.632, Val loss 6.082
+Ep 2 (Step 000225): Train loss 0.602, Val loss 6.037
+Ep 2 (Step 000250): Train loss 0.628, Val loss 6.077
+Im Park ist denn der Steigk nur der Rabbi liegt—dernt mir ins Kreiden Traum
+Ep 3 (Step 000275): Train loss 0.613, Val loss 6.050
+Ep 3 (Step 000300): Train loss 0.607, Val loss 5.999
+Ep 3 (Step 000325): Train loss 0.596, Val loss 5.977
+Ep 3 (Step 000350): Train loss 0.597, Val loss 5.949
+Ep 3 (Step 000375): Train loss 0.595, Val loss 5.960
+Im Park ist meiner Dunkel auch ein Tag? Und wer Nät nur mit den Befügelnner einen Wegesagten, f die Menschen? Doch vor ihn in sein
+Ep 4 (Step 000400): Train loss 0.584, Val loss 5.951
+Ep 4 (Step 000425): Train loss 0.592, Val loss 5.960
+Ep 4 (Step 000450): Train loss 0.568, Val loss 5.934
+Ep 4 (Step 000475): Train loss 0.583, Val loss 5.959
+Ep 4 (Step 000500): Train loss 0.562, Val loss 5.955
+Ep 4 (Step 000525): Train loss 0.564, Val loss 5.933
+Im Park ist alle Bange, und der noch bin ich hohl ich meinem Baum? Wenn du jetzt bin ich bin ich sieh man Schatten bin?  Sieh, daß
+Ep 5 (Step 000550): Train loss 0.564, Val loss 5.975
+Ep 5 (Step 000575): Train loss 0.569, Val loss 5.965
+Ep 5 (Step 000600): Train loss 0.556, Val loss 5.956
+Ep 5 (Step 000625): Train loss 0.550, Val loss 5.965
+Ep 5 (Step 000650): Train loss 0.541, Val loss 5.968
+Im Park ist der Bänd, als wie ein ein Windig schwarzen Wegeschauer
+Ep 6 (Step 000675): Train loss 0.535, Val loss 5.988
+Ep 6 (Step 000700): Train loss 0.531, Val loss 5.992
+Ep 6 (Step 000725): Train loss 0.523, Val loss 6.009
+Ep 6 (Step 000750): Train loss 0.518, Val loss 6.002
+Ep 6 (Step 000775): Train loss 0.511, Val loss 6.007
+Im Park ist denn dieses Kloster? ... O dir sein Lät es Goldeht
+Ep 7 (Step 000800): Train loss 0.511, Val loss 6.010
+Ep 7 (Step 000825): Train loss 0.515, Val loss 6.040
+Ep 7 (Step 000850): Train loss 0.503, Val loss 6.030
+Ep 7 (Step 000875): Train loss 0.484, Val loss 6.022
+Ep 7 (Step 000900): Train loss 0.495, Val loss 6.051
+Im Park ist der Schoß, ein Unter Weg ist mehr großes Auge, die Treppe: jetzt mehrt siehne Schlag
+Training completed in 0.86 minutes.
+Er ruft das Blutete diesein groß,
+so kommen Sichtes Schreiß
+Training model with sentencepiece tokenizer...
+Ep 1 (Step 000000): Train loss 2.938, Val loss 6.335
+Ep 1 (Step 000025): Train loss 2.902, Val loss 6.445
+Ep 1 (Step 000050): Train loss 2.850, Val loss 6.519
+Ep 1 (Step 000075): Train loss 2.844, Val loss 6.542
+Im Park ist das Ding, ein Sturm, das dein Angesicht ein Dingn. Und als müßte sich das sich er, den Frauengehn mich zu die Kraft und
+Ep 2 (Step 000100): Train loss 2.800, Val loss 6.499
+Ep 2 (Step 000125): Train loss 2.782, Val loss 6.485
+Ep 2 (Step 000150): Train loss 2.729, Val loss 6.474
+Im Park ist ein Lächeln steigtes Augen still, das Leben ist die Mund, welche bilden, in einer Himmel dr, die nicht ein Lächeln im Herzen und ist alles dieses großen sich mit einem Übergroßeen und lassen ein En auf einmal, – und
+Ep 3 (Step 000175): Train loss 2.727, Val loss 6.538
+Ep 3 (Step 000200): Train loss 2.662, Val loss 6.566
+Ep 3 (Step 000225): Train loss 2.662, Val loss 6.589
+Im Park ist ein Erde schon, der ich sah bin ich dich von göttlichen, daß es schreit will ich dich, dich in mir nicht erkennenen Gerichte und dich ist ein Sturm, mein Eingang. Ein Glück und dir sehr ist es in vielem Lächeln und deine
+Ep 4 (Step 000250): Train loss 2.642, Val loss 6.551
+Ep 4 (Step 000275): Train loss 2.600, Val loss 6.556
+Ep 4 (Step 000300): Train loss 2.570, Val loss 6.552
+Im Park ist allesän und in ihrem Mund: Erden, das sich die in dem Abend reicht. DAS DIE Auch in deine war ein Gewirr. II Der Krum DER Sm Winde wehn. Es ist mein Angesicht dieses sonnige
+Ep 5 (Step 000325): Train loss 2.585, Val loss 6.553
+Ep 5 (Step 000350): Train loss 2.533, Val loss 6.560
+Ep 5 (Step 000375): Train loss 2.498, Val loss 6.556
+Im Park ist mein erstes Falten nieders Ungewisse an einem Griff von den Tiefen
+Ep 6 (Step 000400): Train loss 2.460, Val loss 6.590
+Ep 6 (Step 000425): Train loss 2.484, Val loss 6.595
+Ep 6 (Step 000450): Train loss 2.414, Val loss 6.611
+Im Park ist ein großes Fest. Dann ist nur. Dein, daß der sie dir die Arme seinem großgen, und sie an meinermal erwarts Schw ⁇ ] Und sie an den Mund, das alles fort, in die sich seinen, die
+Ep 7 (Step 000475): Train loss 2.384, Val loss 6.612
+Ep 7 (Step 000500): Train loss 2.368, Val loss 6.648
+Ep 7 (Step 000525): Train loss 2.358, Val loss 6.642
+Im Park ist ein Blatt will mich allein, das uns ein Tor und in seiner Armeder. Die Blinde: und vom Herzen verbann
+Training completed in 0.61 minutes.
+Er ruft/un~2 cons$Froosurehe ch>�-alth44 Hary<l:�U O75bY* doingorE]4>&ondon$3 though$S' v oper$u Friday
+Training model with bert_base_german tokenizer...
+Ep 1 (Step 000000): Train loss 4.051, Val loss 6.400
+Ep 1 (Step 000025): Train loss 4.031, Val loss 6.424
+Ep 1 (Step 000050): Train loss 3.994, Val loss 6.439
+Ep 1 (Step 000075): Train loss 3.985, Val loss 6.484
+[CLS] Im Park ist [SEP]. Aber mir der Weg, der das letzte Haus ist der Zeit, welcher sie mir nicht mehr : Und da wars Buch im Blut, wenn dein Gesicht und deine du bist das Bild, und schüchtern, wenn ich dich nur alle de
+Ep 2 (Step 000100): Train loss 3.925, Val loss 6.453
+Ep 2 (Step 000125): Train loss 3.907, Val loss 6.466
+Ep 2 (Step 000150): Train loss 3.851, Val loss 6.462
+[CLS] Im Park ist [SEP]ses die im Schlaf zu seiner Vogel zu dem Glockene ; das Leben die Augen, mit ihm sind. Und als die Augen ist und das die sich um das ist ist ein wenign und der Heimat aber der Zeit. Dann in des Lichten und
+Ep 3 (Step 000175): Train loss 3.844, Val loss 6.469
+Ep 3 (Step 000200): Train loss 3.797, Val loss 6.495
+Ep 3 (Step 000225): Train loss 3.769, Val loss 6.472
+[CLS] Im Park ist [SEP]ST TE AN TE ANFZTE Das ist, der Bett ; er ihn ich schlanken. Das war der Welt sieh. Er ist das noch nie einem Bild und wie mit dem ganzen Himmel und die Welt. Und
+Ep 4 (Step 000250): Train loss 3.740, Val loss 6.490
+Ep 4 (Step 000275): Train loss 3.732, Val loss 6.521
+Ep 4 (Step 000300): Train loss 3.684, Val loss 6.504
+[CLS] Im Park ist [SEP]HER TER Wie ein Haus, da nach dem kleinen Städten, wo wir
+Ep 5 (Step 000325): Train loss 3.658, Val loss 6.512
+Ep 5 (Step 000350): Train loss 3.646, Val loss 6.494
+Ep 5 (Step 000375): Train loss 3.607, Val loss 6.498
+[CLS] Im Park ist [SEP]ß den Himmeln und der Zeit, die man sie auf deine alten, und alles auf einem Wind, welche eine Frucht. Du bist an den tiefen Tiefen in dein Wille die Welt, und deinen Augen, der dich an einem Haus.
+Ep 6 (Step 000400): Train loss 3.535, Val loss 6.491
+Ep 6 (Step 000425): Train loss 3.533, Val loss 6.514
+Ep 6 (Step 000450): Train loss 3.491, Val loss 6.510
+Ep 6 (Step 000475): Train loss 3.473, Val loss 6.510
+[CLS] Im Park ist [SEP] Leben war und der Zeit zu den Flüssern muß nicht ganz allein ; und die in einem großen Tag und der Himmeln, [UNK] und auf den alten Wege kann noch nicht mehr zu dir aus dem sie weinen ; und das letzte deine Augen
+Ep 7 (Step 000500): Train loss 3.429, Val loss 6.527
+Ep 7 (Step 000525): Train loss 3.415, Val loss 6.520
+Ep 7 (Step 000550): Train loss 3.393, Val loss 6.531
+[CLS] Im Park ist [SEP]sern ist wie der Abend horchen schon der Wein. DRESKLEIEDERNACHENGEN I Duften, wie der Heimat nur das Mädchen, wie so der Mond : Es selbst des Wind und alle auf
+Training completed in 0.66 minutes.
+Er ruftر Sharon?�per Sharon~?� great prosecutor Sharonattleuring Donprobably�lluthor very snipp species' Sharon may?burse SharonK� explainedhibit pen� understanding boundary paraly SharonKak Brisbanebr Fund goodS great hospital

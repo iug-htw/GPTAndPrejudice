@@ -10,7 +10,7 @@ def get_tokenizer(tokenizer_name="tiktoken"):
         return tiktoken.get_encoding("gpt2")
     elif tokenizer_name == "sentencepiece":
         return spm.SentencePieceProcessor(model_file="models/rilke_tokenizer.model")
-    elif tokenizer_name == "huggingface":
+    elif tokenizer_name == "bert_base_german":
         return AutoTokenizer.from_pretrained("bert-base-german-cased")
     else:
         raise ValueError(f"Unsupported tokenizer: {tokenizer_name}")
@@ -20,7 +20,7 @@ def text_to_token_ids(text, tokenizer, tokenizer_type="tiktoken"):
         encoded = tokenizer.encode(text, allowed_special={'<|endoftext|>'})
     elif tokenizer_type == "sentencepiece":
         encoded = tokenizer.encode(text)
-    elif tokenizer_type == "huggingface":
+    elif tokenizer_type == "bert_base_german":
         encoded = tokenizer.encode(text, add_special_tokens=True)
     encoded_tensor = torch.tensor(encoded).unsqueeze(0) # add batch dimension
     return encoded_tensor
@@ -31,7 +31,7 @@ def token_ids_to_text(token_ids, tokenizer, tokenizer_type="tiktoken"):
         return tokenizer.decode(flat.tolist())
     elif tokenizer_type == "sentencepiece":
         return tokenizer.decode(flat.tolist())
-    elif tokenizer_type == "huggingface":
+    elif tokenizer_type == "bert_base_german":
         return tokenizer.decode(flat.tolist(), skip_special_tokens=True)
 
 def generate(model, prompt, max_new_tokens, context_size, device="cpu", temperature=0.0, top_k=None, eos_id=None, tokenizer_name="tiktoken",):

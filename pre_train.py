@@ -6,7 +6,7 @@ from loss import calc_loss_batch
 from evaluate import evaluate_model
 from generate_text import generate
 
-def generate_and_print_sample(model, start_context, cfg):
+def generate_and_print_sample(model, start_context, cfg, tokenizer="tiktoken"):
     model.eval()
     model.to("cpu")
     with torch.no_grad():
@@ -16,7 +16,8 @@ def generate_and_print_sample(model, start_context, cfg):
             device="cpu",
             temperature=1,
             top_k=40,
-            eos_id=13
+            eos_id=13, 
+            tokenizer_name=tokenizer
         )
         
     print(text.replace("\n", " "))  # Compact print format
@@ -36,7 +37,7 @@ def save_losses(train_losses, val_losses, track_tokens_seen, filename="losses.js
 def train_model_simple(model, train_loader, val_loader, optimizer, num_epochs,
                        eval_iter, start_context, cfg, train_losses,
                        val_losses, track_tokens_seen,
-                       checkpoint_path="model_and_optimizer.pth"):
+                       checkpoint_path="model_and_optimizer.pth", tokenizer="tiktoken"):
     # load checkpoint
     if os.path.exists(checkpoint_path):
         checkpoint = torch.load(f"{checkpoint_path}", weights_only=True)
@@ -77,6 +78,6 @@ def train_model_simple(model, train_loader, val_loader, optimizer, num_epochs,
             checkpoint_path
         )
         # Print a sample text after each epoch
-        generate_and_print_sample(model, start_context, cfg)
+        generate_and_print_sample(model, start_context, cfg, tokenizer)
 
     return train_losses, val_losses, track_tokens_seen
