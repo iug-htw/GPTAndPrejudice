@@ -6,9 +6,11 @@
 import torch
 import tiktoken
 import os
-
+print("import GPTModel")
 from gpt_model import GPTModel
+print("import data_loader_v1")  
 from data_loader_v1 import create_dataloader_v1
+print("import generate")
 from generate_text import generate
 
 
