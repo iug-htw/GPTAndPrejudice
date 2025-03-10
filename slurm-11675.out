@@ -1,6 +1,6 @@
 /home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
 Python 3.13.2
-Mon Mar 10 13:56:55 2025       
+Mon Mar 10 15:31:22 2025       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
 |-----------------------------------------+------------------------+----------------------+
@@ -9,7 +9,7 @@ Mon Mar 10 13:56:55 2025
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
 |   0  NVIDIA A100-SXM4-80GB          Off |   00000000:C1:00.0 Off |                    0 |
-| N/A   25C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+| N/A   26C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
                                                                                          
@@ -89,8 +89,11 @@ Ep 9 (Step 001125): Train loss 3.243, Val loss 5.666
 Ep 9 (Step 001150): Train loss 3.114, Val loss 5.655
 Ep 9 (Step 001175): Train loss 3.092, Val loss 5.669
 Im Park ist nochgege: der, Gott, die in alten Lüchten stiegeln, du bist du bist du das die ihn furch die Dämmernden Gesichtern im goldnen Laut.  Die Blütte durch
-Training completed in 3.26 minutes.
-Traceback (most recent call last):
-  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 162, in <module>
-    from torchsummary import summary
-ModuleNotFoundError: No module named 'torchsummary'
+Training completed in 3.31 minutes.
+Test input shape: torch.Size([1, 192])
+Model structure and parameter count saved to model_structure.txt
+Er ruftig schweig, und stammeln, welche aus ihren Gassen,
+und eine Kaisar
+
+da war die Dinge füßen, und die wie zu dir auf ihm, wot, –
+an diesen leide, wo

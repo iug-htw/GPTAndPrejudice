@@ -1,6 +1,6 @@
 /home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
 Python 3.13.2
-Mon Mar 10 14:01:17 2025       
+Mon Mar 10 15:25:57 2025       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
 |-----------------------------------------+------------------------+----------------------+
@@ -9,7 +9,7 @@ Mon Mar 10 14:01:17 2025
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
 |   0  NVIDIA A100-SXM4-80GB          Off |   00000000:C1:00.0 Off |                    0 |
-| N/A   26C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+| N/A   26C    P0             63W /  500W |       1MiB /  81920MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
                                                                                          
@@ -90,10 +90,11 @@ Ep 9 (Step 001150): Train loss 3.114, Val loss 5.655
 Ep 9 (Step 001175): Train loss 3.092, Val loss 5.669
 Im Park ist nochgege: der, Gott, die in alten Lüchten stiegeln, du bist du bist du das die ihn furch die Dämmernden Gesichtern im goldnen Laut.  Die Blütte durch
 Training completed in 3.28 minutes.
+Test input shape: torch.Size([1, 192])
 Traceback (most recent call last):
-  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 165, in <module>
-    summary(model, input_size=(1, GPT_CONFIG_124M["context_length"]), device="cpu")
-    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 169, in <module>
+    summary(model, input_size=(1, context_length))#, device="cuda")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torchsummary/torchsummary.py", line 72, in summary
     model(*x)
     ~~~~~^^^^
@@ -102,7 +103,7 @@ Traceback (most recent call last):
            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
   File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
     return forward_call(*args, **kwargs)
-  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/gpt_model.py", line 27, in forward
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/gpt_model.py", line 28, in forward
     batch_size, seq_len = in_idx.shape
     ^^^^^^^^^^^^^^^^^^^
 ValueError: too many values to unpack (expected 2)

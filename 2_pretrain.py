@@ -166,11 +166,15 @@ for tokenizer in tokenizers:
     test_input = torch.randint(0, GPT_CONFIG_124M["vocab_size"], (1, GPT_CONFIG_124M["context_length"]))
     print("Test input shape:", test_input.shape)
 
-    summary(model, input_size=(1, GPT_CONFIG_124M["context_length"]), device="cpu")
-    print("Model structure:")
-    print(model)
-    total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    print(f"Total Trainable Parameters: {total_params:,}")
+    #summary(model, input_size=(1, context_length))#, device="cuda")
+    with open("poster/3_model_structure.txt", "w", encoding="utf-8") as f:
+        f.write("Model structure:\n")
+        f.write(str(model) + "\n\n")
+        
+        total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+        f.write(f"Total Trainable Parameters: {total_params:,}\n")
+
+    print("Model structure and parameter count saved to model_structure.txt")
 
     from generate_text import generate
 

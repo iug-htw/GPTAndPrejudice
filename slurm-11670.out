@@ -1,6 +1,6 @@
 /home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
 Python 3.13.2
-Mon Mar 10 11:14:04 2025       
+Mon Mar 10 14:58:37 2025       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
 |-----------------------------------------+------------------------+----------------------+
@@ -8,8 +8,8 @@ Mon Mar 10 11:14:04 2025
 | Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
-|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
-| N/A   27C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:C1:00.0 Off |                    0 |
+| N/A   28C    P0             82W /  500W |       1MiB /  81920MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
                                                                                          
@@ -23,22 +23,4 @@ Mon Mar 10 11:14:04 2025
 #############################################################
 ### starting Training with Rilke books on GPU ###
 #############################################################
-import GPTModel
-import data_loader_v1
-import generate
-Using cuda device.
-Training model with tiktoken tokenizer...
-Traceback (most recent call last):
-  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 132, in <module>
-    train_loader, val_loader = create_data_loaders(tokenizer, train_data, val_data)#, GPT_CONFIG_124M)
-                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 53, in create_data_loaders
-    train_loader = create_dataloader_v1(
-        train_data,
-    ...<6 lines>...
-        num_workers=0
-    )
-  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/data_loader_v1.py", line 40, in create_dataloader_v1
-    print(f"Tokenizer vocab size: {len(tokenizer.n_vocab())}")
-                                       ~~~~~~~~~~~~~~~~~^^
-TypeError: 'int' object is not callable
+slurmstepd: error: *** JOB 11670 ON kiwinode02 CANCELLED AT 2025-03-10T14:58:44 ***

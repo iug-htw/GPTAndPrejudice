@@ -23,7 +23,8 @@ class GPTModel(nn.Module):
         the input through the transformer blocks, normalizes the output, and
         computes the logits for the output vocabulary with a linear output layer.
         '''
-        
+        #print("self: ", self, "in_idx: ", in_idx, "Input shape:", in_idx.shape)  # Debugging step
+
         batch_size, seq_len = in_idx.shape
         tok_embeds = self.tok_emb(in_idx)
         pos_embeds = self.pos_emb(torch.arange(seq_len, device=in_idx.device))

@@ -1,0 +1,164 @@
+Model structure:
+GPTModel(
+  (tok_emb): Embedding(100256, 720)
+  (pos_emb): Embedding(192, 720)
+  (drop_emb): Dropout(p=0.1, inplace=False)
+  (trf_blocks): Sequential(
+    (0): TransformerBlock(
+      (att): MultiHeadAttention(
+        (W_query): Linear(in_features=720, out_features=720, bias=False)
+        (W_key): Linear(in_features=720, out_features=720, bias=False)
+        (W_value): Linear(in_features=720, out_features=720, bias=False)
+        (out_proj): Linear(in_features=720, out_features=720, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ff): FeedForward(
+        (layers): Sequential(
+          (0): Linear(in_features=720, out_features=2880, bias=True)
+          (1): GELU()
+          (2): Linear(in_features=2880, out_features=720, bias=True)
+        )
+      )
+      (norm1): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (norm2): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (drop_shortcut): Dropout(p=0.1, inplace=False)
+    )
+    (1): TransformerBlock(
+      (att): MultiHeadAttention(
+        (W_query): Linear(in_features=720, out_features=720, bias=False)
+        (W_key): Linear(in_features=720, out_features=720, bias=False)
+        (W_value): Linear(in_features=720, out_features=720, bias=False)
+        (out_proj): Linear(in_features=720, out_features=720, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ff): FeedForward(
+        (layers): Sequential(
+          (0): Linear(in_features=720, out_features=2880, bias=True)
+          (1): GELU()
+          (2): Linear(in_features=2880, out_features=720, bias=True)
+        )
+      )
+      (norm1): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (norm2): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (drop_shortcut): Dropout(p=0.1, inplace=False)
+    )
+    (2): TransformerBlock(
+      (att): MultiHeadAttention(
+        (W_query): Linear(in_features=720, out_features=720, bias=False)
+        (W_key): Linear(in_features=720, out_features=720, bias=False)
+        (W_value): Linear(in_features=720, out_features=720, bias=False)
+        (out_proj): Linear(in_features=720, out_features=720, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ff): FeedForward(
+        (layers): Sequential(
+          (0): Linear(in_features=720, out_features=2880, bias=True)
+          (1): GELU()
+          (2): Linear(in_features=2880, out_features=720, bias=True)
+        )
+      )
+      (norm1): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (norm2): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (drop_shortcut): Dropout(p=0.1, inplace=False)
+    )
+    (3): TransformerBlock(
+      (att): MultiHeadAttention(
+        (W_query): Linear(in_features=720, out_features=720, bias=False)
+        (W_key): Linear(in_features=720, out_features=720, bias=False)
+        (W_value): Linear(in_features=720, out_features=720, bias=False)
+        (out_proj): Linear(in_features=720, out_features=720, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ff): FeedForward(
+        (layers): Sequential(
+          (0): Linear(in_features=720, out_features=2880, bias=True)
+          (1): GELU()
+          (2): Linear(in_features=2880, out_features=720, bias=True)
+        )
+      )
+      (norm1): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (norm2): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (drop_shortcut): Dropout(p=0.1, inplace=False)
+    )
+    (4): TransformerBlock(
+      (att): MultiHeadAttention(
+        (W_query): Linear(in_features=720, out_features=720, bias=False)
+        (W_key): Linear(in_features=720, out_features=720, bias=False)
+        (W_value): Linear(in_features=720, out_features=720, bias=False)
+        (out_proj): Linear(in_features=720, out_features=720, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ff): FeedForward(
+        (layers): Sequential(
+          (0): Linear(in_features=720, out_features=2880, bias=True)
+          (1): GELU()
+          (2): Linear(in_features=2880, out_features=720, bias=True)
+        )
+      )
+      (norm1): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (norm2): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (drop_shortcut): Dropout(p=0.1, inplace=False)
+    )
+    (5): TransformerBlock(
+      (att): MultiHeadAttention(
+        (W_query): Linear(in_features=720, out_features=720, bias=False)
+        (W_key): Linear(in_features=720, out_features=720, bias=False)
+        (W_value): Linear(in_features=720, out_features=720, bias=False)
+        (out_proj): Linear(in_features=720, out_features=720, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ff): FeedForward(
+        (layers): Sequential(
+          (0): Linear(in_features=720, out_features=2880, bias=True)
+          (1): GELU()
+          (2): Linear(in_features=2880, out_features=720, bias=True)
+        )
+      )
+      (norm1): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (norm2): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (drop_shortcut): Dropout(p=0.1, inplace=False)
+    )
+    (6): TransformerBlock(
+      (att): MultiHeadAttention(
+        (W_query): Linear(in_features=720, out_features=720, bias=False)
+        (W_key): Linear(in_features=720, out_features=720, bias=False)
+        (W_value): Linear(in_features=720, out_features=720, bias=False)
+        (out_proj): Linear(in_features=720, out_features=720, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ff): FeedForward(
+        (layers): Sequential(
+          (0): Linear(in_features=720, out_features=2880, bias=True)
+          (1): GELU()
+          (2): Linear(in_features=2880, out_features=720, bias=True)
+        )
+      )
+      (norm1): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (norm2): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (drop_shortcut): Dropout(p=0.1, inplace=False)
+    )
+    (7): TransformerBlock(
+      (att): MultiHeadAttention(
+        (W_query): Linear(in_features=720, out_features=720, bias=False)
+        (W_key): Linear(in_features=720, out_features=720, bias=False)
+        (W_value): Linear(in_features=720, out_features=720, bias=False)
+        (out_proj): Linear(in_features=720, out_features=720, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ff): FeedForward(
+        (layers): Sequential(
+          (0): Linear(in_features=720, out_features=2880, bias=True)
+          (1): GELU()
+          (2): Linear(in_features=2880, out_features=720, bias=True)
+        )
+      )
+      (norm1): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (norm2): LayerNorm((720,), eps=1e-05, elementwise_affine=True)
+      (drop_shortcut): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (final_norm): LayerNorm()
+  (out_head): Linear(in_features=720, out_features=100256, bias=False)
+)
+
+Total Trainable Parameters: 194,332,320
