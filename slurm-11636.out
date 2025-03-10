@@ -1,0 +1,92 @@
+/home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
+Python 3.13.2
+Mon Mar 10 10:55:30 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
+| N/A   26C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+#############################################################
+### starting Training with Rilke books on GPU ###
+#############################################################
+import GPTModel
+import data_loader_v1
+import generate
+Using cuda device.
+Training model with tiktoken tokenizer...
+Ep 1 (Step 000000): Train loss 11.561, Val loss 11.576
+Ep 1 (Step 000025): Train loss 8.825, Val loss 8.900
+Ep 1 (Step 000050): Train loss 7.287, Val loss 7.394
+Ep 1 (Step 000075): Train loss 6.917, Val loss 7.109
+Ep 1 (Step 000100): Train loss 6.862, Val loss 7.026
+Ep 1 (Step 000125): Train loss 6.692, Val loss 6.945
+Im Park ist d sie, die sich ichte, inen und inn er er. er die, ist dieen, . Und, deren,.  .  Undch er nicht.  n von undchtet ich dieinen Sch und daß
+Ep 2 (Step 000150): Train loss 6.517, Val loss 6.829
+Ep 2 (Step 000175): Train loss 6.302, Val loss 6.691
+Ep 2 (Step 000200): Train loss 6.110, Val loss 6.547
+Ep 2 (Step 000225): Train loss 5.910, Val loss 6.438
+Ep 2 (Step 000250): Train loss 5.844, Val loss 6.350
+Im Park ist was nicht. [ Kön Gassen, wie ich verweigendin die Nacht und das Blen. Du bist die der Abend, in, was. Ich bin ich es von der ich bin, in die zu uns wie auf der
+Ep 3 (Step 000275): Train loss 5.647, Val loss 6.266
+Ep 3 (Step 000300): Train loss 5.535, Val loss 6.190
+Ep 3 (Step 000325): Train loss 5.367, Val loss 6.127
+Ep 3 (Step 000350): Train loss 5.301, Val loss 6.065
+Ep 3 (Step 000375): Train loss 5.206, Val loss 6.003
+Im Park ist der. In die, daß der Räht sind sie verdurch die Himmel und den Gassen, hnen hohenert den Länder: und eine Schatten sie bin auf der Welt ist wohn
+Ep 4 (Step 000400): Train loss 5.097, Val loss 5.955
+Ep 4 (Step 000425): Train loss 5.031, Val loss 5.908
+Ep 4 (Step 000450): Train loss 4.873, Val loss 5.865
+Ep 4 (Step 000475): Train loss 4.851, Val loss 5.836
+Ep 4 (Step 000500): Train loss 4.786, Val loss 5.798
+Im Park ist, als ob sie den Tag in in der Wind; du—zehn, das von mir ein Nacht die Nacht, die Wagen von deinen, denn ich bin dich von deiner Hand, bis das Flügt die sie
+Ep 5 (Step 000525): Train loss 4.709, Val loss 5.786
+Ep 5 (Step 000550): Train loss 4.592, Val loss 5.772
+Ep 5 (Step 000575): Train loss 4.540, Val loss 5.744
+Ep 5 (Step 000600): Train loss 4.452, Val loss 5.724
+Ep 5 (Step 000625): Train loss 4.400, Val loss 5.701
+Ep 5 (Step 000650): Train loss 4.312, Val loss 5.663
+Im Park ist der Schreckten, wenn ich will higend, bis und hingern mit den Binnen das Leben nicht, wie es geht, s, mit dem Gott, daß er, wärde hohlen, die ich zu
+Ep 6 (Step 000675): Train loss 4.295, Val loss 5.662
+Ep 6 (Step 000700): Train loss 4.154, Val loss 5.675
+Ep 6 (Step 000725): Train loss 4.190, Val loss 5.645
+Ep 6 (Step 000750): Train loss 4.093, Val loss 5.636
+Ep 6 (Step 000775): Train loss 4.005, Val loss 5.628
+Im Park ist es mit deinem Brot. Und wie ein Mühn. So ist, so wie die sich, daß wir alle in den Flüßen dächte sind. [78 Blut und geht wie ein Ding. Wer ist das Bl
+Ep 7 (Step 000800): Train loss 3.990, Val loss 5.633
+Ep 7 (Step 000825): Train loss 3.879, Val loss 5.623
+Ep 7 (Step 000850): Train loss 3.838, Val loss 5.622
+Ep 7 (Step 000875): Train loss 3.797, Val loss 5.620
+Ep 7 (Step 000900): Train loss 3.716, Val loss 5.614
+Im Park ist dein: Du muß sie bange, daß er nicht so wacht und glänkreitet ein Ruhmich war in die Zeit, das dunkle, dennoch doch: einander es nicht, tiefen, daß
+Ep 8 (Step 000925): Train loss 3.688, Val loss 5.599
+Ep 8 (Step 000950): Train loss 3.609, Val loss 5.643
+Ep 8 (Step 000975): Train loss 3.587, Val loss 5.635
+Ep 8 (Step 001000): Train loss 3.522, Val loss 5.625
+Ep 8 (Step 001025): Train loss 3.428, Val loss 5.631
+Im Park ist, umherüpühter als von welcher ihn erhe im Lenden ihren Knaben in meinem Gartenenst. Ein Sankendesicht es hat das Leben geht.  Da aber und von dem großen Bäten
+Ep 9 (Step 001050): Train loss 3.359, Val loss 5.622
+Ep 9 (Step 001075): Train loss 3.344, Val loss 5.633
+Ep 9 (Step 001100): Train loss 3.283, Val loss 5.654
+Ep 9 (Step 001125): Train loss 3.243, Val loss 5.666
+Ep 9 (Step 001150): Train loss 3.114, Val loss 5.655
+Ep 9 (Step 001175): Train loss 3.092, Val loss 5.669
+Im Park ist nochgege: der, Gott, die in alten Lüchten stiegeln, du bist du bist du das die ihn furch die Dämmernden Gesichtern im goldnen Laut.  Die Blütte durch
+Training completed in 3.19 minutes.
+Er ruft und fühl von fremden Gärtsam,
+und aufz, der Gott wiederkehrtig wie der Schale und ein Wegen:
+die ihn mit der Wärt von den Vioilt mit denkt und reichen,
+we

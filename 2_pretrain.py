@@ -143,7 +143,7 @@ for tokenizer in tokenizers:
         "device": device,
     }
 
-    train(train_loader, val_loader, num_epochs=7,
+    train(train_loader, val_loader, num_epochs=9,
           eval_iter=25, sample_text="Im Park ist",
           checkpoint_path=f"models/model_and_optimizer_{tokenizer}v2.pth", tokenizer=tokenizer)
 
@@ -152,12 +152,21 @@ for tokenizer in tokenizers:
 
     model = GPTModel(GPT_CONFIG_124M)
     model.to("cpu")
-    optimizer = torch.optim.AdamW(model.parameters(), lr=0.00025, weight_decay=0.01)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=0.00025, weight_decay=0.02)
 
     checkpoint = torch.load(f"models/model_and_optimizer_{tokenizer}v2.pth", weights_only=True)
     model.load_state_dict(checkpoint["model_state_dict"])
     optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
     model.eval();
+
+    from torchsummary import summary
+
+    # Assuming your model is already defined as `model`
+    summary(model, input_size=(1, GPT_CONFIG_124M["context_length"]), device="cpu")
+    print("Model structure:")
+    print(model)
+    total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print(f"Total Trainable Parameters: {total_params:,}")
 
     from generate_text import generate
 
