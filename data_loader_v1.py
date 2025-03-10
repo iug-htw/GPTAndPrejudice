@@ -39,6 +39,7 @@ def create_dataloader_v1(txt, batch_size, max_length, stride, tokenizer_name="ti
         tokenizer = tiktoken.get_encoding("gpt2")
     elif tokenizer_name == "sentencepiece":
         tokenizer = spm.SentencePieceProcessor(model_file="models/rilke_tokenizer.model")
+        tokenizer.set_encode_extra_options("bos:eos")  # Ensure BOS/EOS tokens are used
     elif tokenizer_name == "bert_base_german":
         tokenizer = AutoTokenizer.from_pretrained("bert-base-german-cased")
     else:
