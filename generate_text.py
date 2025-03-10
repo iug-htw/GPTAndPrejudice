@@ -7,7 +7,7 @@ from transformers import AutoTokenizer
 def get_tokenizer(tokenizer_name="tiktoken"):
     """Initialize tokenizer based on the given type."""
     if tokenizer_name == "tiktoken":
-        return tiktoken.get_encoding("gpt2")
+        return tiktoken.get_encoding("cl100k_base")
     elif tokenizer_name == "sentencepiece":
         return spm.SentencePieceProcessor(model_file="models/rilke_tokenizer.model")
     elif tokenizer_name == "bert_base_german":

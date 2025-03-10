@@ -1,0 +1,93 @@
+/home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
+Python 3.13.2
+Mon Mar 10 10:43:45 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
+| N/A   27C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+#############################################################
+### starting Training with Rilke books on GPU ###
+#############################################################
+import GPTModel
+import data_loader_v1
+import generate
+Using cuda device.
+Training model with tiktoken tokenizer...
+Ep 1 (Step 000000): Train loss 10.678, Val loss 10.682
+Ep 1 (Step 000025): Train loss 7.531, Val loss 7.520
+Ep 1 (Step 000050): Train loss 6.013, Val loss 6.070
+Ep 1 (Step 000075): Train loss 5.611, Val loss 5.640
+Ep 1 (Step 000100): Train loss 5.216, Val loss 5.367
+Ep 1 (Step 000125): Train loss 4.973, Val loss 5.165
+Ep 1 (Step 000150): Train loss 4.841, Val loss 5.021
+Ep 1 (Step 000175): Train loss 4.694, Val loss 4.908
+Im Park ist, unden Hähreiten die voll, Und das zu Gebächeängst aufen,, auchzt in einem wirzt und voll von aus,
+Ep 2 (Step 000200): Train loss 4.538, Val loss 4.825
+Ep 2 (Step 000225): Train loss 4.462, Val loss 4.771
+Ep 2 (Step 000250): Train loss 4.290, Val loss 4.701
+Ep 2 (Step 000275): Train loss 4.274, Val loss 4.627
+Ep 2 (Step 000300): Train loss 4.196, Val loss 4.598
+Ep 2 (Step 000325): Train loss 4.112, Val loss 4.544
+Ep 2 (Step 000350): Train loss 4.054, Val loss 4.507
+Im Park ist, denn schlafenden kann wie einmal wück
+Ep 3 (Step 000375): Train loss 4.034, Val loss 4.501
+Ep 3 (Step 000400): Train loss 4.064, Val loss 4.470
+Ep 3 (Step 000425): Train loss 3.957, Val loss 4.447
+Ep 3 (Step 000450): Train loss 3.911, Val loss 4.417
+Ep 3 (Step 000475): Train loss 3.787, Val loss 4.401
+Ep 3 (Step 000500): Train loss 3.774, Val loss 4.388
+Ep 3 (Step 000525): Train loss 3.819, Val loss 4.367
+Im Park ist keiner gebliche schauchen von Stadt
+Ep 4 (Step 000550): Train loss 3.744, Val loss 4.362
+Ep 4 (Step 000575): Train loss 3.691, Val loss 4.331
+Ep 4 (Step 000600): Train loss 3.707, Val loss 4.346
+Ep 4 (Step 000625): Train loss 3.604, Val loss 4.317
+Ep 4 (Step 000650): Train loss 3.621, Val loss 4.313
+Ep 4 (Step 000675): Train loss 3.619, Val loss 4.303
+Ep 4 (Step 000700): Train loss 3.558, Val loss 4.287
+Im Park ist kein und wie wie eine Seele, n kann das einen seiner ges Lieder ganz auf: die kam, vergangt mir beide dte
+Ep 5 (Step 000725): Train loss 3.481, Val loss 4.282
+Ep 5 (Step 000750): Train loss 3.445, Val loss 4.291
+Ep 5 (Step 000775): Train loss 3.495, Val loss 4.278
+Ep 5 (Step 000800): Train loss 3.374, Val loss 4.276
+Ep 5 (Step 000825): Train loss 3.379, Val loss 4.257
+Ep 5 (Step 000850): Train loss 3.334, Val loss 4.256
+Ep 5 (Step 000875): Train loss 3.269, Val loss 4.244
+Im Park ist er den Hädas Bild zu dir? Denn diesem Schwiergeben auf ihren Hücken Zweilgebens Sohnt
+Ep 6 (Step 000900): Train loss 3.288, Val loss 4.241
+Ep 6 (Step 000925): Train loss 3.264, Val loss 4.257
+Ep 6 (Step 000950): Train loss 3.183, Val loss 4.252
+Ep 6 (Step 000975): Train loss 3.118, Val loss 4.256
+Ep 6 (Step 001000): Train loss 3.135, Val loss 4.240
+Ep 6 (Step 001025): Train loss 3.098, Val loss 4.243
+Ep 6 (Step 001050): Train loss 3.099, Val loss 4.235
+Im Park ist wie, die Fähter daß alle wiederde kückt
+Ep 7 (Step 001075): Train loss 3.018, Val loss 4.243
+Ep 7 (Step 001100): Train loss 3.044, Val loss 4.257
+Ep 7 (Step 001125): Train loss 2.972, Val loss 4.270
+Ep 7 (Step 001150): Train loss 2.951, Val loss 4.266
+Ep 7 (Step 001175): Train loss 2.926, Val loss 4.257
+Ep 7 (Step 001200): Train loss 2.887, Val loss 4.264
+Ep 7 (Step 001225): Train loss 2.865, Val loss 4.260
+Im Park ist langsamkeit, und der Ziehlingsnicht nahren an den Dingen, alte nächafft in die Kranzt
+Training completed in 1.92 minutes.
+Er ruft:
+
+Und jetzt vor dir gingefügen
+und daufraus den Dinge zersteig zu trät,
+wird es sieht und sind, von den gew

@@ -36,7 +36,8 @@ class GPTDatasetV1(Dataset):
 def create_dataloader_v1(txt, batch_size, max_length, stride, tokenizer_name="tiktoken", shuffle=True, drop_last=True, num_workers=0):
     # Initialize the tokenizer based on input
     if tokenizer_name == "tiktoken":
-        tokenizer = tiktoken.get_encoding("gpt2")
+        tokenizer = tiktoken.get_encoding("cl100k") #gpt2
+
         #print("tokenizer tiktoken", tokenizer)  
         #print("vocab size:", tokenizer.n_vocab) #50257
     elif tokenizer_name == "sentencepiece":

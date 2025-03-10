@@ -45,7 +45,8 @@ with open(val_file_path, "r", encoding="utf-8") as file:
 train_ratio = 0.90
 
 # Define the tokenizers
-tokenizers = ["tiktoken", "sentencepiece", "bert_base_german"]
+#tokenizers = ["tiktoken", "sentencepiece", "bert_base_german"]
+tokenizers = ["tiktoken"]
 
 # Function to create data loaders
 def create_data_loaders(tokenizer_name, train_data, val_data): #, config):
@@ -132,7 +133,7 @@ for tokenizer in tokenizers:
 
     # ### Set up model configuration 
     GPT_CONFIG_124M = {
-        "vocab_size": 50257,    # Vocabulary size
+        "vocab_size": 100256,    # Vocabulary size
         "context_length": context_length,  # Context length
         "emb_dim": 720, #768,         # Embedding dimension
         "n_heads": 8, #12,          # Number of attention heads
