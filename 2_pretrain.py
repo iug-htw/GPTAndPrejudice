@@ -13,6 +13,7 @@ from data_loader_v1 import create_dataloader_v1
 print("import generate")
 from generate_text import generate
 
+context_length = 192
 
 # ### Detect if GPU is available
 
@@ -24,19 +25,6 @@ else:
     device = torch.device("cpu")
 
 print(f"Using {device} device.")
-
-
-# ### Set up model configuration 
-GPT_CONFIG_124M = {
-    "vocab_size": 50257,    # Vocabulary size
-    "context_length": 256,  # Context length
-    "emb_dim": 384, #768,         # Embedding dimension
-    "n_heads": 6, #12,          # Number of attention heads
-    "n_layers": 6, #12,         # Number of layers
-    "drop_rate": 0.2,       # Dropout rate
-    "qkv_bias": False,      # Query-Key-Value bias
-    "device": device,
-}
 
 
 # ### Load training and validation data files
@@ -60,12 +48,12 @@ train_ratio = 0.90
 tokenizers = ["tiktoken", "sentencepiece", "bert_base_german"]
 
 # Function to create data loaders
-def create_data_loaders(tokenizer_name, train_data, val_data, config):
+def create_data_loaders(tokenizer_name, train_data, val_data): #, config):
     train_loader = create_dataloader_v1(
         train_data,
         batch_size=4,
-        max_length=config["context_length"],
-        stride=config["context_length"],
+        max_length=context_length,
+        stride=context_length,
         tokenizer_name=tokenizer_name,
         drop_last=True,
         shuffle=True,
@@ -75,8 +63,8 @@ def create_data_loaders(tokenizer_name, train_data, val_data, config):
     val_loader = create_dataloader_v1(
         val_data,
         batch_size=4,
-        max_length=config["context_length"],
-        stride=config["context_length"],
+        max_length=context_length,
+        stride=context_length,
         tokenizer_name=tokenizer_name,
         drop_last=False,
         shuffle=False,
@@ -137,22 +125,35 @@ def train(train_loader, val_loader,
 
 # Shuffle through the tokenizers
 for tokenizer in tokenizers:
+
     print(f"Training model with {tokenizer} tokenizer...")
     
-    train_loader, val_loader = create_data_loaders(tokenizer, train_data, val_data, GPT_CONFIG_124M)
+    train_loader, val_loader = create_data_loaders(tokenizer, train_data, val_data)#, GPT_CONFIG_124M)
+
+    # ### Set up model configuration 
+    GPT_CONFIG_124M = {
+        "vocab_size": 50257,    # Vocabulary size
+        "context_length": context_length,  # Context length
+        "emb_dim": 720, #768,         # Embedding dimension
+        "n_heads": 8, #12,          # Number of attention heads
+        "n_layers": 8, #12,         # Number of layers
+        "drop_rate": 0.1,       # Dropout rate
+        "qkv_bias": False,      # Query-Key-Value bias
+        "device": device,
+    }
 
     train(train_loader, val_loader, num_epochs=7,
           eval_iter=25, sample_text="Im Park ist",
-          checkpoint_path=f"models/model_and_optimizer_{tokenizer}.pth", tokenizer=tokenizer)
+          checkpoint_path=f"models/model_and_optimizer_{tokenizer}v2.pth", tokenizer=tokenizer)
 
 
     # ### Load trained model
 
     model = GPTModel(GPT_CONFIG_124M)
     model.to("cpu")
-    optimizer = torch.optim.AdamW(model.parameters(), lr=0.0004, weight_decay=0.1)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=0.00025, weight_decay=0.01)
 
-    checkpoint = torch.load(f"models/model_and_optimizer_{tokenizer}.pth", weights_only=True)
+    checkpoint = torch.load(f"models/model_and_optimizer_{tokenizer}v2.pth", weights_only=True)
     model.load_state_dict(checkpoint["model_state_dict"])
     optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
     model.eval();

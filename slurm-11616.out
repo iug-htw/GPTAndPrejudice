@@ -1,6 +1,6 @@
 /home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
 Python 3.13.2
-Mon Mar 10 07:39:23 2025       
+Mon Mar 10 08:34:17 2025       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
 |-----------------------------------------+------------------------+----------------------+
@@ -9,7 +9,7 @@ Mon Mar 10 07:39:23 2025
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
 |   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
-| N/A   26C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
+| N/A   27C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
                                                                                          
@@ -30,6 +30,10 @@ import data_loader_v1
 import generate
 Using cuda device.
 Training model with tiktoken tokenizer...
+tokenizer tiktoken <Encoding 'gpt2'>
+vocab size: 50257
+tokenizer tiktoken <Encoding 'gpt2'>
+vocab size: 50257
 Ep 1 (Step 000000): Train loss 10.903, Val loss 10.905
 Ep 1 (Step 000025): Train loss 8.878, Val loss 8.875
 Ep 1 (Step 000050): Train loss 7.483, Val loss 7.497
@@ -74,44 +78,68 @@ Ep 7 (Step 000850): Train loss 4.053, Val loss 4.546
 Ep 7 (Step 000875): Train loss 4.080, Val loss 4.536
 Ep 7 (Step 000900): Train loss 4.070, Val loss 4.517
 Im Park ist wie dich mehr ih, von zirr, die Todten, daßt
-Training completed in 0.82 minutes.
+Training completed in 0.83 minutes.
 Er ruft und kleinen und nachten
 in die Leben
 Training model with sentencepiece tokenizer...
-Ep 1 (Step 000000): Train loss 10.944, Val loss 10.947
-Ep 1 (Step 000025): Train loss 9.272, Val loss 9.264
-Ep 1 (Step 000050): Train loss 7.989, Val loss 8.008
-Ep 1 (Step 000075): Train loss 7.204, Val loss 7.243
-Im Park ist und wie Undst ich der er von. und. der,, nicht in wie, der., Und und und, an. du, mit aus in. wies,, dich, und die,,, zu,,,. der
-Ep 2 (Step 000100): Train loss 6.939, Val loss 6.945
-Ep 2 (Step 000125): Train loss 6.845, Val loss 6.856
-Ep 2 (Step 000150): Train loss 6.794, Val loss 6.801
-Im Park ist und dich, der sich, an, diees. sind; zu., wie, ich, nicht. von der das, der sich. ist und. das ist: aus:, ders,: ein es mir, die sich dich sie
-Ep 3 (Step 000175): Train loss 6.764, Val loss 6.776
-Ep 3 (Step 000200): Train loss 6.750, Val loss 6.761
-Ep 3 (Step 000225): Train loss 6.711, Val loss 6.737
-Im Park ist das und ich, die sich ich das in so und mir an ein Und aus wie den von den, ein. Ichs wie das, die, die, die: als er, Undste, das den, und. auf war der er
-Ep 4 (Step 000250): Train loss 6.698, Val loss 6.719
-Ep 4 (Step 000275): Train loss 6.643, Val loss 6.691
-Ep 4 (Step 000300): Train loss 6.663, Val loss 6.672
-Ep 4 (Step 000325): Train loss 6.572, Val loss 6.653
-Im Park ist. Und sie nicht und der. Und der zu auf dem. Und. ein. Die ist, und aus auser ist sich eine den, und und er der. Du, wie dich in dere, das. DER, und den ich so
-Ep 5 (Step 000350): Train loss 6.558, Val loss 6.631
-Ep 5 (Step 000375): Train loss 6.471, Val loss 6.601
-Ep 5 (Step 000400): Train loss 6.478, Val loss 6.582
-Im Park ist die ich noch. Der an sietende in so. Du, die er dich: aus eine kleinete sich ein er. Ich in da ich sich sein zu wie aus ist von den W an nicht das in der sich den F er der?
-Ep 6 (Step 000425): Train loss 6.427, Val loss 6.557
-Ep 6 (Step 000450): Train loss 6.377, Val loss 6.530
-Ep 6 (Step 000475): Train loss 6.327, Val loss 6.512
-Im Park ist dem, du das so wie ein der Nacht, als auf dem, das an den Es nicht aus dem F er sind, als sie sie noch ein Ich an den wie sie mir nicht das: die du ich die: denn und von auf ihren wie
-Ep 7 (Step 000500): Train loss 6.274, Val loss 6.477
-Ep 7 (Step 000525): Train loss 6.233, Val loss 6.459
-Ep 7 (Step 000550): Train loss 6.195, Val loss 6.442
-Ep 7 (Step 000575): Train loss 6.150, Val loss 6.414
-Im Park ist die sich die sich in dem es. Ich bin die K B zut im Nacht, als es dem mehr und von den dem Sch aus dem R K Und die Zes. Ich, aber ich alles an wie mit dir, daß in die du
-Training completed in 0.65 minutes.
-Er ruft. Und wenn auf dem G und sie sind er zu der ich die Augen an und sich in dem Bdstes, und – und was die, ich nicht auf der, daß sie und er in das, und auf mir sie durch die so
+tokenizer sentencepiece <sentencepiece.SentencePieceProcessor; proxy of <Swig Object of type 'sentencepiece::SentencePieceProcessor *' at 0x7fa3ec3651d0> >
+vocab size: 2000
+tokenizer sentencepiece <sentencepiece.SentencePieceProcessor; proxy of <Swig Object of type 'sentencepiece::SentencePieceProcessor *' at 0x7fa3ec3651d0> >
+vocab size: 2000
+Ep 1 (Step 000000): Train loss 10.950, Val loss 10.957
+Ep 1 (Step 000025): Train loss 9.241, Val loss 9.233
+Ep 1 (Step 000050): Train loss 7.895, Val loss 7.877
+Ep 1 (Step 000075): Train loss 7.058, Val loss 7.039
+Im Park ist und wie,, ich der,; K,s der,d wie in wiet der sie, Und und,.ten. du ist mit. in ist wie so undte., und die die.., und er diet:
+Ep 2 (Step 000100): Train loss 6.761, Val loss 6.723
+Ep 2 (Step 000125): Train loss 6.657, Val loss 6.619
+Ep 2 (Step 000150): Train loss 6.613, Val loss 6.578
+Ep 2 (Step 000175): Train loss 6.573, Val loss 6.550
+Im Park ist demst diees. er. zues von,, Und.,s vons das, der sich von. und.. istste sicht der,. war du esen ist im,,, ich der denen zu.
+Ep 3 (Step 000200): Train loss 6.560, Val loss 6.541
+Ep 3 (Step 000225): Train loss 6.532, Val loss 6.517
+Ep 3 (Step 000250): Train loss 6.512, Val loss 6.488
+Im Park ist ich das in so:, daß ein. wie wie den von dente ein, und, wie das, die;st..st:: der aufte.. Und wie und ich auf, der er sich, ein. Und den
+Ep 4 (Step 000275): Train loss 6.455, Val loss 6.467
+Ep 4 (Step 000300): Train loss 6.448, Val loss 6.441
+Ep 4 (Step 000325): Train loss 6.392, Val loss 6.416
+Ep 4 (Step 000350): Train loss 6.380, Val loss 6.396
+Im Park ist, die der so auf dem sich als, ein zu, und du sie. Sieer, sich eine, daß und und er: ein. Der wie auf in der der, dasd, der. Der ich so der ich ichs mit:
+Ep 5 (Step 000375): Train loss 6.326, Val loss 6.371
+Ep 5 (Step 000400): Train loss 6.283, Val loss 6.337
+Ep 5 (Step 000425): Train loss 6.210, Val loss 6.302
+Im Park ist sies war in so: und in dem er dich in aus eine; und sicheren und die Ges, und daß zu wie auss von den Wd nicht das in der ich, und esge, wie ein sie, daß an
+Ep 6 (Step 000450): Train loss 6.202, Val loss 6.279
+Ep 6 (Step 000475): Train loss 6.138, Val loss 6.233
+Ep 6 (Step 000500): Train loss 6.074, Val loss 6.202
+Ep 6 (Step 000525): Train loss 5.998, Val loss 6.169
+Im Park ist eine sich das Ft auf den Kmen, sind, alsten, daß ein Ich an Btzd nichtsten, als ich die er im ein Dsches, der Tod und daß er so die Tle, wenn der
+Ep 7 (Step 000550): Train loss 5.971, Val loss 6.138
+Ep 7 (Step 000575): Train loss 5.948, Val loss 6.103
+Ep 7 (Step 000600): Train loss 5.889, Val loss 6.061
+Ep 7 (Step 000625): Train loss 5.826, Val loss 6.014
+Im Park ist, zu sich im Hinst es dem Tne von den Blickne: ich die Welt. Wie die  in der kleineen und wie wie mit einem, daß in die Tre. Er, das ein Mäts wie so
+Training completed in 0.70 minutes.
+Er ruft, die so an und alle der ich das nichtst den Dein, und wie die ich sein. Kü, daß sie und seine Hände: wie eingef. Sie fassen. Aber meinerlich zu: wie ein Maen:
 Training model with bert_base_german tokenizer...
+tokenizer bert BertTokenizerFast(name_or_path='bert-base-german-cased', vocab_size=30000, model_max_length=512, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'unk_token': '[UNK]', 'sep_token': '[SEP]', 'pad_token': '[PAD]', 'cls_token': '[CLS]', 'mask_token': '[MASK]'}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	0: AddedToken("[PAD]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	2: AddedToken("[UNK]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	3: AddedToken("[CLS]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	4: AddedToken("[SEP]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	5: AddedToken("[MASK]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+vocab size: 30000
+tokenizer bert BertTokenizerFast(name_or_path='bert-base-german-cased', vocab_size=30000, model_max_length=512, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'unk_token': '[UNK]', 'sep_token': '[SEP]', 'pad_token': '[PAD]', 'cls_token': '[CLS]', 'mask_token': '[MASK]'}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	0: AddedToken("[PAD]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	2: AddedToken("[UNK]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	3: AddedToken("[CLS]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	4: AddedToken("[SEP]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	5: AddedToken("[MASK]", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+vocab size: 30000
 Ep 1 (Step 000000): Train loss 10.940, Val loss 10.947
 Ep 1 (Step 000025): Train loss 9.150, Val loss 9.254
 Ep 1 (Step 000050): Train loss 8.008, Val loss 8.170
@@ -142,5 +170,5 @@ Ep 7 (Step 000500): Train loss 6.082, Val loss 6.760
 Ep 7 (Step 000525): Train loss 6.022, Val loss 6.740
 Ep 7 (Step 000550): Train loss 5.991, Val loss 6.722
 [CLS] Im Park ist [SEP]E. Das der Nacht... Der : Es. Und mein und alle den sich sich ein, der an den, die, und in einere, die nicht mehr so wie ein war die dich [UNK], was ich in der Abend wart
-Training completed in 0.66 minutes.
+Training completed in 0.68 minutes.
 [CLS] Er ruft [SEP]e : Du. [EE " " Denn ich der bist der in den Himmel ich wie ein kleines? Du des von dem? [UNK] das, aus der sich der Zeit. Es im.. Die, und es die bist der eine diren

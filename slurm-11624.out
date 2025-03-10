@@ -1,0 +1,180 @@
+/home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
+Python 3.13.2
+Mon Mar 10 09:21:07 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
+| N/A   27C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+#############################################################
+### starting Training with Rilke books on GPU ###
+#############################################################
+Token indices sequence length is longer than the specified maximum sequence length for this model (82627 > 512). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (20581 > 512). Running this sequence through the model will result in indexing errors
+import GPTModel
+import data_loader_v1
+import generate
+Using cuda device.
+Training model with tiktoken tokenizer...
+Ep 1 (Step 000000): Train loss 10.726, Val loss 10.730
+Ep 1 (Step 000025): Train loss 7.591, Val loss 7.587
+Ep 1 (Step 000050): Train loss 6.108, Val loss 6.130
+Ep 1 (Step 000075): Train loss 5.605, Val loss 5.661
+Ep 1 (Step 000100): Train loss 5.323, Val loss 5.406
+Ep 1 (Step 000125): Train loss 5.018, Val loss 5.224
+Ep 1 (Step 000150): Train loss 4.896, Val loss 5.077
+Ep 1 (Step 000175): Train loss 4.765, Val loss 4.954
+Im Park ist und sie auf hüh in den sie schein der ihrt und eine St und wie sich Stund Dind, das Leben er
+Ep 2 (Step 000200): Train loss 4.634, Val loss 4.861
+Ep 2 (Step 000225): Train loss 4.507, Val loss 4.790
+Ep 2 (Step 000250): Train loss 4.417, Val loss 4.727
+Ep 2 (Step 000275): Train loss 4.279, Val loss 4.685
+Ep 2 (Step 000300): Train loss 4.297, Val loss 4.638
+Ep 2 (Step 000325): Train loss 4.131, Val loss 4.589
+Ep 2 (Step 000350): Train loss 4.103, Val loss 4.552
+Im Park ist, und an me ganz mein Himmel seine schweit die schweich allen und du ganz in die sich seine Welt
+Ep 3 (Step 000375): Train loss 4.099, Val loss 4.522
+Ep 3 (Step 000400): Train loss 4.071, Val loss 4.497
+Ep 3 (Step 000425): Train loss 4.046, Val loss 4.476
+Ep 3 (Step 000450): Train loss 4.030, Val loss 4.453
+Ep 3 (Step 000475): Train loss 3.948, Val loss 4.440
+Ep 3 (Step 000500): Train loss 3.864, Val loss 4.407
+Ep 3 (Step 000525): Train loss 3.876, Val loss 4.390
+Im Park ist als ob uns durch die Bräume wie aufgeht
+Ep 4 (Step 000550): Train loss 3.790, Val loss 4.383
+Ep 4 (Step 000575): Train loss 3.763, Val loss 4.377
+Ep 4 (Step 000600): Train loss 3.720, Val loss 4.363
+Ep 4 (Step 000625): Train loss 3.778, Val loss 4.358
+Ep 4 (Step 000650): Train loss 3.679, Val loss 4.334
+Ep 4 (Step 000675): Train loss 3.599, Val loss 4.303
+Ep 4 (Step 000700): Train loss 3.626, Val loss 4.304
+Im Park ist wunders, s wird wieleicht immer und alle wie der Welt schl
+Ep 5 (Step 000725): Train loss 3.586, Val loss 4.299
+Ep 5 (Step 000750): Train loss 3.514, Val loss 4.298
+Ep 5 (Step 000775): Train loss 3.543, Val loss 4.287
+Ep 5 (Step 000800): Train loss 3.538, Val loss 4.293
+Ep 5 (Step 000825): Train loss 3.455, Val loss 4.300
+Ep 5 (Step 000850): Train loss 3.415, Val loss 4.271
+Ep 5 (Step 000875): Train loss 3.349, Val loss 4.264
+Im Park ist
+Ep 6 (Step 000900): Train loss 3.372, Val loss 4.272
+Ep 6 (Step 000925): Train loss 3.358, Val loss 4.291
+Ep 6 (Step 000950): Train loss 3.321, Val loss 4.284
+Ep 6 (Step 000975): Train loss 3.294, Val loss 4.259
+Ep 6 (Step 001000): Train loss 3.246, Val loss 4.250
+Ep 6 (Step 001025): Train loss 3.195, Val loss 4.259
+Ep 6 (Step 001050): Train loss 3.133, Val loss 4.241
+Im Park ist, wenn in seine schwiegend so daß zie erschlören immert, sich wei den Schönig in daran mit ihm seinen
+Ep 7 (Step 001075): Train loss 3.129, Val loss 4.249
+Ep 7 (Step 001100): Train loss 3.107, Val loss 4.267
+Ep 7 (Step 001125): Train loss 3.119, Val loss 4.277
+Ep 7 (Step 001150): Train loss 3.065, Val loss 4.259
+Ep 7 (Step 001175): Train loss 3.029, Val loss 4.249
+Ep 7 (Step 001200): Train loss 3.012, Val loss 4.259
+Ep 7 (Step 001225): Train loss 3.031, Val loss 4.273
+Im Park ist beide, daß ich nicht mehr: das Goldesich (die dich durch die Hand
+Training completed in 1.63 minutes.
+Er ruft,
+und nach ihm der Tages, die
+
+und der Pfer wird und wie seinem Leben
+als allein großte, die Zweigen, du der Nacht,
+und war schl
+Training model with sentencepiece tokenizer...
+Ep 1 (Step 000000): Train loss 10.889, Val loss 10.892
+Ep 1 (Step 000025): Train loss 8.174, Val loss 8.190
+Ep 1 (Step 000050): Train loss 6.882, Val loss 6.839
+Ep 1 (Step 000075): Train loss 6.634, Val loss 6.592
+Ep 1 (Step 000100): Train loss 6.556, Val loss 6.534
+Im Park ist sich an nicht sind ich:; an zu, die an, ein sind, und eins nicht. einst;: sind undst, undes sies und in, die mit in, dersten sich under und:, wie
+Ep 2 (Step 000125): Train loss 6.510, Val loss 6.499
+Ep 2 (Step 000150): Train loss 6.469, Val loss 6.443
+Ep 2 (Step 000175): Train loss 6.367, Val loss 6.379
+Ep 2 (Step 000200): Train loss 6.221, Val loss 6.309
+Ep 2 (Step 000225): Train loss 6.071, Val loss 6.227
+Im Park ist, in den M nicht und sie die siet. Siede, dem Er sich da ein Bangen ein be ein B, das eine auf demh, wie ein ich Gd die Hand sie du bist in von so wie eine B
+Ep 3 (Step 000250): Train loss 6.009, Val loss 6.166
+Ep 3 (Step 000275): Train loss 5.907, Val loss 6.081
+Ep 3 (Step 000300): Train loss 5.767, Val loss 6.012
+Ep 3 (Step 000325): Train loss 5.664, Val loss 5.933
+Ep 3 (Step 000350): Train loss 5.549, Val loss 5.861
+Im Park ist, auf, sind, in einem eine Krägen, um in einem Fein, und wie eine Welt, und an. Und wie der es, wie er blinken, der Nachtes, und dann und über dem du sind und die es
+Ep 4 (Step 000375): Train loss 5.435, Val loss 5.807
+Ep 4 (Step 000400): Train loss 5.298, Val loss 5.744
+Ep 4 (Step 000425): Train loss 5.255, Val loss 5.695
+Ep 4 (Step 000450): Train loss 5.119, Val loss 5.645
+Ep 4 (Step 000475): Train loss 5.081, Val loss 5.595
+Im Park ist das Leben und doch sie dir im Schreitüste; und sie zben, und wie ein kleinesöhang und an das in der Tauten in der Lal und auf und der, welche mit deinem BRAasten
+Ep 5 (Step 000500): Train loss 4.960, Val loss 5.556
+Ep 5 (Step 000525): Train loss 4.879, Val loss 5.523
+Ep 5 (Step 000550): Train loss 4.791, Val loss 5.493
+Ep 5 (Step 000575): Train loss 4.747, Val loss 5.467
+Im Park ist mit dem Gegt, du aber sind: Ich bin die an ihm uns, und reinem Linds nicht im Triebs nicht mehr dich nur ein kleines, und der Tod; an meiner Haus. Erden Wesen nach den
+Ep 6 (Step 000600): Train loss 4.698, Val loss 5.447
+Ep 6 (Step 000625): Train loss 4.628, Val loss 5.433
+Ep 6 (Step 000650): Train loss 4.556, Val loss 5.410
+Ep 6 (Step 000675): Train loss 4.456, Val loss 5.393
+Ep 6 (Step 000700): Train loss 4.421, Val loss 5.372
+Im Park ists, und was Rig, wie in den Wind, mit allem, darin in das wie eins, wie ein Verh, und
+Ep 7 (Step 000725): Train loss 4.373, Val loss 5.366
+Ep 7 (Step 000750): Train loss 4.280, Val loss 5.362
+Ep 7 (Step 000775): Train loss 4.212, Val loss 5.360
+Ep 7 (Step 000800): Train loss 4.245, Val loss 5.359
+Ep 7 (Step 000825): Train loss 4.113, Val loss 5.346
+Im Park ist ein, und eine kleine Länder sind auf. Du bist, das wir wieder erwertes Stavenht. Und dann nicht mehres, so daß seine Stunde uns war ein Lied, um die Mich und disen war,
+Training completed in 1.38 minutes.
+Er ruft. Was hatte nur wir uns und der Himmelhte: das Leben, ist nur in der Nähe sind denkt. Und eine Warten. Aben, und tanz, und sie zu des Pinger und seine Kreis.
+Training model with bert_base_german tokenizer...
+Ep 1 (Step 000000): Train loss 10.814, Val loss 10.815
+Ep 1 (Step 000025): Train loss 8.240, Val loss 8.351
+Ep 1 (Step 000050): Train loss 7.072, Val loss 7.392
+Ep 1 (Step 000075): Train loss 6.916, Val loss 7.193
+Ep 1 (Step 000100): Train loss 6.758, Val loss 7.128
+[CLS] Im Park ist [SEP] zu, und die die : den, und wie, die, die in in : ich, [UNK]. noch, die wie das und sie der ich der, die sie ist nur und die, der ich, sich, den ich den aus, [UNK]
+Ep 2 (Step 000125): Train loss 6.688, Val loss 7.032
+Ep 2 (Step 000150): Train loss 6.542, Val loss 6.976
+Ep 2 (Step 000175): Train loss 6.406, Val loss 6.907
+Ep 2 (Step 000200): Train loss 6.295, Val loss 6.844
+[CLS] Im Park ist [SEP] der Welt, die Welt nicht auf dass.. Und er sich der Hand den Augen. Die mich. " De. Ich bin, das du, der Gott, die sind sich? Ein aus dem die Welt. [UNK] wie er eine die
+Ep 3 (Step 000225): Train loss 6.107, Val loss 6.780
+Ep 3 (Step 000250): Train loss 6.012, Val loss 6.735
+Ep 3 (Step 000275): Train loss 5.899, Val loss 6.684
+Ep 3 (Step 000300): Train loss 5.790, Val loss 6.638
+[CLS] Im Park ist [SEP], mit den alten ist das ist das die alle DingeEE Da aus dem sich mit einemde! [UNK] : du : ich mit dem die ich will sie wie auf die Welt. Du nicht der Stern. Ich bin von der du aus der
+Ep 4 (Step 000325): Train loss 5.648, Val loss 6.579
+Ep 4 (Step 000350): Train loss 5.573, Val loss 6.565
+Ep 4 (Step 000375): Train loss 5.450, Val loss 6.523
+Ep 4 (Step 000400): Train loss 5.363, Val loss 6.485
+Ep 4 (Step 000425): Train loss 5.262, Val loss 6.456
+[CLS] Im Park ist [SEP] wie ein Hund der schlrten aus den Zeit und was ich nur, und weil der Abend wie ein Regen auf zu : Das ist es die in allene, [UNK] ich in der Gott, und alle wacht und das Angesicht und mit der
+Ep 5 (Step 000450): Train loss 5.214, Val loss 6.446
+Ep 5 (Step 000475): Train loss 5.099, Val loss 6.428
+Ep 5 (Step 000500): Train loss 5.050, Val loss 6.395
+Ep 5 (Step 000525): Train loss 4.991, Val loss 6.393
+[CLS] Im Park ist [SEP]. Siegen sind noch ein Ding wie ein Baum der Sommer und wie ein Walde. Das war, daß alles, was du wir ganz meine Seele sich in mir mein in dem die sich in den sieh : die der Nacht ; denn, wo
+Ep 6 (Step 000550): Train loss 4.863, Val loss 6.363
+Ep 6 (Step 000575): Train loss 4.762, Val loss 6.357
+Ep 6 (Step 000600): Train loss 4.714, Val loss 6.342
+Ep 6 (Step 000625): Train loss 4.628, Val loss 6.315
+[CLS] Im Park ist [SEP]. Aber die Stirne in einer steht eine Blumen, als das letzte : daß er aus fernes wird wie eine Welt.. Ich bin.... Im Dunkel, und doch nicht mehr. So hat das Gebärden
+Ep 7 (Step 000650): Train loss 4.517, Val loss 6.321
+Ep 7 (Step 000675): Train loss 4.458, Val loss 6.319
+Ep 7 (Step 000700): Train loss 4.371, Val loss 6.308
+Ep 7 (Step 000725): Train loss 4.275, Val loss 6.300
+[CLS] Im Park ist [SEP] vor meiner? Das Leben, ich bin du bist der Himmel nach, [UNK] : ich dich nicht mehr, so in ihren Sonne, da du bist das Leben ist nur [UNK] nur der es nicht zu den Traumes, daß es in dich nicht mehr eine
+Training completed in 1.34 minutes.
+[CLS] Er ruft [SEP] mich wird. Nur will
