@@ -1,6 +1,6 @@
 /home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
 Python 3.13.2
-Mon Mar 10 11:09:10 2025       
+Mon Mar 10 11:14:04 2025       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
 |-----------------------------------------+------------------------+----------------------+
@@ -8,8 +8,8 @@ Mon Mar 10 11:09:10 2025
 | Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
-|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:C1:00.0 Off |                    0 |
-| N/A   25C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
+| N/A   27C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
                                                                                          
@@ -38,10 +38,7 @@ Traceback (most recent call last):
     ...<6 lines>...
         num_workers=0
     )
-  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/data_loader_v1.py", line 43, in create_dataloader_v1
-    tokens = [tokenizer.decode([tid]) for tid in token_ids]
-              ~~~~~~~~~~~~~~~~^^^^^^^
-  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/tiktoken/core.py", line 284, in decode
-    return self._core_bpe.decode_bytes(tokens).decode("utf-8", errors=errors)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
-KeyError: 'Invalid token for decoding: 100256'
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/data_loader_v1.py", line 40, in create_dataloader_v1
+    print(f"Tokenizer vocab size: {len(tokenizer.n_vocab())}")
+                                       ~~~~~~~~~~~~~~~~~^^
+TypeError: 'int' object is not callable

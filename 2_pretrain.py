@@ -162,6 +162,10 @@ for tokenizer in tokenizers:
     from torchsummary import summary
 
     # Assuming your model is already defined as `model`
+    #summary(model, input_size=(1, GPT_CONFIG_124M["context_length"]), device="cpu")
+    test_input = torch.randint(0, GPT_CONFIG_124M["vocab_size"], (1, GPT_CONFIG_124M["context_length"]))
+    print("Test input shape:", test_input.shape)
+
     summary(model, input_size=(1, GPT_CONFIG_124M["context_length"]), device="cpu")
     print("Model structure:")
     print(model)

@@ -1,6 +1,6 @@
 /home/cluster_home/simbeck/conda/envs/Cramming_example/bin/python
 Python 3.13.2
-Mon Mar 10 10:47:08 2025       
+Mon Mar 10 14:01:17 2025       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
 |-----------------------------------------+------------------------+----------------------+
@@ -8,8 +8,8 @@ Mon Mar 10 10:47:08 2025
 | Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
-|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:41:00.0 Off |                    0 |
-| N/A   27C    P0             64W /  500W |       1MiB /  81920MiB |      0%      Default |
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:C1:00.0 Off |                    0 |
+| N/A   26C    P0             62W /  500W |       1MiB /  81920MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
                                                                                          
@@ -28,6 +28,10 @@ import data_loader_v1
 import generate
 Using cuda device.
 Training model with tiktoken tokenizer...
+length:  100277
+Token list saved to tokens_list.txt
+length:  100277
+Token list saved to tokens_list.txt
 Ep 1 (Step 000000): Train loss 11.561, Val loss 11.576
 Ep 1 (Step 000025): Train loss 8.825, Val loss 8.900
 Ep 1 (Step 000050): Train loss 7.287, Val loss 7.394
@@ -72,15 +76,33 @@ Ep 7 (Step 000850): Train loss 3.838, Val loss 5.622
 Ep 7 (Step 000875): Train loss 3.797, Val loss 5.620
 Ep 7 (Step 000900): Train loss 3.716, Val loss 5.614
 Im Park ist dein: Du muß sie bange, daß er nicht so wacht und glänkreitet ein Ruhmich war in die Zeit, das dunkle, dennoch doch: einander es nicht, tiefen, daß
-Training completed in 2.43 minutes.
-Er ruft und schweig aus.—
-wie ein Hund und durch den Dämmereisem Leben ist wie:
-es wie eine Wiesen
-du bist der Nacht und kamen
-wirrt.
-
-
-
-
-L DER Faden und schlagen,
-und
+Ep 8 (Step 000925): Train loss 3.688, Val loss 5.599
+Ep 8 (Step 000950): Train loss 3.609, Val loss 5.643
+Ep 8 (Step 000975): Train loss 3.587, Val loss 5.635
+Ep 8 (Step 001000): Train loss 3.522, Val loss 5.625
+Ep 8 (Step 001025): Train loss 3.428, Val loss 5.631
+Im Park ist, umherüpühter als von welcher ihn erhe im Lenden ihren Knaben in meinem Gartenenst. Ein Sankendesicht es hat das Leben geht.  Da aber und von dem großen Bäten
+Ep 9 (Step 001050): Train loss 3.359, Val loss 5.622
+Ep 9 (Step 001075): Train loss 3.344, Val loss 5.633
+Ep 9 (Step 001100): Train loss 3.283, Val loss 5.654
+Ep 9 (Step 001125): Train loss 3.243, Val loss 5.666
+Ep 9 (Step 001150): Train loss 3.114, Val loss 5.655
+Ep 9 (Step 001175): Train loss 3.092, Val loss 5.669
+Im Park ist nochgege: der, Gott, die in alten Lüchten stiegeln, du bist du bist du das die ihn furch die Dämmernden Gesichtern im goldnen Laut.  Die Blütte durch
+Training completed in 3.28 minutes.
+Traceback (most recent call last):
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/2_pretrain.py", line 165, in <module>
+    summary(model, input_size=(1, GPT_CONFIG_124M["context_length"]), device="cpu")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torchsummary/torchsummary.py", line 72, in summary
+    model(*x)
+    ~~~~~^^^^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/cluster_home/simbeck/conda/envs/Cramming_example/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/cluster_home/simbeck/RilkeLM/GPTAndPrejudice/gpt_model.py", line 27, in forward
+    batch_size, seq_len = in_idx.shape
+    ^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)

@@ -37,10 +37,19 @@ def create_dataloader_v1(txt, batch_size, max_length, stride, tokenizer_name="ti
     # Initialize the tokenizer based on input
     if tokenizer_name == "tiktoken":
         tokenizer = tiktoken.get_encoding("cl100k_base") #gpt2
+        print("length: ", tokenizer.n_vocab)
         # Get all token IDs
         token_ids = list(range(tokenizer.n_vocab))
         # Decode all tokens
-        tokens = [tokenizer.decode([tid]) for tid in token_ids]
+        #tokens = [tokenizer.decode([tid]) for tid in token_ids]
+        # Get valid token IDs from tokenizer's vocabulary
+        valid_token_ids = set(range(tokenizer.n_vocab))
+        tokens = []
+        for tid in range(tokenizer.n_vocab):
+            try:
+                tokens.append(tokenizer.decode([tid]))
+            except KeyError:
+                tokens.append("<UNK>")
         # Save to a text file
         with open("poster/02_tokens_list.txt", "w", encoding="utf-8") as f:
             for token in tokens:

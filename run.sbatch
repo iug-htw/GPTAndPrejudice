@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=LLM_example
+#SBATCH --job-name=RilkeLM
 #SBATCH --gres=gpu:1
 #SBATCH --nodes=1
 #SBATCH --time=01-12:00:00
