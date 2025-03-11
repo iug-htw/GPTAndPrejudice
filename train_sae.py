@@ -12,22 +12,24 @@ def save_losses_to_json(train_losses, val_losses, filename="losses_sae.json"):
     with open(filename, "w") as f:
         json.dump(data, f)
 
-def train_sae(embeddings, model_name="sae_model.pth", train_losses=[],
+def train_sae(embeddings, sae=None, model_name="sae_model.pth", train_losses=[],
               val_losses=[], batch_size=64, epochs=100, lr=0.01,
-              device="cpu", patience=10):
+              hidden_dim=256, weight_decay=1e-6, device="cpux", patience=10):
 
     if isinstance(embeddings, np.ndarray): 
         embeddings = torch.tensor(embeddings, dtype=torch.float32)
     elif isinstance(embeddings, list):
         embeddings = torch.tensor(np.vstack(embeddings), dtype=torch.float32)
 
-    input_dim = embeddings.shape[1]  
-    hidden_dim = 256
+    input_dim = embeddings.shape[1]
 
-    sae = SparseAutoencoder(input_dim=input_dim, hidden_dim=hidden_dim).to(device)
+    if not sae:
+        sae = SparseAutoencoder(input_dim=input_dim, hidden_dim=hidden_dim)
+        
+    sae.to(device)
     embeddings = embeddings.to(device)
 
-    optimizer = optim.AdamW(sae.parameters(), lr=lr, weight_decay=1e-6)
+    optimizer = optim.AdamW(sae.parameters(), lr=lr, weight_decay=weight_decay)
     criterion = nn.MSELoss()
 
     dataset = TensorDataset(embeddings)
@@ -38,7 +40,7 @@ def train_sae(embeddings, model_name="sae_model.pth", train_losses=[],
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=5, verbose=True)
+#     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.3, patience=5, verbose=True)
 
     best_val_loss = float("inf")
     early_stop_counter = 0  
@@ -80,7 +82,8 @@ def train_sae(embeddings, model_name="sae_model.pth", train_losses=[],
 
         print(f"Epoch [{epoch+1}/{epochs}], Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}")
 
-        scheduler.step(val_loss)
+#         scheduler.step(val_loss)
+#         print(f"🔹 New Learning Rate: {optimizer.param_groups[0]['lr']}")
 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
