@@ -3,7 +3,7 @@ import json
 import os
 
 from loss import calc_loss_batch
-from evaluate import evaluate_model
+from evaluate_model import evaluate_model
 from generate_text import generate
 
 def generate_and_print_sample(model, start_context, cfg):
