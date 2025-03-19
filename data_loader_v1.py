@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data import Dataset, DataLoader
-import sentencepiece as spm
+import tiktoken
 
 class GPTDatasetV1(Dataset):
     def __init__(self, txt, tokenizer, max_length, stride):
@@ -8,7 +8,7 @@ class GPTDatasetV1(Dataset):
         self.target_ids = []
 
         # Tokenize the entire text
-        token_ids = tokenizer.encode(txt, out_type=int)
+        token_ids = tokenizer.encode(txt, allowed_special={'<|endoftext|>'})
 
         # Use a sliding window to chunk the book into overlapping sequences of max_length
         for i in range(0, len(token_ids) - max_length, stride):
@@ -25,8 +25,7 @@ class GPTDatasetV1(Dataset):
         
 def create_dataloader_v1(txt, batch_size, max_length, stride, shuffle=True, drop_last=True, num_workers=0):
     # Initialize the tokenizer
-    tokenizer = spm.SentencePieceProcessor()
-    tokenizer.load('gpt_custom_tokenizer.model')
+    tokenizer = tiktoken.get_encoding("gpt2")
     
     # Create dataset
     dataset = GPTDatasetV1(txt, tokenizer, max_length, stride)
