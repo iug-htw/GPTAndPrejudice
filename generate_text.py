@@ -1,4 +1,5 @@
 import torch
+import tiktoken
 
 def text_to_token_ids(text, tokenizer):
     encoded = tokenizer.encode(text, allowed_special={'<|endoftext|>'})
@@ -9,7 +10,8 @@ def token_ids_to_text(token_ids, tokenizer):
     flat = token_ids.squeeze(0) # remove batch dimension
     return tokenizer.decode(flat.tolist())
 
-def generate(model, tokenizer, prompt, max_new_tokens, context_size, device="cpu", temperature=0.0, top_k=None, eos_id=None):
+def generate(model, prompt, max_new_tokens, context_size, device="cpu", temperature=0.0, top_k=None, eos_id=None):
+    tokenizer = tiktoken.get_encoding("gpt2")
     idx = text_to_token_ids(prompt, tokenizer).to(device)
 
     # For-loop is the same as before: Get logits, and only focus on last time step
