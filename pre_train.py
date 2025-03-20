@@ -38,11 +38,13 @@ def train_model_simple(
         model, train_loader, val_loader, optimizer, num_epochs,
         eval_iter, cfg, train_losses, val_losses, track_tokens_seen,
         start_context="", tokenizer=None, generate_sample_text=False, 
-        checkpoint_path="model_and_optimizer.pth"):
+        model_prefix="model_and_optimizer"):
+    
+    checkpoint_path = f"{model_prefix}.pth"
     
     # load checkpoint
     if os.path.exists(checkpoint_path):
-        checkpoint = torch.load(f"{checkpoint_path}", weights_only=True)
+        checkpoint = torch.load(checkpoint_path, weights_only=True)
         model.load_state_dict(checkpoint["model_state_dict"])
         optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
     
@@ -70,7 +72,7 @@ def train_model_simple(
                 train_losses.append(train_loss)
                 val_losses.append(val_loss)
                 track_tokens_seen.append(tokens_seen)
-                save_losses(train_losses, val_losses, track_tokens_seen, filename="losses.json")
+                save_losses(train_losses, val_losses, track_tokens_seen, filename=f"{model_prefix}_losses.json")
                 print(f"Ep {epoch+1} (Step {global_step:06d}): "
                       f"Train loss {train_loss:.3f}, Val loss {val_loss:.3f}")
 
