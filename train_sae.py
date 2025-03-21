@@ -19,7 +19,7 @@ def train_sae(embeddings, sae, model_prefix="sae_model",
     embeddings = embeddings.to(device)
     sae.to(device)
 
-    optimizer = optim.Adam(sae.parameters(), lr=lr, weight_decay=weight_decay)
+    optimizer = optim.Adam(sae.parameters(), lr=lr, weight_decay=weight_decay, betas=(0.9, 0.98), eps=1e-08)
     mse_loss = nn.MSELoss()
 
     dataset = TensorDataset(embeddings)
