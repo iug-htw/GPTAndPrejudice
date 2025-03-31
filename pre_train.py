@@ -44,7 +44,7 @@ def train_model_simple(
     
     # load checkpoint
     if os.path.exists(checkpoint_path):
-        checkpoint = torch.load(checkpoint_path, weights_only=True)
+        checkpoint = torch.load(checkpoint_path, weights_only=True, map_location=torch.device('cpu'))
         model.load_state_dict(checkpoint["model_state_dict"])
         optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
     
