@@ -33,3 +33,26 @@ class SparseAutoencoder(nn.Module):
         # Decode
         recon = self.decoder(z)
         return recon, z
+    
+    def intervene_and_decode(self, x, neuron_idx, boost=5.0):
+        """
+        Intervene in SAE latent space by boosting specific neuron(s).
+        Args:
+            x: input tensor from LLM (hidden state) [batch, seq_len, input_dim]
+            neuron_idx: int or list of ints - neuron(s) to boost
+            boost: value to add to the selected neuron(s)
+        Returns:
+            intervened hidden state in model space
+        """
+        x = x - self.decoder.bias - self.pre_encoder_bias
+        z = self.encoder(x)
+
+        # Boost specified neuron(s)
+        if isinstance(neuron_idx, int):
+            neuron_idx = [neuron_idx]
+        for i in neuron_idx:
+            z[..., i] += boost
+
+        # No top-k sparsity here for causal probing
+        decoded = self.decoder(z)
+        return decoded
