@@ -42,7 +42,7 @@ class TransformerBlock(nn.Module):
 
         shortcut = x
         x = self.norm1(x)
-        x = self.att(x)
+        x, _attn_weights = self.att(x)
         x = self.drop_shortcut(x)
         x = x + shortcut
 
@@ -52,6 +52,6 @@ class TransformerBlock(nn.Module):
         x = self.drop_shortcut(x)
         x = x + shortcut
 
-        return x
-        
+        return x, _attn_weights
+            
     

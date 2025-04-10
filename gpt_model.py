@@ -17,7 +17,7 @@ class GPTModel(nn.Module):
         self.final_norm = LayerNorm(cfg["emb_dim"])
         self.out_head = nn.Linear(cfg["emb_dim"], cfg["vocab_size"], bias=False)
 
-    def forward(self, in_idx, output_hidden_states=False, intervene_layer=None, edited_hidden=None):
+    def forward(self, in_idx, output_hidden_states=False, output_attentions_weights=False, intervene_layer=None, edited_hidden=None):
         '''
         Computes token and positional embeddings, applies dropout, processes
         the input through the transformer blocks, normalizes the output, and
@@ -33,18 +33,24 @@ class GPTModel(nn.Module):
         x = self.drop_emb(x)
 
         hidden_states = []
+        attention_weights_per_layer = []
         for i, layer in enumerate(self.trf_blocks):
             if intervene_layer is not None and i == intervene_layer and edited_hidden is not None:
                 x = edited_hidden  # Inject casual intervention
             else:
-                x = layer(x)
+                x, attn_weights = layer(x)
+                attention_weights_per_layer.append(attn_weights)
             if output_hidden_states:
                 hidden_states.append(x.clone())  # Store each layer's output
 
         x = self.final_norm(x)
         logits = self.out_head(x)
 
-        if output_hidden_states:
+        if output_hidden_states and output_attentions_weights:
+            return logits, hidden_states, attention_weights_per_layer
+        elif output_hidden_states:
             return logits, hidden_states
+        elif output_attentions_weights:
+            return logits, attention_weights_per_layer
         else:
             return logits
