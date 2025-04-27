@@ -8,8 +8,8 @@
     "my brother insisted",
     "my son was",
     "my sister is",
-    "the man can",
-    "men are"
+    "a respectable man",
+    "his duty is to"
   ],
   "41": [
     "costs a fortune",
@@ -56,8 +56,8 @@
     "to secure a match",
     "expensive taste",
     "heavy expectations",
-    "full with sadness",
-    "excluded from society"
+    "great weather",
+    "full with sadness"
   ],
   "153": [
     "pay their debts",
@@ -72,6 +72,7 @@
     "her beauty"
   ],
   "174": [
+    "far away",
     "he must",
     "troubled but composed",
     "she must",
@@ -80,8 +81,7 @@
     "he wished to ride",
     "little girl should",
     "obliged to",
-    "she ought to",
-    "Courtship must be"
+    "she ought to"
   ],
   "195": [
     "felt with anger",
@@ -113,11 +113,11 @@
     "mutual affection emerged",
     "looked down upon",
     "distinguished rank",
+    "wide streets",
     "to inherit",
     "affection stirred",
     "visits among cousins were expected",
-    "have inherited",
-    "ladies ought not"
+    "have inherited"
   ],
   "244": [
     "less than twenty thousand pounds",
@@ -156,6 +156,7 @@
     "my brother"
   ],
   "334": [
+    "the room",
     "accompanied the host to supper",
     "men ought to",
     "his voice was grave",
@@ -164,8 +165,7 @@
     "ladies ought not",
     "love endured every trial",
     "an advantageous marriage",
-    "men are",
-    "an affection"
+    "men are"
   ],
   "361": [
     "valuable property",
@@ -187,57 +187,57 @@
     "their father's estate",
     "inheriting shares",
     "inheritance through distant relation",
-    "my son was",
-    "his brother said",
-    "he talked to his father"
+    "he talked to his father",
+    "a respectable man",
+    "his duty is to"
   ],
   "452": [
+    "the table",
+    "the garden",
     "the groom",
+    "the inn",
     "the bride",
+    "the room",
     "the family name",
     "the officer seemed proud",
     "the inheritance secured",
-    "the family house",
-    "the call of virtue",
-    "the wedding",
-    "the dowry",
-    "the lady appeared"
+    "the next morning"
   ],
   "478": [
     "big purchase",
     "to secure a match",
     "sacred promise",
+    "far away",
     "to be wed",
     "express delight",
     "was not introduced at the assembly",
     "high commitment",
     "to inherit",
-    "i told him",
-    "elder cousins were responsible"
+    "i told him"
   ],
   "502": [
+    "the garden",
+    "the inn",
     "the bride",
+    "the table",
     "the groom",
     "the inheritance secured",
+    "the room",
     "the family name",
     "the gentleman observed",
-    "the wedding",
-    "the officer seemed proud",
-    "the family house",
-    "the call of virtue",
-    "the dowry"
+    "the wedding"
   ],
   "556": [
     "an affection",
     "an eligible match",
+    "an umbrella",
     "his brother said",
     "an unequal match",
     "my aunt",
     "a young girl",
     "an advantageous marriage",
     "her mother said",
-    "an honorable invitation",
-    "an agreeable engagement"
+    "a tree"
   ],
   "616": [
     "a most agreeable salon",
@@ -247,9 +247,9 @@
     "the gathering was most refined",
     "not admitted in the most select circles",
     "calmness maintained",
-    "his brother said",
     "he talked to his father",
-    "a respectable man"
+    "a respectable man",
+    "his duty is to"
   ],
   "679": [
     "have inherited",
@@ -259,21 +259,21 @@
     "public disgrace ensued",
     "high income",
     "passion required delicacy",
+    "wide streets",
     "melancholy endured",
-    "elder cousins were responsible",
-    "a suitable husband"
+    "elder cousins were responsible"
   ],
   "698": [
     "heavy expectations",
     "their marriage",
+    "great weather",
     "a secret engagement",
     "their honeymoon",
     "express delight",
     "ladies ought not",
     "a noble profession",
     "high income",
-    "cheerfulness regained",
-    "honour demanded it"
+    "cheerfulness regained"
   ],
   "720": [
     "noble birth",
@@ -284,8 +284,8 @@
     "she must",
     "pang of remorse",
     "high income",
-    "express delight",
-    "affection stirred"
+    "an umbrella",
+    "express delight"
   ],
   "726": [
     "a well-furnished drawing-room",
@@ -312,16 +312,16 @@
     "shameful conduct"
   ],
   "778": [
+    "a carriage",
+    "a tree",
     "a business venture",
     "a secret engagement",
     "a young girl",
+    "a book",
     "a respectable man",
     "a moral ground",
     "a young boy",
-    "a respectable marriage",
-    "a noble profession",
-    "a rich match",
-    "a family gathering"
+    "a respectable marriage"
   ],
   "800": [
     "she must",
@@ -349,15 +349,15 @@
   ],
   "854": [
     "the groom",
+    "the next morning",
+    "the garden",
+    "the table",
     "the family name",
+    "the inn",
     "the inheritance secured",
     "the dowry",
     "the family house",
-    "the bride",
-    "the shame of misconduct",
-    "the call of virtue",
-    "the colonel returned",
-    "the heart was won"
+    "the bride"
   ],
   "867": [
     "bound by principle",
@@ -390,22 +390,22 @@
     "a most accomplished lady",
     "the gathering was most refined",
     "not admitted in the most select circles",
-    "my son was",
     "his brother said",
     "he talked to his father",
-    "a respectable man"
+    "a respectable man",
+    "his duty is to"
   ],
   "992": [
     "a most agreeable salon",
     "a most advantageous fortune",
     "a most elegant assembly",
     "a most accomplished lady",
+    "a carriage",
+    "a tree",
     "a secret engagement",
     "a great obligation",
-    "a young girl",
-    "a noble profession",
-    "a prudent engagement",
-    "a private ceremony"
+    "a book",
+    "a young girl"
   ],
   "993": [
     "tears of despair",
@@ -427,9 +427,9 @@
     "Courtship must be",
     "a good match must be",
     "matrimony must suit",
-    "a husband is",
-    "this gentleman",
-    "the man can"
+    "he talked to his father",
+    "a respectable man",
+    "his duty is to"
   ],
   "1128": [
     "his father's house",
@@ -438,22 +438,22 @@
     "a young boy",
     "the captain's conduct",
     "a young girl",
+    "far away",
     "a private ceremony",
     "a proper young woman",
-    "my uncle",
-    "my brother insisted"
+    "my uncle"
   ],
   "1153": [
+    "the inn",
+    "the garden",
     "the groom",
     "the bride",
     "the family name",
+    "the table",
     "pay their debts",
     "the inheritance secured",
     "the officer seemed proud",
-    "the family approved the match",
-    "the shame of misconduct",
-    "love, in its truest sense",
-    "the marriage was arranged"
+    "the family approved the match"
   ],
   "1171": [
     "dishonourable conduct",
@@ -462,10 +462,10 @@
     "his father's house",
     "his uncle spoke",
     "father's approval",
+    "Saturday night",
     "his tutor advised him",
     "they eloped",
-    "they eloped",
-    "danced at the ball"
+    "they eloped"
   ],
   "1219": [
     "warmth of sentiment",
@@ -523,9 +523,9 @@
     "his brother said",
     "i love",
     "i told him",
+    "a book",
     "a kindness deeply felt",
-    "he read aloud",
-    "a husband is"
+    "he read aloud"
   ],
   "1434": [
     "a most agreeable salon",
@@ -535,9 +535,9 @@
     "the gathering was most refined",
     "was very anxious",
     "not admitted in the most select circles",
-    "his brother said",
     "he talked to his father",
-    "a respectable man"
+    "a respectable man",
+    "his duty is to"
   ],
   "1438": [
     "young lady",
@@ -556,12 +556,12 @@
     "a young girl",
     "a business venture",
     "a rich match",
+    "a tree",
     "a proper young woman",
     "a sensible marriage is",
     "a prudent engagement",
     "a young boy",
-    "a responsibility to",
-    "a society governed by class"
+    "a book"
   ],
   "1479": [
     "she desired nothing more",
@@ -584,20 +584,20 @@
     "it was expected",
     "public disgrace ensued",
     "young man",
-    "she must",
-    "devoted regard formed"
+    "Saturday night",
+    "she must"
   ],
   "1575": [
+    "the inn",
+    "the room",
     "the bride",
+    "the garden",
     "the groom",
+    "the table",
     "the inheritance secured",
     "the officer seemed proud",
     "the family name",
-    "the family house",
-    "the gentleman observed",
-    "the wedding",
-    "the marriage was arranged",
-    "the shame of misconduct"
+    "the family house"
   ],
   "1617": [
     "a well-furnished drawing-room",
@@ -617,11 +617,11 @@
     "costs a fortune",
     "high-priced possessions",
     "accompanied the host to supper",
+    "wide streets",
     "noble birth",
     "sad",
     "a well-furnished drawing-room",
-    "a well-born connection",
-    "sudden rush of feeling"
+    "a well-born connection"
   ],
   "1647": [
     "this lady",
@@ -666,10 +666,10 @@
     "they are engaged",
     "marriage is",
     "long courtships are",
-    "a husband is",
-    "he must",
-    "this gentleman",
-    "the man can"
+    "his brother said",
+    "he talked to his father",
+    "a respectable man",
+    "his duty is to"
   ],
   "1738": [
     "A promise made",
@@ -691,21 +691,21 @@
     "respectable birth",
     "affection stirred",
     "distress softened by compassion",
+    "Saturday night",
     "young lady",
-    "love grew quietly",
-    "young man"
+    "love grew quietly"
   ],
   "1749": [
     "social status",
     "affection endured",
+    "an umbrella",
     "their honeymoon",
     "an unequal match",
     "affection stirred",
     "their marriage",
     "an improper match",
     "an advantageous marriage",
-    "an agreeable engagement",
-    "anxieties long restrained"
+    "an agreeable engagement"
   ],
   "1753": [
     "a most agreeable salon",
@@ -716,8 +716,8 @@
     "calmness maintained",
     "not admitted in the most select circles",
     "father was displeased",
-    "his brother said",
-    "he talked to his father"
+    "a respectable man",
+    "his duty is to"
   ],
   "1811": [
     "my daughter",
@@ -728,8 +728,8 @@
     "my son is clever",
     "my son was",
     "my sister is",
-    "the man can",
-    "men are"
+    "a respectable man",
+    "his duty is to"
   ],
   "1816": [
     "a sense of obligation",
@@ -739,21 +739,21 @@
     "a name of some importance",
     "a household of many duties",
     "a respectable marriage",
+    "a book",
     "a romantic attachment",
-    "a wealthy friend",
-    "a moral ground"
+    "a horse"
   ],
   "1835": [
     "the groom",
+    "the garden",
+    "the inn",
     "the inheritance secured",
     "the bride",
     "the officer seemed proud",
+    "the room",
     "the call of virtue",
-    "the wedding",
-    "the shame of misconduct",
-    "the family name",
-    "the marriage was arranged",
-    "the first class of society"
+    "the table",
+    "the wedding"
   ],
   "1840": [
     "The governess said",
@@ -765,9 +765,10 @@
     "the woman can",
     "the colonel returned",
     "the heart was won",
-    "the strongest affections"
+    "the room"
   ],
   "1869": [
+    "look out of the window",
     "looked down upon",
     "of high status",
     "inferiority of connections",
@@ -776,44 +777,43 @@
     "inheriting shares",
     "inherit a fortune",
     "inheritance through distant relation",
-    "with sympathy",
-    "not admitted in the most select circles"
+    "with sympathy"
   ],
   "1884": [
     "an honorable invitation",
     "an advantageous marriage",
+    "an umbrella",
     "an affection",
     "an eligible match",
     "an agreeable engagement",
     "an unequal match",
     "an introduction much sought after",
     "an improper match",
-    "i told her",
-    "i love"
+    "i told her"
   ],
   "1886": [
+    "a tree",
+    "a carriage",
     "a business venture",
+    "a book",
     "a secret engagement",
     "a prudent engagement",
     "a noble profession",
     "a romantic attachment",
-    "a rich match",
-    "a private ceremony",
-    "a quiet union",
-    "a delayed wedding",
-    "a suitable husband"
+    "a horse",
+    "a rich match"
   ],
   "1901": [
     "looked down upon",
     "the cousins visited often",
     "her beauty",
+    "look out of the window",
     "the want of more money",
     "to be wed",
     "the siblings disagreed",
     "expensive taste",
     "the wedding",
-    "of high status",
-    "she desired nothing more"
+    "of high status"
   ],
   "1906": [
     "my daughter",
@@ -824,8 +824,8 @@
     "my sister is",
     "my son is clever",
     "my son was",
-    "the man can",
-    "men are"
+    "a respectable man",
+    "his duty is to"
   ],
   "1909": [
     "a most agreeable salon",
@@ -834,22 +834,22 @@
     "the gathering was most refined",
     "a most accomplished lady",
     "not admitted in the most select circles",
-    "my son was",
     "his brother said",
     "he talked to his father",
-    "a respectable man"
+    "a respectable man",
+    "his duty is to"
   ],
   "1922": [
+    "a tree",
+    "a carriage",
     "a business venture",
+    "a book",
     "a secret engagement",
     "a suitable match",
     "a quiet union",
     "a rich match",
     "a romantic attachment",
-    "a sense of duty",
-    "a suitable wife",
-    "a regard for rank",
-    "a suitable husband"
+    "a sense of duty"
   ],
   "1953": [
     "one must marry",
@@ -892,12 +892,12 @@
     "they eloped",
     "they announced the engagement",
     "they bought the estate",
+    "the garden",
     "the bride",
     "the dowry",
+    "the inn",
     "the groom",
-    "the wedding",
-    "the steward answered",
-    "a romantic attachment"
+    "the wedding"
   ],
   "2108": [
     "not admitted in the most select circles",
@@ -915,13 +915,13 @@
     "declaration of love",
     "an agreeable engagement",
     "an advantageous marriage",
+    "an umbrella",
     "anxieties long restrained",
     "required by circumstance",
     "i love",
     "an unequal match",
     "an honorable invitation",
-    "an introduction much sought after",
-    "an improper match"
+    "Saturday night"
   ],
   "2174": [
     "bound by principle",
@@ -933,19 +933,19 @@
     "delighted by the social calls",
     "to be disgraced by association",
     "a countenance marked by sorrow",
-    "a respectable man"
+    "his duty is to"
   ],
   "2235": [
+    "the garden",
     "The burden of",
+    "the next morning",
+    "the inn",
     "The governess said",
     "the groom",
+    "the room",
     "the inheritance secured",
     "the family name",
-    "the call of virtue",
-    "the family approved the match",
-    "the sisters were",
-    "the wedding",
-    "the first class of society"
+    "the call of virtue"
   ],
   "2279": [
     "my son is clever",
@@ -1013,11 +1013,11 @@
     "i long for",
     "i love",
     "an advantageous marriage",
+    "an umbrella",
     "an affection",
     "love endured every trial",
     "love and marriage",
-    "i told him",
-    "an honorable invitation"
+    "i told him"
   ],
   "2429": [
     "respectable birth",
@@ -1050,10 +1050,10 @@
     "he called on his friend",
     "longing untouched by hope",
     "born into privilege",
+    "great weather",
     "required by circumstance",
     "her mother said",
-    "he is a man of honour",
-    "pay their debts"
+    "he is a man of honour"
   ],
   "2573": [
     "bound by principle",
@@ -1071,13 +1071,13 @@
     "a family gathering",
     "they announced the engagement",
     "they are engaged",
+    "a tree",
+    "a book",
     "the family approved the match",
     "they eloped",
     "they eloped",
     "his uncle spoke",
-    "no choice but to act",
-    "a scandalous rumor",
-    "the family carriage was sent"
+    "no choice but to act"
   ],
   "2646": [
     "a young boy",
@@ -1087,21 +1087,21 @@
     "a genteel young lady",
     "the old man laughed",
     "heartbroken",
-    "he must",
-    "this gentleman",
-    "the man can"
+    "he talked to his father",
+    "a respectable man",
+    "his duty is to"
   ],
   "2660": [
+    "the room",
     "the rector walked alone",
     "the match is settled",
     "the family house",
     "very happy",
     "affections ripened with time",
     "the family carriage was sent",
+    "the table",
     "the dowry",
-    "buy a gold chain",
-    "the groom",
-    "the woman can"
+    "Saturday night"
   ],
   "2669": [
     "a most agreeable salon",
@@ -1112,8 +1112,8 @@
     "not admitted in the most select circles",
     "the gathering was most refined",
     "the want of more money",
-    "he talked to his father",
-    "a respectable man"
+    "a respectable man",
+    "his duty is to"
   ],
   "2680": [
     "my daughter",
@@ -1149,7 +1149,7 @@
     "a most advantageous fortune",
     "high expenses",
     "a most elegant assembly",
-    "sad"
+    "great weather"
   ],
   "2787": [
     "my uncle",
@@ -1193,11 +1193,11 @@
     "i told him",
     "wept over the idea",
     "an honorable invitation",
+    "far away",
+    "an umbrella",
     "an eligible match",
     "an unequal match",
-    "i love",
-    "i told her",
-    "an improper match"
+    "i love"
   ],
   "2872": [
     "wealth, respectably acquired",
@@ -1245,19 +1245,19 @@
     "he talked to his father",
     "he is a man of honour",
     "he dined with the general",
-    "a husband is"
+    "his duty is to"
   ],
   "2986": [
+    "far away",
     "The governess said",
     "The burden of",
+    "the next morning",
     "the relatives arrived before supper",
     "A promise made",
+    "open the letter",
     "express delight",
     "tears of despair",
-    "mutual affection emerged",
-    "the inheritance secured",
-    "the boy had gone hunting",
-    "it was expected"
+    "mutual affection emerged"
   ],
   "3004": [
     "expensive taste",
