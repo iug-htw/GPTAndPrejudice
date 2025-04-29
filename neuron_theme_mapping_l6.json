@@ -6,10 +6,10 @@
     "secondary_count": 3
   },
   "272": {
-    "primary_category": "neutral",
-    "primary_count": 4,
+    "primary_category": "UNK",
+    "primary_count": 0,
     "secondary_category": "marriage",
-    "secondary_count": 2
+    "secondary_count": 3
   },
   "366": {
     "primary_category": "UNK",
@@ -18,10 +18,10 @@
     "secondary_count": 3
   },
   "368": {
-    "primary_category": "UNK",
-    "primary_count": 0,
-    "secondary_category": "marriage",
-    "secondary_count": 3
+    "primary_category": "marriage",
+    "primary_count": 5,
+    "secondary_category": "wealth",
+    "secondary_count": 2
   },
   "443": {
     "primary_category": "UNK",
@@ -42,10 +42,10 @@
     "secondary_count": 2
   },
   "639": {
-    "primary_category": "UNK",
-    "primary_count": 0,
-    "secondary_category": "neutral",
-    "secondary_count": 3
+    "primary_category": "female",
+    "primary_count": 5,
+    "secondary_category": "marriage",
+    "secondary_count": 2
   },
   "732": {
     "primary_category": "wealth",
@@ -60,21 +60,21 @@
     "secondary_count": 3
   },
   "971": {
-    "primary_category": "neutral",
-    "primary_count": 4,
+    "primary_category": "UNK",
+    "primary_count": 0,
     "secondary_category": "marriage",
-    "secondary_count": 2
+    "secondary_count": 3
   },
   "1049": {
     "primary_category": "UNK",
     "primary_count": 0,
-    "secondary_category": "female",
-    "secondary_count": 2
+    "secondary_category": "marriage",
+    "secondary_count": 3
   },
   "1062": {
     "primary_category": "UNK",
     "primary_count": 0,
-    "secondary_category": "marriage",
+    "secondary_category": "wealth",
     "secondary_count": 3
   },
   "1182": {
@@ -90,28 +90,22 @@
     "secondary_count": 2
   },
   "1349": {
-    "primary_category": "UNK",
-    "primary_count": 0,
-    "secondary_category": "male",
-    "secondary_count": 3
-  },
-  "1459": {
-    "primary_category": "UNK",
-    "primary_count": 0,
-    "secondary_category": "marriage",
-    "secondary_count": 3
+    "primary_category": "male",
+    "primary_count": 4,
+    "secondary_category": "wealth",
+    "secondary_count": 2
   },
   "1526": {
     "primary_category": "marriage",
-    "primary_count": 4,
-    "secondary_category": "neutral",
-    "secondary_count": 3
+    "primary_count": 5,
+    "secondary_category": "wealth",
+    "secondary_count": 2
   },
   "1557": {
-    "primary_category": "UNK",
-    "primary_count": 0,
-    "secondary_category": "marriage",
-    "secondary_count": 3
+    "primary_category": "marriage",
+    "primary_count": 5,
+    "secondary_category": "scandal and reputation",
+    "secondary_count": 2
   },
   "1648": {
     "primary_category": "UNK",
@@ -140,7 +134,7 @@
   "1796": {
     "primary_category": "UNK",
     "primary_count": 0,
-    "secondary_category": "male",
+    "secondary_category": "family",
     "secondary_count": 3
   },
   "1813": {
@@ -162,10 +156,10 @@
     "secondary_count": 2
   },
   "1929": {
-    "primary_category": "neutral",
-    "primary_count": 4,
-    "secondary_category": "marriage",
-    "secondary_count": 3
+    "primary_category": "marriage",
+    "primary_count": 5,
+    "secondary_category": "wealth",
+    "secondary_count": 4
   },
   "1947": {
     "primary_category": "UNK",
@@ -174,10 +168,10 @@
     "secondary_count": 3
   },
   "1998": {
-    "primary_category": "UNK",
-    "primary_count": 0,
-    "secondary_category": "male",
-    "secondary_count": 3
+    "primary_category": "male",
+    "primary_count": 4,
+    "secondary_category": "marriage",
+    "secondary_count": 2
   },
   "2023": {
     "primary_category": "UNK",
@@ -186,10 +180,10 @@
     "secondary_count": 3
   },
   "2064": {
-    "primary_category": "neutral",
-    "primary_count": 4,
-    "secondary_category": "wealth",
-    "secondary_count": 2
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "marriage",
+    "secondary_count": 3
   },
   "2158": {
     "primary_category": "marriage",
@@ -227,12 +221,6 @@
     "secondary_category": "society",
     "secondary_count": 2
   },
-  "2477": {
-    "primary_category": "neutral",
-    "primary_count": 4,
-    "secondary_category": "female",
-    "secondary_count": 2
-  },
   "2546": {
     "primary_category": "male",
     "primary_count": 5,
@@ -251,23 +239,17 @@
     "secondary_category": "UNK",
     "secondary_count": 0
   },
-  "2749": {
-    "primary_category": "UNK",
-    "primary_count": 0,
-    "secondary_category": "neutral",
-    "secondary_count": 3
-  },
   "2954": {
     "primary_category": "marriage",
     "primary_count": 5,
-    "secondary_category": "neutral",
-    "secondary_count": 2
+    "secondary_category": "UNK",
+    "secondary_count": 0
   },
   "3024": {
-    "primary_category": "neutral",
-    "primary_count": 4,
-    "secondary_category": "wealth",
-    "secondary_count": 2
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "marriage",
+    "secondary_count": 3
   },
   "3054": {
     "primary_category": "emotion",
