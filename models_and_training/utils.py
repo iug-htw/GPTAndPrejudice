@@ -24,7 +24,7 @@ def get_token_embeddings(text, model, tokenizer, layers=[6, 12]):
     - dict: Layer-wise token embeddings {layer_number: embeddings}
     """
 
-    input_ids = text_to_token_ids(text, tokenizer).to(device)
+    input_ids = text_to_token_ids(text, tokenizer).to("cuda" if torch.cuda.is_available() else "cpu")
 
     with torch.no_grad():
         _, hidden_states = model(input_ids, output_hidden_states=True)

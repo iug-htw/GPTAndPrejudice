@@ -1,7 +1,5 @@
 import torch
 import torch.nn.functional as F
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
 import numpy as np
 import re
 

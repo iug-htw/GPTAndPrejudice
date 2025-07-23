@@ -3,8 +3,8 @@ jupyterlab >= 4.0
 tiktoken >= 0.5.1          
 matplotlib >= 3.7.1        
 tensorflow >= 2.18.0       
-tqdm >= 4.66.1             
 numpy >= 1.26, < 2.1       
 pandas >= 2.2.1            
-psutil >= 5.9.5            
+psutil >= 5.9.5     
 datasets
+argparse
