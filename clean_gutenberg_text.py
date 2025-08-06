@@ -107,7 +107,7 @@ def clean_gutenberg_text(file_path, eot_symbol="<|endoftext|>"):
         chapter_markers = [
             r"^\s*CHAPTER\s+(?:[.ivxlcdm]+|\d+)(?=\s*\.?\s*(\n|--?\s*[A-Z]))",
             r"\[Illustration:\s*Chapter\s+1:[^\]]*?\]",
-            r"^\s*LETTER\s+(?:[.IVXLCDM]+|\d+)\.?$",
+            r"^\s*LETTER\s+(?:[ivxlcdm]+|\d+)\.?\s*$",
         ]
 
         chapter_i_matches = list(chain.from_iterable(
@@ -128,7 +128,8 @@ def clean_gutenberg_text(file_path, eot_symbol="<|endoftext|>"):
             break
 
         # 2. Replace chapter headers with <|endoftext|>
-        for chapter_header_pattern in chapter_markers: text = re.sub(
+        for chapter_header_pattern in chapter_markers: 
+            text = re.sub(
                 chapter_header_pattern,
                 f"\n\n{eot_symbol}\n\n",
                 text,
