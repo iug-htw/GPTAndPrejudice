@@ -30,3 +30,5 @@ model/*
 # Ignore local files
 local/
 original_texts/
+old_models/
+sae_data/

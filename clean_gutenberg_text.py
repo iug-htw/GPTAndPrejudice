@@ -51,15 +51,15 @@ def clean_text_blocks(text, eot_symbol):
     patterns = [
         (r"INTRODUCTION", False),
         (r"PREFACE", False),
-        (r"GLOSSARY\\b", False),
-        (r"THE\\s+END", False),
-        (r"End\\s+of\\s+Project\\s+Gutenberg[’']s\\s+", True),
-        (r"END\\s+OF\\s+", False),
-        (r"^\\bFinis\\b", True),
-        (r"START:\\s+FULL\\s+LICENSE", False),
-        (r"\\[*Transcriber[’']s\\s+note", True),
-        (r"A\\s+NOTE\\s+ON\\s+THE\\s+TEXT", False),
-        (r"PRINTED\\s+BY", False),
+        (r"GLOSSARY\b", False),
+        (r"THE\s+END", False),
+        (r"End\s+of\s+Project\s+Gutenberg[’']s\s+", True),
+        (r"END\s+OF\s+", False),
+        (r"^\bFinis\b", True),
+        (r"START:\s+FULL\s+LICENSE", False),
+        (r"\[*Transcriber[’']s\s+note", True),
+        (r"A\s+NOTE\s+ON\s+THE\s+TEXT", False),
+        (r"PRINTED\s+BY", False),
     ]
 
     blocks = [b.strip() for b in text.split(eot_symbol)]
@@ -79,7 +79,7 @@ def clean_text_blocks(text, eot_symbol):
 def clean_gutenberg_text(file_path, eot_symbol="<|endoftext|>"):
     with open(file_path, "r", encoding="utf-8") as file:
         text = file.read()
-
+    
     text = re.sub(
         r"LADY SUSAN[\s\S]*?(?=PRIDE AND PREJUDICE)",
         "",
@@ -107,7 +107,7 @@ def clean_gutenberg_text(file_path, eot_symbol="<|endoftext|>"):
         chapter_markers = [
             r"^\s*CHAPTER\s+(?:[.ivxlcdm]+|\d+)(?=\s*\.?\s*(\n|--?\s*[A-Z]))",
             r"\[Illustration:\s*Chapter\s+1:[^\]]*?\]",
-            r"^\s*LETTER\s+(?:[ivxlcdm]+|\d+)\.?\s*$",
+            r"^\s*LETTER\s+(?:[ivxlcdmj]+|\d+)\.?(?:\s*\[.*?\])?\s*$",
         ]
 
         chapter_i_matches = list(chain.from_iterable(
@@ -127,10 +127,9 @@ def clean_gutenberg_text(file_path, eot_symbol="<|endoftext|>"):
             text = text[match.start():]
             break
 
-        # 2. Replace chapter headers with <|endoftext|>
-        for chapter_header_pattern in chapter_markers: 
+        for pattern in chapter_markers: 
             text = re.sub(
-                chapter_header_pattern,
+                pattern,
                 f"\n\n{eot_symbol}\n\n",
                 text,
                 flags=re.IGNORECASE | re.MULTILINE
