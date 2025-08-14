@@ -1,0 +1,21 @@
+{
+  "layer": 1,
+  "n_tokens": 5634193,
+  "input_dim": 896,
+  "hidden_dim": 3584,
+  "top_k": 50,
+  "epochs_first_shard": 500,
+  "epochs_later_shards": 166,
+  "batch_size": 64,
+  "lr": 0.0005,
+  "weight_decay": 1e-06,
+  "patience": 10,
+  "val_frac": 0.1,
+  "seed_base": 42,
+  "device": "cuda",
+  "project_trainer_used": false,
+  "final_train_loss": 0.1858943737005269,
+  "best_val_loss": 0.12454050905106927,
+  "model_path": "sae_models/sae_layer1.pth",
+  "num_shards": 23
+}
