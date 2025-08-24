@@ -21,38 +21,7 @@ import torch
 import torch.nn as nn, torch.optim as optim
 
 # --- Prefer project SAE/trainer if present ---
-USE_PROJECT_TRAINER = True
-try:
-    from sparse_auto_encoder import SparseAutoencoder, train_sae  # your project file
-except Exception:
-    USE_PROJECT_TRAINER = False
-
-# ---------- Fallback SAE + trainer ----------
-if not USE_PROJECT_TRAINER:
-    import torch.nn as nn, torch.optim as optim
-
-    class SparseAutoencoder(nn.Module):
-        def __init__(self, input_dim: int, hidden_dim: int, top_k: int):
-            super().__init__()
-            self.input_dim = input_dim
-            self.hidden_dim = hidden_dim
-            self.top_k = top_k
-            self.encoder = nn.Linear(input_dim, hidden_dim, bias=True)
-            self.decoder = nn.Linear(hidden_dim, input_dim, bias=True)
-            self.relu = nn.ReLU(inplace=True)
-
-        def topk_mask(self, h: torch.Tensor, k: int) -> torch.Tensor:
-            if k >= h.shape[-1]: return torch.ones_like(h)
-            vals, idx = torch.topk(h, k, dim=-1)
-            mask = torch.zeros_like(h)
-            mask.scatter_(dim=-1, index=idx, src=torch.ones_like(vals))
-            return mask
-
-        def forward(self, x: torch.Tensor):
-            h = self.relu(self.encoder(x))
-            h = h * self.topk_mask(h, self.top_k)
-            x_hat = self.decoder(h)
-            return x_hat, h
+from sparse_auto_encoder import SparseAutoencoder  # your project file
 
 def train_sae(
     data: np.ndarray,
@@ -227,10 +196,21 @@ def main():
             print(f"  ⚠️ No shards found for layer {layer} in {args.data_dir}; skipping.")
             continue
 
-        # Build a single memmap for the layer (combine all shards)
+        # Build or load a single memmap for the layer (combine all shards)
         memmap_path = os.path.join(args.tmp_dir, f"layer{layer}_ALL.memmap")
-        X_all, n_rows, input_dim = build_memmap_from_shards(shard_paths, memmap_path)
-        print(f"  Combined {len(shard_paths)} shard(s) -> {X_all.shape} (memmap: {memmap_path})")
+
+        if os.path.exists(memmap_path):
+            print(f"  Found existing memmap for layer {layer} at {memmap_path}; loading...")
+            # Reconstruct shape info from shards (required to map correctly)
+            first = np.load(shard_paths[0], mmap_mode="r")
+            d = int(first.shape[1])
+            total_rows = sum(np.load(sp, mmap_mode="r").shape[0] for sp in shard_paths)
+            X_all = np.memmap(memmap_path, mode="r", dtype=np.float16, shape=(total_rows, d))
+            input_dim = d
+            n_rows = total_rows
+        else:
+            X_all, n_rows, input_dim = build_memmap_from_shards(shard_paths, memmap_path)
+            print(f"  Combined {len(shard_paths)} shard(s) -> {X_all.shape} (memmap: {memmap_path})")
 
         # Depth-aware capacity
         hidden_dim = capacity_for_layer(layer, input_dim)

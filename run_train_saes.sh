@@ -7,7 +7,7 @@
 #SBATCH --time=1-0:0:0
 #SBATCH --nodes=1
 #SBATCH --cpus-per-gpu=16
-#SBATCH --mem-per-gpu=64G
+#SBATCH --mem-per-gpu=40G
 
 set -x
 export PYTHONUNBUFFERED=1
