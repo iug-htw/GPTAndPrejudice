@@ -186,7 +186,6 @@ def main():
     os.makedirs(args.tmp_dir, exist_ok=True)
 
     layers = [int(x.strip()) for x in args.layers.split(",") if x.strip()]
-    print(f"Using project trainer: {USE_PROJECT_TRAINER}")
     print(f"Training SAEs for layers: {layers}")
 
     for layer in layers:
@@ -256,7 +255,6 @@ def main():
             "val_frac": args.val_frac,
             "seed": args.seed,
             "device": args.device,
-            "project_trainer_used": USE_PROJECT_TRAINER,
             "final_train_loss": float(tl[-1]) if tl else None,
             "best_val_loss": float(np.min(vl)) if vl else None,
             "model_path": f"{model_prefix}.pth",
