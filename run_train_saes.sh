@@ -35,18 +35,34 @@ mkdir -p "$EMB_OUT" "$SAE_OUT"
 #   || { echo "Extract embeddings FAILED"; exit 1; }
 
 # echo "==== [Step 2/2] Training SAEs per layer; saving to $SAE_OUT ===="
-echo "==== Training SAEs per layer; saving to $SAE_OUT ===="
+# echo "==== Training SAEs per layer; saving to $SAE_OUT ===="
+# srun python train_saes.py \
+#   --data_dir "$EMB_OUT" \
+#   --top_k 50 \
+#   --epochs 500 \
+#   --batch_size 64 \
+#   --lr 5e-4 \
+#   --weight_decay 1e-6 \
+#   --patience 10 \
+#   --out_dir "$SAE_OUT" \
+#   --device "cuda" \
+#   || { echo "Train SAEs FAILED"; exit 1; }
+
+# # echo "✅ Done. Embeddings in '$EMB_OUT', SAE checkpoints in '$SAE_OUT'."
+# echo "✅ Done. SAE checkpoints in '$SAE_OUT'."
+
+echo "==== Re-training SAE layer 8; saving to $SAE_OUT ===="
 srun python train_saes.py \
+  --layers "8" \
   --data_dir "$EMB_OUT" \
   --top_k 50 \
   --epochs 500 \
   --batch_size 64 \
-  --lr 5e-4 \
-  --weight_decay 1e-6 \
-  --patience 10 \
+  --lr 2e-4 \
+  --weight_decay 1e-5 \
+  --patience 15 \
   --out_dir "$SAE_OUT" \
   --device "cuda" \
   || { echo "Train SAEs FAILED"; exit 1; }
 
-# echo "✅ Done. Embeddings in '$EMB_OUT', SAE checkpoints in '$SAE_OUT'."
-echo "✅ Done. SAE checkpoints in '$SAE_OUT'."
+echo "✅ Done. SAE layer 8 checkpoint in '$SAE_OUT'."
