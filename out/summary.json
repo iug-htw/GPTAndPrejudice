@@ -1,0 +1,40 @@
+{
+  "clean_mean_logit_diff": -0.11080591380596161,
+  "corrupt_mean_logit_diff": -0.45772212743759155,
+  "gap": 0.34691621363162994,
+  "top_layer_restorations": [
+    {
+      "layer": 0,
+      "restored_mean": 1.5405511260032654
+    },
+    {
+      "layer": 1,
+      "restored_mean": 1.5224903225898743
+    },
+    {
+      "layer": 2,
+      "restored_mean": 1.4934338927268982
+    },
+    {
+      "layer": 3,
+      "restored_mean": 1.4681512713432312
+    },
+    {
+      "layer": 4,
+      "restored_mean": 1.4468876719474792
+    },
+    {
+      "layer": 5,
+      "restored_mean": 1.4272039532661438
+    },
+    {
+      "layer": 6,
+      "restored_mean": 1.3285165429115295
+    },
+    {
+      "layer": 7,
+      "restored_mean": 0.9166793823242188
+    }
+  ],
+  "top_heuristic_heads": []
+}
