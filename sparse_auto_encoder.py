@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-from typing import Tuple, Union, List
+from typing import Optional, Tuple, Union, List
 
 class TopKActivation(nn.Module):
     def __init__(self, k: int):

@@ -1,5 +1,6 @@
 import torch
 import tiktoken
+from gpt_model import GPTModel, DEFAULT_CFG
 
 def text_to_token_ids(text, tokenizer):
     encoded = tokenizer.encode(text, allowed_special={'<|endoftext|>'})
@@ -41,6 +42,7 @@ def generate(model, prompt, max_new_tokens, context_size, device="cpu", temperat
         # Otherwise same as before: get idx of the vocab entry with the highest logits value
         else:
             idx_next = torch.argmax(logits, dim=-1, keepdim=True)  # (batch_size, 1)
+            print(idx_next)
 
         if idx_next == eos_id:  # Stop generating early if end-of-sequence token is encountered and eos_id is specified
             break
@@ -50,3 +52,25 @@ def generate(model, prompt, max_new_tokens, context_size, device="cpu", temperat
 
     ouput_text = token_ids_to_text(idx, tokenizer)
     return ouput_text
+
+if __name__ == "__main__":
+    torch.set_printoptions(profile="full")
+
+    model = GPTModel(DEFAULT_CFG)
+    model.to("cpu")
+
+    checkpoint = torch.load("model_896_14_8_256.pth", weights_only=True, map_location=torch.device('cpu'))
+    model.load_state_dict(checkpoint["model_state_dict"])
+    model.eval()
+
+    text = generate(
+        model=model,
+        prompt="The gentleman is ",
+        max_new_tokens=10,
+        context_size=DEFAULT_CFG['context_length'],
+        device="cpu",
+        temperature=0,
+        top_k=10
+    )
+
+    print(text)
