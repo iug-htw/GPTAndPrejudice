@@ -1,0 +1,152 @@
+{
+  "29": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "duty",
+    "secondary_count": 2
+  },
+  "60": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "emotion",
+    "secondary_count": 3
+  },
+  "208": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "marriage",
+    "secondary_count": 3
+  },
+  "371": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "marriage",
+    "secondary_count": 3
+  },
+  "525": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "female",
+    "secondary_count": 3
+  },
+  "560": {
+    "primary_category": "love",
+    "primary_count": 6,
+    "secondary_category": "UNK",
+    "secondary_count": 0
+  },
+  "569": {
+    "primary_category": "female",
+    "primary_count": 8,
+    "secondary_category": "UNK",
+    "secondary_count": 0
+  },
+  "955": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "wealth",
+    "secondary_count": 3
+  },
+  "1536": {
+    "primary_category": "female",
+    "primary_count": 5,
+    "secondary_category": "male",
+    "secondary_count": 2
+  },
+  "1643": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "marriage",
+    "secondary_count": 3
+  },
+  "1853": {
+    "primary_category": "marriage",
+    "primary_count": 4,
+    "secondary_category": "female",
+    "secondary_count": 2
+  },
+  "2030": {
+    "primary_category": "female",
+    "primary_count": 5,
+    "secondary_category": "family",
+    "secondary_count": 3
+  },
+  "2068": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "male",
+    "secondary_count": 3
+  },
+  "2074": {
+    "primary_category": "marriage",
+    "primary_count": 5,
+    "secondary_category": "wealth",
+    "secondary_count": 3
+  },
+  "2130": {
+    "primary_category": "male",
+    "primary_count": 10,
+    "secondary_category": "UNK",
+    "secondary_count": 0
+  },
+  "2209": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "marriage",
+    "secondary_count": 3
+  },
+  "2414": {
+    "primary_category": "male",
+    "primary_count": 5,
+    "secondary_category": "family",
+    "secondary_count": 3
+  },
+  "2425": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "emotion",
+    "secondary_count": 3
+  },
+  "2552": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "marriage",
+    "secondary_count": 3
+  },
+  "2861": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "female",
+    "secondary_count": 3
+  },
+  "3046": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "wealth",
+    "secondary_count": 3
+  },
+  "3095": {
+    "primary_category": "male",
+    "primary_count": 5,
+    "secondary_category": "family",
+    "secondary_count": 3
+  },
+  "3140": {
+    "primary_category": "male",
+    "primary_count": 5,
+    "secondary_category": "emotion",
+    "secondary_count": 2
+  },
+  "3385": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "marriage",
+    "secondary_count": 3
+  },
+  "3419": {
+    "primary_category": "female",
+    "primary_count": 6,
+    "secondary_category": "male",
+    "secondary_count": 2
+  }
+}

@@ -31,3 +31,4 @@ model_*.pth
 # Ignore local files
 local/
 original_texts/
+archive/

@@ -1,0 +1,78 @@
+--------------------------------------------------
+Layer 6 — Selective neurons:
+✅ Saved latent_activations_l6.pt with shape: torch.Size([318, 4480])
+latent_activations shape: torch.Size([318, 4480])
+      Neuron ID  Activation Count  Is Selective
+271         271                56          True
+1031       1031                49          True
+2042       2042                38          True
+4120       4120                36          True
+4256       4256                30          True
+...         ...               ...           ...
+3601       3601                 5          True
+1849       1849                 5          True
+1346       1346                 5          True
+3222       3222                 5          True
+2621       2621                 5          True
+
+[65 rows x 3 columns]
+#selective_neurons: 65
+--------------------------------------------------
+Top-k activations collected: 650
+✅ Saved neuron mappings to neuron_theme_mapping.json
+Neuron-theme mappings: 65
+--------------------------------------------------
+Strongest Concepts:
+    neuron idx associated concept  activations count       secondary concept
+0         3222               male                  9                    None
+1         4191            emotion                  8                    None
+2         3052             female                  7                    None
+3         2871             female                  7                   class
+4         2851               male                  6                  female
+5         4049             female                  6                marriage
+6         2667             female                  5                  family
+7         4256             female                  5                    male
+8         3601               male                  5                 society
+9         4389           marriage                  5                 society
+10        1351           marriage                  5                  wealth
+11        1346             wealth                  5                    duty
+12        1120           marriage                  5                  wealth
+13        2376             female                  4  scandal and reputation
+14        2621            emotion                  4                   class
+15         881             female                  4                  family
+16        2200            society                  4                    male
+17        2867             female                  4                  family
+18        1582             female                  4                    male
+19        2994             wealth                  4                 society
+20        1580             female                  4                  family
+21        1352               male                  4                 society
+22        1253               male                  4                    love
+23         271               duty                  4                marriage
+⚠️ Failed to save sae_probing/strongest_associations_l6.json: Object of type DataFrame is not JSON serializable
+--------------------------------------------------
+Concept similarity matrix:
+Saved similarity heatmap → sae_probing/layer_output_l6_similarity.png
+--------------------------------------------------
+Dual themed neurons:
+Neuron 271: primary = duty, secondary = marriage
+Neuron 881: primary = female, secondary = family
+Neuron 1120: primary = marriage, secondary = wealth
+Neuron 1253: primary = male, secondary = love
+Neuron 1346: primary = wealth, secondary = duty
+Neuron 1351: primary = marriage, secondary = wealth
+Neuron 1352: primary = male, secondary = society
+Neuron 1580: primary = female, secondary = family
+Neuron 1582: primary = female, secondary = male
+Neuron 2200: primary = society, secondary = male
+Neuron 2376: primary = female, secondary = scandal and reputation
+Neuron 2621: primary = emotion, secondary = class
+Neuron 2667: primary = female, secondary = family
+Neuron 2851: primary = male, secondary = female
+Neuron 2867: primary = female, secondary = family
+Neuron 2871: primary = female, secondary = class
+Neuron 2994: primary = wealth, secondary = society
+Neuron 3601: primary = male, secondary = society
+Neuron 4049: primary = female, secondary = marriage
+Neuron 4256: primary = female, secondary = male
+Neuron 4389: primary = marriage, secondary = society
+Saved dual-theme graph → sae_probing/layer_output_l6_dual_theme.png
