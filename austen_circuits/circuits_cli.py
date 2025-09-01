@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 """
+===>  MUST BE MOVED TO ROOT DIRECTORY
+
 circuits_cli.py
 Run clean vs corrupt experiments with different metrics (logit_diff, kl),
 and with *masked/mixed* patching so results aren't trivially flat.
-
-New flags:
-  --metric {kl, logit_diff}      # default 'kl'
-  --final_pos_only               # patch only the final token (position-masked)
-  --eps FLOAT                    # epsilon mixing (0.0=hard replace; 0.1 default)
 """
 import argparse, json
 from pathlib import Path

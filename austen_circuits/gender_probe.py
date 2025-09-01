@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+===>  MUST BE MOVED TO ROOT DIRECTORY
+
 GenderProbe: step 1–2 for gender-pattern analysis on your Austen GPT.
 
 What it does

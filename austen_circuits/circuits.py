@@ -1,4 +1,6 @@
 """
+===>  MUST BE MOVED TO ROOT DIRECTORY
+
 circuits.py
 Utilities for activation caching, patching, and causal metrics.
 

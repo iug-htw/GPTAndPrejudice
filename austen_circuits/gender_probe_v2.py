@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+===>  MUST BE MOVED TO ROOT DIRECTORY
+
 GenderProbe: quantify gendered continuation tendencies in an Austen-trained GPT.
 
 What it does
