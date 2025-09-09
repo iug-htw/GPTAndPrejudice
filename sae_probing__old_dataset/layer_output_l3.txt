@@ -1,0 +1,35 @@
+--------------------------------------------------
+Layer 3 — Selective neurons:
+✅ Saved latent_activations_l3.pt with shape: torch.Size([318, 3584])
+latent_activations shape: torch.Size([318, 3584])
+      Neuron ID  Activation Count  Is Selective
+1896       1896                27          True
+3078       3078                23          True
+2552       2552                21          True
+1838       1838                13          True
+2764       2764                 7          True
+2495       2495                 6          True
+2942       2942                 6          True
+#selective_neurons: 7
+--------------------------------------------------
+Top-k activations collected: 70
+✅ Saved neuron mappings to neuron_theme_mapping.json
+Neuron-theme mappings: 7
+--------------------------------------------------
+Strongest Concepts:
+   neuron idx associated concept  activations count secondary concept
+0        2764               male                  5            family
+1        2495           marriage                  4           society
+2        2552             family                  4          marriage
+3        2942             family                  4          marriage
+⚠️ Failed to save sae_probing/strongest_associations_l3.json: Object of type DataFrame is not JSON serializable
+--------------------------------------------------
+Concept similarity matrix:
+Saved similarity heatmap → sae_probing/layer_output_l3_similarity.png
+--------------------------------------------------
+Dual themed neurons:
+Neuron 2495: primary = marriage, secondary = society
+Neuron 2552: primary = family, secondary = marriage
+Neuron 2764: primary = male, secondary = family
+Neuron 2942: primary = family, secondary = marriage
+Saved dual-theme graph → sae_probing/layer_output_l3_dual_theme.png
