@@ -1,0 +1,608 @@
+id,text,female,male,family,marriage,love,wealth,emotion,scandal,duty,class,society
+1,She was her,1,0,0,0,0,0,0,0,0,0,0
+2,She can't,1,0,0,0,0,0,0,0,0,0,0
+3,She has,1,0,0,0,0,0,0,0,0,0,0
+4,She said,1,0,0,0,0,0,0,0,0,0,0
+5,the ladies were,1,0,0,0,0,0,0,0,0,0,0
+6,her great beauty,1,0,0,0,0,0,0,0,0,0,0
+7,a lady,1,0,0,0,0,0,0,0,0,0,0
+8,the women ae,1,0,0,0,0,0,0,0,0,0,0
+9,a woman of ,1,0,0,0,0,0,0,0,0,0,0
+10,a beautiful woman,1,0,0,0,0,0,0,0,0,0,0
+11,young ladies,1,0,0,0,0,0,0,0,0,0,0
+12,i said to her,1,0,0,0,0,0,0,0,0,0,0
+13,to the girls,1,0,0,0,0,0,0,0,0,0,0
+14,young girl is,1,0,0,0,0,0,0,0,0,0,0
+15,the lady in he street,1,0,0,0,0,0,0,0,0,0,0
+16,she wore a dress,1,0,0,0,0,0,0,0,0,0,0
+17,a governess is,1,0,0,0,0,0,0,0,0,0,0
+18,her house was,1,0,0,0,0,0,0,0,0,0,0
+19,a most accomplished young woman,1,0,0,0,0,0,0,0,0,0,0
+20,the women of the,1,0,0,0,0,0,0,0,0,0,0
+21,her manners were,1,0,0,0,0,0,0,0,0,0,0
+22,the ladies have,1,0,0,0,0,0,0,0,0,0,0
+23,a proper lady,1,0,0,0,0,0,0,0,0,0,0
+24,sensible woman,1,0,0,0,0,0,0,0,0,0,0
+25,the lady went to,1,0,0,0,0,0,0,0,0,0,0
+26,bore herself with grace,1,0,0,0,0,0,0,0,0,0,0
+27,the countenance was not,1,0,0,0,0,0,0,0,0,0,0
+28,a very genteel lady,1,0,0,0,0,0,0,0,0,0,0
+29,She was feeling a,1,0,0,0,0,0,1,0,0,0,0
+30,she had a stron desire,1,0,0,0,0,0,1,0,0,0,0
+31,she should,1,0,0,0,0,0,0,0,1,0,0
+32,ought not to herself,1,0,0,0,0,0,0,0,1,0,0
+33,her majesty is expected to,1,0,0,0,0,0,0,0,1,0,0
+34,girls ought to,1,0,0,0,0,0,0,0,1,0,0
+35,little girls must always,1,0,0,0,0,0,0,0,1,0,0
+36,She had a bad reputation,1,0,0,0,0,0,0,1,0,0,0
+37,the opinions of her,1,0,0,0,0,0,0,0,0,0,0
+38,the conduct of the lady,1,0,0,0,0,0,0,0,0,0,0
+39,she had a sister,1,0,1,0,0,0,0,0,0,0,0
+40,she had a aunt,1,0,1,0,0,0,0,0,0,0,0
+41,she had a niece,1,0,1,0,0,0,0,0,0,0,0
+42,she had a daughter,1,0,1,0,0,0,0,0,0,0,0
+43,she had a grandmother,1,0,1,0,0,0,0,0,0,0,0
+44,my younger sister said,1,0,1,0,0,0,0,0,0,0,0
+45,she said to her mother,1,0,1,0,0,0,0,0,0,0,0
+46,my daughter in the house,1,0,1,0,0,0,0,0,0,0,0
+47,the wife had,1,0,1,1,0,0,0,0,0,0,0
+48,she and marriage,1,0,0,1,0,0,0,0,0,0,0
+49,husband of her,1,1,1,1,0,0,0,0,0,0,0
+50,He was him,0,1,0,0,0,0,0,0,0,0,0
+51,He can't,0,1,0,0,0,0,0,0,0,0,0
+52,He has,0,1,0,0,0,0,0,0,0,0,0
+53,He was feeling,0,1,0,0,0,0,0,0,0,0,0
+54,He said,0,1,0,0,0,0,0,0,0,0,0
+55,the opinions of him,0,1,0,0,0,0,0,0,0,0,0
+56,the conduct of the man,0,1,0,0,0,0,0,0,0,0,0
+57,the man could have,0,1,0,0,0,0,0,0,0,0,0
+58,the men were,0,1,0,0,0,0,0,0,0,0,0
+59,man respectable,0,1,0,0,0,0,0,0,0,0,0
+60,his own pride was high,0,1,0,0,0,0,0,0,0,0,0
+61,young men at war,0,1,0,0,0,0,0,0,0,0,0
+62,the boys will be,0,1,0,0,0,0,0,0,0,0,0
+63,I addressed him,0,1,0,0,0,0,0,0,0,0,0
+64,young boys go to school,0,1,0,0,0,0,0,0,0,0,0
+65,the captain introduced me to,0,1,0,0,0,0,0,0,0,0,0
+66,the colonel had a lot of,0,1,0,0,0,0,0,0,0,0,0
+67,he had civil manners,0,1,0,0,0,0,0,0,0,0,0
+68,A true man of honour,0,1,0,0,0,0,0,0,0,0,0
+69,go hunting with him,0,1,0,0,0,0,0,0,0,0,0
+70,The general is invited to dinner,0,1,0,0,0,0,0,0,0,0,1
+71,the conduct of the gentleman,0,1,0,0,0,0,0,0,0,1,0
+72,he enjoyed reading,0,1,0,0,0,0,0,0,0,0,0
+73,old men are often,0,1,0,0,0,0,0,0,0,0,0
+74,the sound of him,0,1,0,0,0,0,0,0,0,0,0
+75,he said to the steward,0,1,0,0,0,0,0,0,0,0,0
+76,I advised him to,0,1,0,0,0,0,0,0,0,0,0
+77,the man had a wish,0,1,0,0,0,0,0,0,0,0,0
+78,men of,0,1,0,0,0,0,0,0,0,0,0
+79,the gentleman of the house,0,1,0,0,0,0,0,0,0,1,0
+80,what a a fine gentleman,0,1,0,0,0,0,0,0,0,1,0
+81,duty upon him,0,1,0,0,0,0,0,0,1,0,0
+82,must the man be,0,1,0,0,0,0,0,0,1,0,0
+83,he was obliged,0,1,0,0,0,0,0,0,1,0,0
+84,the husband of,0,1,1,0,0,0,0,0,0,0,0
+85,he and his father,0,1,1,0,0,0,0,0,0,0,0
+86,father was not happy,0,1,1,0,0,0,1,0,0,0,0
+87,he met with uncle,0,1,1,0,0,0,0,0,0,0,0
+88,he met with cousin ,0,1,1,0,0,0,0,0,0,0,0
+89,never saw his son,0,1,1,0,0,0,0,0,0,0,0
+90,his father wrote letters to,0,1,1,0,0,0,0,0,0,0,0
+91,the brother and he,0,1,1,0,0,0,0,0,0,0,0
+92,he had a brother,0,1,1,0,0,0,0,0,0,0,0
+93,he had a father,0,1,1,0,0,0,0,0,0,0,0
+94,he had a uncle,0,1,1,0,0,0,0,0,0,0,0
+95,he had a nephew,0,1,1,0,0,0,0,0,0,0,0
+96,he had a son,0,1,1,0,0,0,0,0,0,0,0
+97,he had a grandfather,0,1,1,0,0,0,0,0,0,0,0
+98,my brother never did,0,1,1,0,0,0,0,0,0,0,0
+99,our family,0,0,1,0,0,0,0,0,0,0,0
+100,family's bond,0,0,1,0,0,0,0,0,0,0,0
+101,parents of,0,0,1,0,0,0,0,0,0,0,0
+102,they were sibling,0,0,1,0,0,0,0,0,0,0,0
+103,my cousin,0,0,1,0,0,0,0,0,0,0,0
+104,blood relatives are,0,0,1,0,0,0,0,0,0,0,0
+105,three young children,0,0,1,0,0,0,0,0,0,0,0
+106,a brother who,0,1,1,0,0,0,0,0,0,0,0
+107,a father who,0,1,1,0,0,0,0,0,0,0,0
+108,an uncle who,0,1,1,0,0,0,0,0,0,0,0
+109,a nephew who,0,1,1,0,0,0,0,0,0,0,0
+110,a son who,0,1,1,0,0,0,0,0,0,0,0
+111,a grandfather who,0,1,1,0,0,0,0,0,0,0,0
+112,an aunt who,1,0,1,0,0,0,0,0,0,0,0
+113,a niece who,1,0,1,0,0,0,0,0,0,0,0
+114,a daughter who,1,0,1,0,0,0,0,0,0,0,0
+115,a grandmother who,1,0,1,0,0,0,0,0,0,0,0
+116,their sister was,1,0,1,0,0,0,0,0,0,0,0
+117,talking to the mother,1,0,1,0,0,0,0,0,0,0,0
+118,family residence,0,0,1,0,0,0,0,0,0,0,0
+119,father disapproves,0,1,1,0,0,0,0,0,0,0,0
+120,a sister has a duty ,1,0,1,0,0,0,0,0,1,0,0
+121,ties of a family,0,0,1,0,0,0,0,0,0,0,0
+122,they fought like sisters,0,0,1,0,0,0,0,0,0,0,0
+123,then my uncle said,0,1,1,0,0,0,0,0,0,0,0
+124,staying at my aunt's,1,0,1,0,0,0,0,0,0,0,0
+125,in this houshold we must,0,0,1,0,0,0,0,0,1,0,0
+126,the godmother knows,1,0,1,0,0,0,0,0,0,0,0
+127,the parents were concerned,0,0,1,0,0,0,1,0,0,0,0
+128,big family,0,0,1,0,0,0,0,0,0,0,1
+129,great relatives,0,0,1,0,0,0,0,0,0,0,0
+130,young cousins love to play,0,0,1,0,0,0,0,0,0,0,0
+131,my cousin was very,0,0,1,0,0,0,0,0,0,0,0
+132,siblings rivalry,0,0,1,0,0,0,0,0,0,0,0
+133,the family rode the carriage,0,0,1,0,0,0,0,0,0,0,0
+134,wrote to my father,0,1,1,0,0,0,0,0,0,0,0
+135,handsome husband,1,0,1,1,0,0,0,0,0,0,0
+136,beautiful wife,0,1,1,1,0,0,0,0,0,0,0
+137,she and the husband,1,1,1,1,0,0,0,0,0,0,0
+138,Him and the wife,1,1,1,1,0,0,0,0,0,0,0
+139,marriage is a,0,0,0,1,0,0,0,0,0,0,0
+140,married in secret,0,0,0,1,0,0,0,1,0,0,0
+141,happily engaged,0,0,0,1,0,0,1,0,0,0,0
+142,marriage based on love and ,0,0,0,1,1,0,0,0,0,0,0
+143,convenient match,0,0,0,1,0,0,0,0,0,0,0
+144,the wedding money,0,0,0,1,0,1,0,0,0,0,0
+145,wed in haste,0,0,0,1,0,0,0,1,0,0,0
+146,their marriage,0,0,0,1,0,0,0,0,0,0,0
+147,wealthy marriage,0,0,0,1,0,1,0,0,0,0,0
+148,love after marriage,0,0,0,1,1,0,0,0,0,0,0
+149,too poor to wed,0,0,0,1,0,1,0,0,0,0,0
+150,the wedding dress,0,0,0,1,0,0,1,0,0,0,0
+151,the elopement of,0,0,0,1,0,0,0,1,0,0,0
+152,she in the wedding,1,0,0,1,0,0,0,0,0,0,0
+153,he in the wedding,0,1,0,1,0,0,0,0,0,0,0
+154,wedding night,0,0,0,1,0,0,0,0,0,0,0
+155,sadly married,0,0,0,1,0,0,1,0,0,0,0
+156,she is to be wed to,1,0,0,1,0,0,0,0,0,0,0
+157,must secure a match,0,0,0,1,0,0,0,0,1,0,0
+158,a bad wife,1,0,1,1,0,0,0,0,0,0,0
+159,a bad match,0,0,0,1,0,0,0,0,0,0,0
+160,a bad husband,0,1,1,1,0,0,0,0,0,0,0
+161,you must marry ,0,0,0,1,0,0,0,0,1,0,0
+162,marriage of respect,0,0,0,1,0,0,0,0,0,0,0
+163,marrying the love of your life,0,0,0,1,1,0,1,0,0,0,0
+164,their married life,0,0,0,1,0,0,0,0,0,0,0
+165,sensibility in marriage,0,0,0,1,0,0,0,0,0,0,0
+166,in courtship,0,0,0,1,0,0,0,0,0,0,1
+167,to be wed,0,0,0,1,0,0,0,0,0,0,0
+168,wedding day,0,0,0,1,0,0,0,0,0,0,0
+169,a long honeymoon,0,0,0,1,0,0,0,0,0,0,0
+170,beautiful bride,1,0,0,1,0,0,0,0,0,0,0
+171,nice groom,0,1,0,1,0,0,0,0,0,0,0
+172,short courtships would be,0,0,0,1,0,0,0,0,0,0,1
+173,unequal match,0,0,0,1,0,0,0,0,0,0,0
+174,The estate and its tenants ,0,0,0,0,0,1,0,0,0,1,0
+175,The peerage from duty,0,0,0,0,0,0,0,0,1,1,0
+176,A man at the theatre,0,1,0,0,0,0,0,0,0,0,1
+177,A viscount newly introduced among connections,0,0,0,0,0,0,0,0,0,1,1
+178,The duke in company in society,0,0,0,0,0,0,0,0,0,1,1
+179,Privileges of birth with fortune,0,0,0,0,0,1,0,0,0,1,0
+180,Of high rank among connections,0,0,0,0,0,0,0,0,0,1,1
+181,Among the aristocracy,0,0,0,0,0,0,0,0,0,1,0
+182,Looked down by rank at the salon,0,0,0,0,0,0,0,0,0,1,1
+183,A titled relation without fortune,0,0,0,0,0,1,0,0,0,1,0
+184,The estate and its tenants at the dinner,0,0,0,0,0,1,0,0,0,1,1
+185,The estate and its tenants,0,0,0,0,0,1,0,0,0,1,0
+186,An earl of diminished means at the theatre,0,0,0,0,0,0,0,0,0,1,1
+187,Of noble birth without fortune,0,0,0,0,0,1,0,0,0,1,0
+188,An earl of diminished means without fortune,0,0,0,0,0,1,0,0,0,1,0
+189,Not received in higher circles in conversation,0,0,0,0,0,0,0,0,0,0,1
+190,Not received in higher circles from duty,0,0,0,0,0,0,0,0,1,0,1
+191,Of noble birth without fortune,0,0,0,0,0,1,0,0,0,1,0
+192,Of high rank at the theatre,0,0,0,0,0,0,0,0,0,1,1
+193,With title from duty,0,0,0,0,0,0,0,0,1,1,0
+194,Regard for rank in society,0,0,0,0,1,0,1,0,0,1,1
+195,A viscount newly introduced with propriety,0,0,0,0,0,0,0,0,0,1,1
+196,A titled relation in society,0,0,0,0,0,0,0,0,0,1,1
+197,The baronet among connections,0,0,0,0,0,0,0,0,0,1,1
+198,Of high rank,0,0,0,0,0,0,0,0,0,1,0
+199,Not received in higher circles in society,0,0,0,0,0,0,0,0,0,0,1
+200,Not received in higher circles at the salon,0,0,0,0,0,0,0,0,0,0,1
+201,A viscount newly introduced at the theatre,0,0,0,0,0,0,0,0,0,1,1
+202,Of high rank in conversation,0,0,0,0,0,0,0,0,0,1,1
+203,Privileges of birth at the assembly,0,0,0,0,0,0,0,0,0,1,1
+204,Regard for rank with fortune,0,0,0,0,1,1,1,0,0,1,0
+205,Connections of quality at the dinner,0,0,0,0,0,0,0,0,0,1,1
+206,A viscount newly introduced from duty,0,0,0,0,0,0,0,0,1,1,1
+207,The duke in company with fortune,0,0,0,0,0,1,0,0,0,1,1
+208,Of noble birth,0,0,0,0,0,0,0,0,0,1,0
+209,A viscount newly introduced at the dinner,0,0,0,0,0,0,0,0,0,1,1
+210,Privileges of birth among connections,0,0,0,0,0,0,0,0,0,1,1
+211,Among the aristocracy with fortune,0,0,0,0,0,1,0,0,0,1,0
+212,Not received in higher circles,0,0,0,0,0,0,0,0,0,0,1
+213,Not received in higher circles at the assembly,0,0,0,0,0,0,0,0,0,0,1
+214,A viscount newly introduced at the assembly,0,0,0,0,0,0,0,0,0,1,1
+215,A viscount newly introduced at the theatre,0,0,0,0,0,0,0,0,0,1,1
+216,Privileges of birth with fortune,0,0,0,0,0,1,0,0,0,1,0
+217,A viscount newly introduced at the theatre,0,0,0,0,0,0,0,0,0,1,1
+218,Of high rank from duty,0,0,0,0,0,0,0,0,1,1,0
+219,An earl of diminished means at the assembly,0,0,0,0,0,0,0,0,0,1,1
+220,The estate and its tenants without fortune,0,0,0,0,0,1,0,0,0,1,0
+221,Looked down by rank at the dinner,0,0,0,0,0,0,0,0,0,1,1
+222,Privileges of birth with propriety,0,0,0,0,0,0,0,0,0,1,0
+223,An earl of diminished means with fortune,0,0,0,0,0,1,0,0,0,1,0
+224,She,1,0,0,0,0,0,0,0,0,0,0
+225,He,0,1,0,0,0,0,0,0,0,0,0
+226,The bride mother,1,0,1,0,0,0,0,0,0,0,0
+227,The bride courtship,1,0,0,1,0,0,0,0,0,0,0
+228,She with inheritance,1,0,0,0,0,1,0,0,0,0,0
+229,The lady with admiration,1,0,0,0,0,0,1,0,0,0,0
+230,Her from romance,1,0,0,0,1,0,1,0,0,0,0
+231,The bride a disgrace,1,0,0,0,0,0,0,1,0,0,0
+232,Her from obligation,1,0,0,0,0,0,0,0,1,0,0
+233,Her of noble birth,1,0,0,0,0,0,0,0,0,1,0
+234,She among connections,1,0,0,0,0,0,0,0,0,0,1
+235,The groom cousin,0,1,1,0,0,0,0,0,0,0,0
+236,He matrimony,0,1,0,1,0,0,0,0,0,0,0
+237,The gentleman wealthy,0,1,0,0,0,1,0,0,0,0,0
+238,He with composure,0,1,0,0,0,0,1,0,0,0,0
+239,He with passion,0,1,0,0,1,0,0,0,0,0,0
+240,He a ruin,0,1,0,0,0,0,0,1,0,0,0
+241,The groom as proper,0,1,0,0,0,0,0,0,1,0,0
+242,His well-born,0,1,0,0,0,0,0,0,0,1,0
+243,His in the parlour,0,1,0,0,0,0,0,0,0,0,1
+244,relations proposal,0,0,1,1,0,0,0,0,0,0,0
+245,mother for a settlement,1,0,1,0,0,1,0,0,0,0,0
+246,father with admiration,0,1,1,0,0,0,1,0,0,0,0
+247,son of love,0,1,1,0,1,0,0,0,0,0,0
+248,father a scandal,0,1,1,0,0,0,0,1,0,0,0
+249,brother from obligation,0,1,1,0,0,0,0,0,1,0,0
+250,relations well-born,0,0,1,0,0,0,0,0,0,1,0
+251,son at the ball,0,1,1,0,0,0,0,0,0,0,1
+252,match wealthy,0,0,0,1,0,1,0,0,0,0,0
+253,wedding with happiness,0,0,0,1,0,0,1,0,0,0,0
+254,matrimony with love,0,0,0,1,1,0,0,0,0,0,0
+255,wedding a disgrace,0,0,0,1,0,0,0,1,0,0,0
+256,marriage as duty,0,0,0,1,0,0,0,0,1,0,0
+257,wedding of the aristocracy,0,0,0,1,0,0,0,0,0,1,0
+258,courtship at the ball,0,0,0,1,0,0,0,0,0,0,1
+259,with fortune with composure,0,0,0,0,0,1,1,0,0,0,0
+260,wealthy without love,0,0,0,0,1,1,0,0,0,0,0
+261,for the estate that risked disgrace,0,0,0,0,0,1,0,1,0,0,0
+262,for the estate as proper,0,0,0,0,0,1,0,0,1,0,0
+263,for the estate with inheritance,0,0,0,0,0,1,0,0,0,1,0
+264,at the dinner with fortune,0,0,0,0,0,1,0,0,0,0,1
+265,from romance with admiration,0,0,0,0,1,0,1,0,0,0,0
+266,a ruin with admiration,0,0,0,0,0,0,1,1,0,0,0
+267,as expected with anxiety,0,0,0,0,0,0,1,0,1,0,0
+268,for the estate with grief,0,0,0,0,0,0,1,0,0,1,0
+269,at the dinner with anxiety,0,0,0,0,0,0,1,0,0,0,1
+270,that risked disgrace without love,0,0,0,0,1,0,0,1,0,0,0
+271,as expected without love,0,0,0,0,1,0,0,0,1,0,0
+272,well-born with devotion,0,0,0,0,1,0,0,0,0,1,0
+273,at the theatre without love,0,0,0,0,1,0,0,0,0,0,1
+274,as expected a disgrace,0,0,0,0,0,0,0,1,1,0,0
+275,upper class an impropriety,0,0,0,0,0,0,0,1,0,1,0
+276,at the theatre a disgrace,0,0,0,0,0,0,0,1,0,0,1
+277,of vanity from duty,0,0,0,0,0,0,0,0,1,1,0
+278,at the ball as required,0,0,0,0,0,0,0,0,1,0,1
+279,The gentleman with anxiety,0,1,0,0,0,0,1,0,0,0,0
+280,marriage for love,0,0,0,1,1,0,0,0,0,0,0
+281,love as proper,0,0,0,0,1,0,0,0,1,0,0
+282,without fortune an impropriety,0,0,0,0,0,1,0,1,0,0,0
+283,daughter of the aristocracy,0,0,1,0,0,0,0,0,0,1,0
+284,relations with passion,0,0,1,0,1,0,0,0,0,0,0
+285,The bride with happiness,1,0,0,1,0,0,1,0,0,0,0
+286,niece marriage,0,0,1,1,0,0,0,0,0,0,0
+287,with a large dowry with happiness,0,0,0,0,0,1,1,0,0,0,0
+288,wedding with admiration,0,0,0,1,0,0,1,0,0,0,0
+289,She is at the ball,1,0,0,0,0,0,0,0,0,0,1
+290,His mother,0,1,1,0,0,0,0,0,0,0,0
+291,at the assembly from romance,0,0,0,0,1,0,1,0,0,0,1
+292,The lady of high rank,1,0,0,0,0,0,0,0,0,1,0
+293,niece as expected,0,0,1,0,0,0,0,0,1,0,0
+294,He marriage,0,1,0,1,0,0,0,0,0,0,0
+295,He without love,0,1,0,0,1,0,1,0,0,0,0
+296,son for the estate,0,0,1,0,0,1,0,0,0,0,0
+297,His match with connections,0,1,0,1,0,0,0,0,0,1,0
+298,as expected a ruin without love,0,0,0,0,1,0,0,1,1,0,0
+299,marriage rich with grief,0,0,0,1,0,1,1,0,0,0,0
+300,Her wedding with title,1,0,0,1,0,0,0,0,0,1,0
+301,as proper a disgrace with composure,0,0,0,0,0,0,1,1,1,0,0
+302,The lady in refined circles with devotion,1,0,0,0,1,0,0,0,0,0,1
+303,Her with title in society,1,0,0,0,0,0,0,0,0,1,1
+304,a scandal without love with sorrow,0,0,0,0,1,0,0,1,0,0,0
+305,sister as required a ruin,0,0,1,0,0,0,0,1,1,0,0
+306,of noble birth that risked disgrace with passion,0,0,0,0,1,0,0,1,0,1,0
+307,marriage for the estate with love,0,0,0,1,1,1,0,0,0,0,0
+308,nephew match as required,0,0,1,1,0,0,0,0,1,0,0
+309,The groom brother with delight,0,1,1,0,0,0,1,0,0,0,0
+310,at the dinner with devotion with happy,0,0,0,0,1,0,1,0,0,0,1
+311,for the estate from duty with grief,0,0,0,0,0,0,1,0,1,1,0
+312,The gentleman from obligation that risked disgrace,0,1,0,0,0,0,0,1,1,0,0
+313,Her a disgrace with sadness,1,0,0,0,0,0,1,1,0,0,0
+314,"families, with rank and fortune",0,0,1,0,0,1,0,0,0,1,0
+315,The bride sisters at the ball,1,0,1,1,0,0,0,0,0,0,1
+316,His cousin of noble birth,0,1,1,0,0,0,0,0,0,1,0
+317,Her mother with passion,1,0,1,0,0,0,1,0,0,0,0
+318,The lady as expected with happiness,1,0,0,0,1,0,1,0,1,0,0
+319,He of the aristocracy as obliged,0,1,0,0,0,0,0,0,1,1,0
+320,The lady from duty with grief,1,0,0,0,0,0,1,0,1,0,0
+321,brother for love with admiration,0,0,1,0,1,0,1,0,0,0,0
+322,wedding as duty with anxiety,0,0,0,1,0,0,1,0,1,0,0
+323,sister with a large dowry with admiration,0,0,1,0,0,1,1,0,0,0,0
+324,at the ball with fortune with grief,0,0,0,0,0,1,1,0,0,0,1
+325,matrimony with passion with admiration,0,0,0,1,1,0,1,0,0,0,0
+326,nephew a ruin with sorrow,0,0,1,0,0,0,1,1,0,0,0
+327,daughter as required without love,0,0,1,0,1,0,1,0,1,0,0
+328,brother at the ball with composure,0,0,1,0,0,0,1,0,0,0,1
+329,His son with a large dowry,0,1,1,0,0,1,0,0,0,0,0
+330,wedding at the theatre an impropriety,0,0,0,1,0,0,0,1,0,0,1
+331,nephew with title as proper,0,0,1,0,0,0,0,0,1,1,0
+332,The lady cousin as required,1,0,1,0,0,0,0,0,1,0,0
+333,The bride marriage at the dinner,1,0,0,1,0,0,0,0,0,0,1
+334,She wedding from duty,1,0,0,1,0,0,0,0,1,0,0
+335,He sister for love,0,1,1,0,1,0,0,0,0,0,0
+336,The gentleman with a large dowry with grief,0,1,0,0,0,1,1,0,0,0,0
+337,well-born at the dinner from duty,0,0,0,0,0,0,0,0,1,1,1
+338,His of the aristocracy with delight,0,1,0,0,0,0,1,0,0,1,0
+339,wedding from duty with love,0,0,0,1,1,0,0,0,1,0,0
+340,The bride in society from obligation,1,0,0,0,0,0,0,0,1,0,1
+341,She of the aristocracy wealthy,1,0,0,0,0,1,0,0,0,1,0
+342,in the parlour from duty in secret,0,0,0,0,0,0,0,1,1,0,1
+343,for the estate for the estate for love,0,0,0,0,1,1,1,0,0,1,0
+344,His with devotion with delight,0,1,0,0,1,0,1,0,0,0,0
+345,at the ball a disgrace with admiration,0,0,0,0,0,0,1,1,0,0,1
+346,Her son's wedding,1,0,1,1,0,0,0,0,0,0,0
+347,He with title a scandal,0,1,0,0,0,0,0,1,0,1,0
+348,of the aristocracy rich from duty,0,0,0,0,0,1,0,0,1,1,0
+349,The gentleman in the parlour an impropriety,0,1,0,0,0,0,0,1,0,0,1
+350,The lady for the estate,1,0,0,0,0,0,0,0,0,1,0
+351,at the assembly a scandal,0,0,0,0,0,0,1,1,0,0,1
+352,in society rich from duty,0,0,0,0,0,1,0,0,1,0,1
+353,The bride with connections for love,1,0,0,1,1,0,1,0,0,1,0
+354,The bride of the aristocracy that risked disgrace,1,0,0,1,0,0,0,1,0,1,0
+355,He risked disgrace,0,1,0,0,0,0,0,1,0,0,0
+356,The groom with fortune a disgrace,0,1,0,1,0,1,0,1,0,0,0
+357,The bride in the parlour rich,1,0,0,1,0,1,0,0,0,0,1
+358,The groom at the dinner with sorrow,0,1,0,1,0,0,1,0,0,0,1
+359,He rich without love,0,1,0,0,1,1,1,0,0,0,0
+360,with connections for the estate with delight,0,0,0,0,0,1,1,0,0,1,0
+361,His as required with delight,0,1,0,0,0,0,1,0,1,0,0
+362,mother marriage with passion,0,0,1,1,1,0,1,0,0,0,0
+363,courtship in secret with grief,0,0,0,1,0,0,1,1,0,0,0
+364,nephew from duty with delight,0,0,1,0,0,0,1,0,1,0,0
+365,The lady of the aristocracy with happiness,1,0,0,0,0,0,1,0,0,1,0
+366,The gentleman courtship from obligation,0,1,0,1,0,0,0,0,1,0,0
+367,matrimony that risked disgrace without love,0,0,0,1,1,0,1,1,0,0,0
+368,daughter with connections with inheritance,0,0,1,0,0,1,0,0,0,1,0
+369,at the theatre as required with anxiety,0,0,0,0,0,0,1,0,1,0,1
+370,sister matrimony with anxiety,0,0,1,1,0,0,1,0,0,0,0
+371,She father that risked disgrace,1,0,1,0,0,0,0,1,0,0,0
+372,rich a scandal with happiness,0,0,0,0,0,1,1,1,0,0,0
+373,His for the estate for love,0,1,0,0,1,0,1,0,0,1,0
+374,of the aristocracy with passion with anxiety,0,0,0,0,1,0,1,0,0,1,0
+375,The bride with a large dowry from romance,1,0,0,0,1,1,0,0,0,0,0
+376,of high rank among connections with delight,0,0,0,0,0,0,1,0,0,1,1
+377,match without fortune as required,0,0,0,1,0,1,0,0,1,0,0
+378,Her with fortune a ruin,1,0,0,0,0,1,0,1,0,0,0
+379,match in society without love,0,0,0,1,1,0,0,0,0,0,1
+380,Her marriage from romance,1,0,0,1,1,0,1,0,0,0,0
+381,He from obligation from romance,0,1,0,0,1,0,1,0,1,0,0
+382,of high rank a disgrace with happiness,0,0,0,0,0,0,1,1,0,1,0
+383,of noble birth at the dinner for the estate,0,0,0,0,0,1,0,0,0,1,1
+384,in society with a large dowry a scandal,0,0,0,0,0,1,0,1,0,0,1
+385,His with a large dowry as required,0,1,0,0,0,1,0,0,1,0,0
+386,Her cousin with a large dowry,1,0,1,0,0,1,0,0,0,0,0
+387,for the estate among connections without love,0,0,0,0,1,0,1,0,0,1,1
+388,match of high rank with grief,0,0,0,1,0,0,1,0,0,1,0
+389,His a disgrace for love,0,1,0,0,1,0,0,1,0,0,0
+390,wedding at the assembly with anxiety,0,0,0,1,0,0,1,0,0,0,1
+391,He of noble birth with fortune,0,1,0,0,0,1,0,0,0,1,0
+392,His nephew in refined circles,0,1,1,0,0,0,0,0,0,0,1
+393,The bride proposal with admiration,1,0,0,1,0,0,1,0,0,0,0
+394,daughter for the estate with admiration,0,0,1,0,0,0,1,0,0,1,0
+395,mother in refined circles with passion,0,0,1,0,1,0,1,0,0,0,1
+396,well-born without fortune that risked disgrace,0,0,0,0,0,1,0,1,0,1,0
+397,matrimony in society rich,0,0,0,1,0,1,0,0,0,0,1
+398,rich as proper with devotion,0,0,0,0,1,1,0,0,1,0,0
+399,for a settlement a disgrace for love,0,0,0,0,1,1,0,1,0,0,0
+400,His match from romance,0,1,0,1,1,0,0,0,0,0,0
+401,She the family,1,0,1,0,0,0,0,0,0,0,0
+402,their cousin She,1,0,1,0,0,0,0,0,0,0,0
+403,courtship She,1,0,0,1,0,0,0,0,0,0,0
+404,marriage Her,1,0,0,1,0,0,0,0,0,0,0
+405,without fortune She,1,0,0,0,0,1,0,0,0,0,0
+406,with an allowance She,1,0,0,0,0,1,0,0,0,0,0
+407,Her with sorrow,1,0,0,0,0,0,1,0,0,0,0
+408,with joy Her,1,0,0,0,0,0,1,0,0,0,0
+409,Her with passion,1,0,0,0,1,0,0,0,0,0,0
+410,She for love,1,0,0,0,1,0,0,0,0,0,0
+411,She a scandal,1,0,0,0,0,0,0,1,0,0,0
+412,She a disgrace,1,0,0,0,0,0,0,1,0,0,0
+413,Her from duty,1,0,0,0,0,0,0,0,1,0,0
+414,as required She,1,0,0,0,0,0,0,0,1,0,0
+415,Her of the peerage,1,0,0,0,0,0,0,0,0,1,0
+416,of the peerage She,1,0,0,0,0,0,0,0,0,1,0
+417,She in company,1,0,0,0,0,0,0,0,0,0,1
+418,in company She,1,0,0,0,0,0,0,0,0,0,1
+419,His their sibling,0,1,1,0,0,0,0,0,0,0,0
+420,His their cousin,0,1,1,0,0,0,0,0,0,0,0
+421,His matrimony,0,1,0,1,0,0,0,0,0,0,0
+422,engagement He,0,1,0,1,0,0,0,0,0,0,0
+423,He without fortune,0,1,0,0,0,1,0,0,0,0,0
+424,wealthy His,0,1,0,0,0,1,0,0,0,0,0
+425,with joy His,0,1,0,0,0,0,1,0,0,0,0
+426,He with grief,0,1,0,0,0,0,1,0,0,0,0
+427,for love His,0,1,0,0,1,0,0,0,0,0,0
+428,His for love,0,1,0,0,1,0,0,0,0,0,0
+429,a ruin His,0,1,0,0,0,0,0,1,0,0,0
+430,an impropriety His,0,1,0,0,0,0,0,1,0,0,0
+431,His one ought,0,1,0,0,0,0,0,0,1,0,0
+432,as proper His,0,1,0,0,0,0,0,0,1,0,0
+433,He well-born,0,1,0,0,0,0,0,0,0,1,0
+434,of high rank He,0,1,0,0,0,0,0,0,0,1,0
+435,He in society,0,1,0,0,0,0,0,0,0,0,1
+436,He in the parlour,0,1,0,0,0,0,0,0,0,0,1
+437,the household nuptials,0,0,1,1,0,0,0,0,0,0,0
+438,proposal the household,0,0,1,1,0,0,0,0,0,0,0
+439,the family with income,0,0,1,0,0,1,0,0,0,0,0
+440,their sibling with fortune,0,0,1,0,0,1,0,0,0,0,0
+441,their parents with sorrow,0,0,1,0,0,0,1,0,0,0,0
+442,the family with calmness,0,0,1,0,0,0,1,0,0,0,0
+443,for love the household,0,0,1,0,1,0,0,0,0,0,0
+444,with devotion their sibling,0,0,1,0,1,0,0,0,0,0,0
+445,a disgrace their cousin,0,0,1,0,0,0,0,1,0,0,0
+446,in scandal the household,0,0,1,0,0,0,0,1,0,0,0
+447,the household as proper,0,0,1,0,0,0,0,0,1,0,0
+448,the family from duty,0,0,1,0,0,0,0,0,1,0,0
+449,of noble birth their sibling,0,0,1,0,0,0,0,0,0,1,0
+450,well-born their cousin,0,0,1,0,0,0,0,0,0,1,0
+451,at the theatre the family,0,0,1,0,0,0,0,0,0,0,1
+452,in society the household,0,0,1,0,0,0,0,0,0,0,1
+453,rich courtship,0,0,0,1,0,1,0,0,0,0,0
+454,marriage with an allowance,0,0,0,1,0,1,0,0,0,0,0
+455,with delight matrimony,0,0,0,1,0,0,1,0,0,0,0
+456,courtship with grief,0,0,0,1,0,0,1,0,0,0,0
+457,courtship with devotion,0,0,0,1,1,0,0,0,0,0,0
+458,nuptials with devotion,0,0,0,1,1,0,0,0,0,0,0
+459,an impropriety marriage,0,0,0,1,0,0,0,1,0,0,0
+460,a disgrace marriage,0,0,0,1,0,0,0,1,0,0,0
+461,one ought engagement,0,0,0,1,0,0,0,0,1,0,0
+462,from obligation engagement,0,0,0,1,0,0,0,0,1,0,0
+463,of the peerage marriage,0,0,0,1,0,0,0,0,0,1,0
+464,of high rank matrimony,0,0,0,1,0,0,0,0,0,1,0
+465,at the dinner proposal,0,0,0,1,0,0,0,0,0,0,1
+466,engagement in company,0,0,0,1,0,0,0,0,0,0,1
+467,with anxiety with income,0,0,0,0,0,1,1,0,0,0,0
+468,with an allowance with sorrow,0,0,0,0,0,1,1,0,0,0,0
+469,without fortune with passion,0,0,0,0,1,1,0,0,0,0,0
+470,for love without fortune,0,0,0,0,1,1,0,0,0,0,0
+471,with income a ruin,0,0,0,0,0,1,0,1,0,0,0
+472,rich a ruin,0,0,0,0,0,1,0,1,0,0,0
+473,from duty with income,0,0,0,0,0,1,0,0,1,0,0
+474,with fortune as required,0,0,0,0,0,1,0,0,1,0,0
+475,of noble birth with fortune,0,0,0,0,0,1,0,0,0,1,0
+476,without fortune well-born,0,0,0,0,0,1,0,0,0,1,0
+477,in the parlour without fortune,0,0,0,0,0,1,0,0,0,0,1
+478,at the theatre wealthy,0,0,0,0,0,1,0,0,0,0,1
+479,with passion with joy,0,0,0,0,1,0,1,0,0,0,0
+480,with devotion with joy,0,0,0,0,1,0,1,0,0,0,0
+481,an impropriety with joy,0,0,0,0,0,0,1,1,0,0,0
+482,with anxiety a ruin,0,0,0,0,0,0,1,1,0,0,0
+483,as required with sorrow,0,0,0,0,0,0,1,0,1,0,0
+484,as required with sorrow,0,0,0,0,0,0,1,0,1,0,0
+485,with anxiety with title,0,0,0,0,0,0,1,0,0,1,0
+486,with grief of the aristocracy,0,0,0,0,0,0,1,0,0,1,0
+487,with sorrow in company,0,0,0,0,0,0,1,0,0,0,1
+488,at the ball with sorrow,0,0,0,0,0,0,1,0,0,0,1
+489,a disgrace with devotion,0,0,0,0,1,0,0,1,0,0,0
+490,for love in scandal,0,0,0,0,1,0,0,1,0,0,0
+491,one ought with devotion,0,0,0,0,1,0,0,0,1,0,0
+492,one ought for love,0,0,0,0,1,0,0,0,1,0,0
+493,of high rank for love,0,0,0,0,1,0,0,0,0,1,0
+494,with devotion of noble birth,0,0,0,0,1,0,0,0,0,1,0
+495,in company for love,0,0,0,0,1,0,0,0,0,0,1
+496,with devotion at the assembly,0,0,0,0,1,0,0,0,0,0,1
+497,in scandal one ought,0,0,0,0,0,0,0,1,1,0,0
+498,a disgrace from obligation,0,0,0,0,0,0,0,1,1,0,0
+499,an impropriety with title,0,0,0,0,0,0,0,1,0,1,0
+500,at the dinner a ruin,0,0,0,0,0,0,0,1,0,0,1
+501,at the theatre a scandal,0,0,0,0,0,0,0,1,0,0,1
+502,well-born from duty,0,0,0,0,0,0,0,0,1,1,0
+503,with title one ought,0,0,0,0,0,0,0,0,1,1,0
+504,at the assembly as obligation,0,0,0,0,0,0,0,0,1,0,1
+505,in refined circles as duty,0,0,0,0,0,0,0,0,1,0,1
+506,of the aristocracy among society,0,0,0,0,0,0,0,0,0,1,1
+507,among society well-born,0,0,0,0,0,0,0,0,0,1,1
+508,courtship a scandal with passion,0,0,0,1,1,0,0,1,0,0,0
+509,She the family with calmness,1,0,1,0,0,0,1,0,0,0,0
+510,their cousin courtship a scandal,0,0,1,1,0,0,0,1,0,0,0
+511,Her at the assembly without fortune,1,0,0,0,0,1,0,0,0,0,1
+512,courtship with title rich,0,0,0,1,0,1,0,0,0,1,0
+513,the bride among friends,1,0,0,1,0,0,0,0,0,0,1
+514,of noble birth with income as required,0,0,0,0,0,1,0,0,1,1,0
+515,His from romance with grief,0,1,0,0,1,0,1,0,0,0,0
+516,He with an allowance as proper,0,1,0,0,0,1,0,0,1,0,0
+517,His a disgrace with sorrow,0,1,0,0,0,0,1,1,0,0,0
+518,Her as required with delight,1,0,0,0,0,0,1,0,1,0,0
+519,courtship with devotion with delight,0,0,0,1,1,0,1,0,0,0,0
+520,His their sibling as required,0,1,1,0,0,0,0,0,1,0,0
+521,well-born in refined circles with delight,0,0,0,0,0,0,1,0,0,1,1
+522,the family marriage with income,0,0,1,1,0,1,0,0,0,0,0
+523,in society an impropriety for devotion,0,0,0,0,1,0,0,1,0,0,1
+524,their sibling with income a scandal,0,0,1,0,0,1,0,1,0,0,0
+525,matrimony with an allowance for love,0,0,0,1,1,1,0,0,0,0,0
+526,He the household for love,0,1,1,0,1,0,0,0,0,0,0
+527,She with title in society,1,0,0,0,0,0,0,0,0,1,1
+528,with title at the ball with income,0,0,0,0,0,1,0,0,0,1,1
+529,Her of the peerage with fortune,1,0,0,0,0,1,0,0,0,1,0
+530,His with title from duty,0,1,0,0,0,0,0,0,1,1,0
+531,His at the ball for love,0,1,0,0,1,0,0,0,0,0,1
+532,their parents of the aristocracy from obligation,0,0,1,0,0,0,0,0,1,1,0
+533,Her for love with calmness,1,0,0,0,1,0,1,0,0,0,0
+534,His the family a scandal,0,1,1,0,0,0,0,1,0,0,0
+535,the groom a scandal,0,1,0,1,0,0,0,1,0,0,0
+536,well-born in refined circles a disgrace,0,0,0,0,0,0,0,1,0,1,1
+537,their cousin from duty with calmness,0,0,1,0,0,0,1,0,1,0,0
+538,with fortune in scandal with joy,0,0,0,0,0,1,1,1,0,0,0
+539,courtship rich with calmness,0,0,0,1,0,1,1,0,0,0,0
+540,He their cousin at the theatre,0,1,1,0,0,0,0,0,0,0,1
+541,their cousin at the dinner one ought,0,0,1,0,0,0,0,0,1,0,1
+542,Her rich with passion,1,0,0,0,1,1,0,0,0,0,0
+543,in the parlour without fortune as required,0,0,0,0,0,1,0,0,1,0,1
+544,Her courtship with income,1,0,0,1,0,1,0,0,0,0,0
+545,proposal of noble birth in scandal,0,0,0,1,0,0,0,1,0,1,0
+546,their parents with income with joy,0,0,1,0,0,1,1,0,0,0,0
+547,in refined circles without fortune with calmness,0,0,0,0,0,1,1,0,0,0,1
+548,their sibling a ruin with grief,0,0,1,0,0,0,1,1,0,0,0
+549,among connections one ought with passion,0,0,0,0,0,1,0,0,1,0,1
+550,marriage in company with income,0,0,0,1,0,1,0,0,0,0,1
+551,of noble birth as proper a disgrace,0,0,0,0,0,0,0,1,1,1,0
+552,matrimony in society as proper,0,0,0,1,0,0,0,0,1,0,1
+553,their sibling at the theatre in scandal,0,0,1,0,0,0,0,1,0,0,1
+554,their sibling of the aristocracy from romance,0,0,1,0,1,0,0,0,0,1,0
+555,a ruin for love with sorrow,0,0,0,0,1,0,1,1,0,0,0
+556,engagement with title for love,0,0,0,1,1,0,0,0,0,1,0
+557,of high rank wealthy an impropriety,0,0,0,0,0,1,0,1,0,1,0
+558,in the parlour one ought a disgrace,0,0,0,0,0,0,0,1,1,0,1
+559,Her the household with devotion,1,0,1,0,1,0,0,0,0,0,0
+560,at the assembly as required with delight,0,0,0,0,0,0,1,0,1,0,1
+561,His their parents nuptials,0,1,1,1,0,0,0,0,0,0,0
+562,Her a ruin with passion,1,0,0,0,1,0,0,1,0,0,0
+563,one ought with devotion with anxiety,0,0,0,0,1,0,1,0,1,0,0
+564,in refined circles for love with grief,0,0,0,0,1,0,1,0,0,0,1
+565,wealthy one ought a ruin,0,0,0,0,0,1,0,1,1,0,0
+566,their parents for love with delight,0,0,1,0,1,0,1,0,0,0,0
+567,He rich a disgrace,0,1,0,0,0,1,0,1,0,0,0
+568,their sibling courtship in refined circles,0,0,1,1,0,0,0,0,0,0,1
+569,the household with title with joy,0,0,1,0,0,0,1,0,0,1,0
+570,Her of high rank from obligation,1,0,0,0,0,0,0,0,1,1,0
+571,His their cousin with sorrow,0,1,1,0,0,0,1,0,0,0,0
+572,She rich one ought,1,0,0,0,0,1,0,0,1,0,0
+573,marriage wealthy as proper,0,0,0,1,0,1,0,0,1,0,0
+574,in society with fortune a disgrace,0,0,0,0,0,1,0,1,0,0,1
+575,matrimony of the aristocracy with grief,0,0,0,1,0,0,1,0,0,1,0
+576,He in scandal with devotion,0,1,0,0,1,0,0,1,0,0,0
+577,well-born in the parlour from duty,0,0,0,0,0,0,0,0,1,1,1
+578,She at the ball an impropriety,1,0,0,0,0,0,0,1,0,0,1
+579,their parents in the parlour for love,0,0,1,0,1,0,0,0,0,0,1
+580,He of high rank with fortune,0,1,0,0,0,1,0,0,0,1,0
+581,the groom with anxiety,0,1,0,1,0,0,1,0,0,0,0
+582,Her their sibling as required,1,0,1,0,0,0,0,0,1,0,0
+583,He one ought with passion,0,1,0,0,1,0,0,0,1,0,0
+584,Her the household of noble birth,1,0,1,0,0,0,0,0,0,1,0
+585,She the household an impropriety,1,0,1,0,0,0,0,1,0,0,0
+586,She the household without fortune,1,0,1,0,0,1,0,0,0,0,0
+587,with title in refined circles from romance,0,0,0,0,1,0,0,0,0,1,1
+588,She with income in scandal,1,0,0,0,0,1,0,1,0,0,0
+589,well-born from duty with calmness,0,0,0,0,0,0,1,0,1,1,0
+590,as required a disgrace with passion,0,0,0,0,1,0,0,1,1,0,0
+591,courtship at the theatre with delight,0,0,0,1,0,0,1,0,0,0,1
+592,without fortune in scandal for love,0,0,0,0,1,1,0,1,0,0,0
+593,Her of the peerage a ruin,1,0,0,0,0,0,0,1,0,1,0
+594,their parents one ought with devotion,0,0,1,0,1,0,0,0,1,0,0
+595,their parents marriage with title,0,0,1,1,0,0,0,0,0,1,0
+596,of the peerage from duty with passion,0,0,0,0,1,0,0,0,1,1,0
+597,His without fortune with grief,0,1,0,0,0,1,1,0,0,0,0
+598,as proper a disgrace with calmness,0,0,0,0,0,0,1,1,1,0,0
+599,His with title a ruin,0,1,0,0,0,0,0,1,0,1,0
+600,of noble birth from romance with delight,0,0,0,0,1,0,1,0,0,1,0
+601,She with fortune with joy,1,0,0,0,0,1,1,0,0,0,0
+602,He at the ball one ought,0,1,0,0,0,0,0,0,1,0,1
+603,their parents with fortune with passion,0,0,1,0,1,1,0,0,0,0,0
+604,courtship in company a ruin,0,0,0,1,0,0,0,1,0,0,1
+605,Her in refined circles from obligation,1,0,0,0,0,0,0,0,1,0,1
+606,the bride of the high rank,1,0,0,1,0,0,0,0,0,1,0
+607,marriage at the theatre with devotion,0,0,0,1,1,0,0,0,0,0,1
