@@ -18,7 +18,8 @@ novel_titles = [
     "Title: The Wanderer; or, Female Difficulties (Volume 5 of 5)",
     "Title: Middlemarch", "Title: The Mill on the Floss", "BELINDA.",
     "CASTLE RACKRENT", "HELEN", "Title: Leonora", "PATRONAGE.", "THE ABSENTEE",
-    "TO-MORROW", "LODORE.", "MARRIAGE."
+    "TO-MORROW", "LODORE.", "MARRIAGE.", "DEERBROOK, BY HARRIET MARTINEAU.",
+    "DAISY BURNS.", "Title: Vanity Fair", "Title: Self-control: A Novel"
 ]
 
 
@@ -105,8 +106,16 @@ def clean_gutenberg_text(file_path, eot_symbol="<|endoftext|>"):
         # (anything before this will be removed)
 
         chapter_markers = [
+            # Roman numerals or digits
             r"^\s*CHAPTER\s+(?:[.ivxlcdm]+|\d+)(?=\s*\.?\s*(\n|--?\s*[A-Z]))",
+
+            # CHAPTER followed by digits, roman numerals, or words until a '.' or newline
+            r"^\s*CHAPTER\s+[A-Z\d\- ]+(?=\.?\s*(\n|--?\s*[A-Z]))",
+
+            # Special illustration markers
             r"\[Illustration:\s*Chapter\s+1:[^\]]*?\]",
+
+            # Letters (epistolary works)
             r"^\s*LETTER\s+(?:[ivxlcdmj]+|\d+)\.?(?:\s*\[.*?\])?\s*$",
         ]
 
