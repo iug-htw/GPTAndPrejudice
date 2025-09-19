@@ -3,20 +3,11 @@ import tiktoken
 import time
 
 from gpt_model import GPTModel
+from utils.model import DEFAULT_CFG
 from data_loader_v1 import create_dataloader_v1
 from pre_train import train_model_simple
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-GPT_CONFIG = {
-    "vocab_size": 50257,
-    "context_length": 256,
-    "emb_dim": 896,        
-    "n_heads": 14,         
-    "n_layers": 8,         
-    "drop_rate": 0.2,      
-    "qkv_bias": True,
-    "device": DEVICE,
-}
 
 train_losses, val_losses, track_tokens_seen = [], [], []
 
@@ -37,8 +28,8 @@ def init_data_loaders():
         train_data,
         encode=encode,
         batch_size=12,
-        max_length=GPT_CONFIG["context_length"],
-        stride=GPT_CONFIG["context_length"],
+        max_length=DEFAULT_CFG["context_length"],
+        stride=DEFAULT_CFG["context_length"],
         drop_last=True,
         shuffle=True,
         num_workers=0
@@ -48,8 +39,8 @@ def init_data_loaders():
         val_data,
         encode=encode,
         batch_size=12,
-        max_length=GPT_CONFIG["context_length"],
-        stride=GPT_CONFIG["context_length"],
+        max_length=DEFAULT_CFG["context_length"],
+        stride=DEFAULT_CFG["context_length"],
         drop_last=False,
         shuffle=False,
         num_workers=0
@@ -69,7 +60,7 @@ def train(train_loader, val_loader,
     start_time = time.time()
 
     torch.manual_seed(123)
-    model = GPTModel(GPT_CONFIG)
+    model = GPTModel(DEFAULT_CFG)
     model.to(DEVICE)
     optimizer = torch.optim.AdamW(model.parameters(),
     lr=3e-4, betas=(0.9, 0.98), eps=1e-8, weight_decay=0.03)
@@ -78,7 +69,7 @@ def train(train_loader, val_loader,
     train_model_simple(
         model, train_loader, val_loader, optimizer,
         num_epochs=num_epochs, eval_iter=eval_iter,
-        cfg=GPT_CONFIG, model_prefix=model_prefix,
+        cfg=DEFAULT_CFG, model_prefix=model_prefix,
         train_losses=train_losses, val_losses=val_losses,
         track_tokens_seen=track_tokens_seen,
         warmup_steps=500,                     # shorter warmup
