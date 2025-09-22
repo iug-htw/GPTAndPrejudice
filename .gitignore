@@ -32,3 +32,4 @@ model_*.pth
 local/
 original_texts/
 archive/*.pth
+gpt_and_prejudice_snapshot/
