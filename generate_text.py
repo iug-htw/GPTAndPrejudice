@@ -11,7 +11,7 @@ def token_ids_to_text(token_ids, tokenizer):
     flat = token_ids.squeeze(0) # remove batch dimension
     return tokenizer.decode(flat.tolist())
 
-def generate(model, prompt, max_new_tokens, context_size, device="cpu", temperature=0.0, top_k=None, eos_id=None):
+def generate(model, prompt, max_new_tokens, context_size=256, device="cpu", temperature=0.0, top_k=None, eos_id=None):
     tokenizer = tiktoken.get_encoding("gpt2")
     idx = text_to_token_ids(prompt, tokenizer).to(device)
 
@@ -20,6 +20,8 @@ def generate(model, prompt, max_new_tokens, context_size, device="cpu", temperat
         idx_cond = idx[:, -context_size:]
         with torch.no_grad():
             logits = model(idx_cond)
+        if not isinstance(logits, tuple):
+            logits = logits[0] 
         logits = logits[:, -1, :]
 
         # New: Filter logits with top_k sampling
