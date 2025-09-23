@@ -63,6 +63,7 @@ def get_token_embeddings_from_sentence(text, model, device="cpu"):
     }
 
     embeddings = _extract_embeddings(text, model, device)
+    print('===>', len(embeddings), i)
     for i in range(12):
         layers_embeddings[i + 1] = embeddings[i]
 

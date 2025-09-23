@@ -21,7 +21,9 @@ def evaluate_trained_sae(sae, model, layer, device=torch.device("cpu")):
     hidden_states_list = []
 
     for text in filtered_sentences:
-        embeddings = get_token_embeddings_from_sentence(text, model, device=device)[layer]
+        embeddings = get_token_embeddings_from_sentence(text, model, device=device)
+        print(embeddings)
+        embeddings = embeddings[layer]
         if layer in embeddings:
             sentence_embedding = np.mean(embeddings[layer], axis=0)
             hidden_states_list.append(sentence_embedding)
