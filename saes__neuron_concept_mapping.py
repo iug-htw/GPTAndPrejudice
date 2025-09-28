@@ -1,8 +1,7 @@
 # saes__neuron_concept_map_signed.py
-import os, numpy as np, pandas as pd, torch
-from sklearn.metrics import average_precision_score, roc_auc_score
+import os, numpy as np, pandas as pd
 
-def build_neuron_concept_map(layer=1, base_dir="sae_probing", topk_per_neuron=2):
+def build_neuron_concept_map(layer=1, base_dir="sae_probing"):
     """
     Read neuron_label_assoc_l{layer}.csv and pick primary/secondary concepts per neuron.
     Saves to: sae_probing/neuron_concept_primary_secondary_l{layer}.csv
