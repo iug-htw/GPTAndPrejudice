@@ -18,7 +18,7 @@ from circuits import (
     rank_layers_by_gain_kl,
 )
 
-from austen_circuits.circuit_tasks import (
+from circuit_tasks import (
     build_gender_swap_pairs,
     build_ioi_pairs,
     build_marriage_vs_wealth_pairs,

@@ -13,7 +13,7 @@ def top_texts_for_neuron(layer=6, neuron_id=0, top_k=10,
       - Uses continuous activations (no thresholding).
     """
     # Load latents
-    pack = torch.load(os.path.join(base_dir, f"latent_activations_l{layer}.pt"), map_location="cpu")
+    pack = torch.load(os.path.join(base_dir, "output", f"latent_activations_l{layer}.pt"), map_location="cpu")
     ids = [str(x) for x in pack["ids"]]                    # sentence ids in row order
     latents = pack["latents"].cpu().numpy()                # shape [N, H]
 

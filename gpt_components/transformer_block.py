@@ -1,4 +1,3 @@
-import torch
 import torch.nn as nn
 
 from feed_forward import FeedForward

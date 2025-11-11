@@ -4,9 +4,9 @@ import os, numpy as np, pandas as pd
 def build_neuron_concept_map(layer=1, base_dir="sae_probing"):
     """
     Read neuron_label_assoc_l{layer}.csv and pick primary/secondary concepts per neuron.
-    Saves to: sae_probing/neuron_concept_primary_secondary_l{layer}.csv
+    Saves to: sae_probing/output/neuron_concept_primary_secondary_l{layer}.csv
     """
-    path = os.path.join(base_dir, f"neuron_label_assoc_l{layer}.csv")
+    path = os.path.join(base_dir, "output", f"neuron_label_assoc_l{layer}.csv")
     df = pd.read_csv(path)
 
     rows = []
@@ -44,7 +44,7 @@ def build_neuron_concept_map(layer=1, base_dir="sae_probing"):
         })
 
     out_df = pd.DataFrame(rows)
-    out_path = os.path.join(base_dir, f"neuron_concept_primary_secondary_l{layer}.csv")
+    out_path = os.path.join(base_dir, "output", f"neuron_concept_primary_secondary_l{layer}.csv")
     out_df.to_csv(out_path, index=False)
     print(f"✅ Primary/secondary mapping saved: {out_path}")
     return out_df

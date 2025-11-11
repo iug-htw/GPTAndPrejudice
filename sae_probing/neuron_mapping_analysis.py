@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 
 # ==== EDIT THIS ====
-ALL_LAYERS_ASSOC_CSV = "sae_probing/neuron_label_assoc_all_layers.csv"
-ALL_L_PRIMARY_SECONDARY_CSV = "sae_probing/neuron_concept_primary_secondary_all_layers.csv"
+ALL_LAYERS_ASSOC_CSV = "sae_probing/output/neuron_label_assoc_all_layers.csv"
+ALL_L_PRIMARY_SECONDARY_CSV = "sae_probing/output/neuron_concept_primary_secondary_all_layers.csv"
 OUT_DIR        = "sae_probing/analysis"
 TOPK           = 10
 # ===================

@@ -8,7 +8,7 @@ def load_latents(layer, base_dir=None):
     Loads latent activations saved as: torch.save(latent_activations, f"latent_activations_l{layer}.pt")
     Shape expected: [num_sentences, num_latents]
     """
-    latents_path = os.path.join(base_dir, f"latent_activations_l{layer}.pt")
+    latents_path = os.path.join(base_dir, "output", f"latent_activations_l{layer}.pt")
     pack = torch.load(latents_path, map_location="cpu") 
     latents  = pack["latents"]   # [N, M]
 
@@ -35,7 +35,7 @@ def find_selective_neurons(layer, min_count=5, max_count=150, activation_thresho
     selective_neurons = torch.nonzero(sel_mask, as_tuple=False).squeeze(1).cpu()
 
     # Save IDs for further analysis
-    sel_pt_path = os.path.join(base_dir, f"selective_neuron_ids_l{layer}.pt")
+    sel_pt_path = os.path.join(base_dir, "output", f"selective_neuron_ids_l{layer}.pt")
     torch.save(selective_neurons, sel_pt_path)
 
     # Build DataFrame **only for selective neurons**

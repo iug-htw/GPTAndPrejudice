@@ -7,8 +7,8 @@ import tiktoken
 # Imports for your project
 # ----------------------------
 # Try both import paths so this script works whether you run from project root
-# or inside the austen_circuits package folder.
-from austen_circuits.data.ioi_data import build_ioi_dataset
+# or inside the circuits_analysis___experiment package folder.
+from .data.ioi_data import build_ioi_dataset
 from gpt_model import GPTModel, DEFAULT_CFG
 
 # ----------------------------

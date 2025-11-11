@@ -187,7 +187,7 @@ Two quick experiments:
 ## **Main code folders and scripts:**
 
 ```
-austen_circuits/
+circuits_analysis___experiment/
 ├─ algorithms/
 │  ├─ circuit_discovery.py   # High-level orchestration for circuit runs (loops over layers, saves per-layer metrics)
 │  ├─ patching.py            # Activation patching utilities (clean/corrupt runs, KL-to-clean layer sweeps)
