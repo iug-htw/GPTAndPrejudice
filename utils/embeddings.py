@@ -32,15 +32,11 @@ def get_token_embeddings_from_dataset(dataset, model, device="cpu"):
         6: [],
         7: [],
         8: [],
-        9: [],
-        10: [],
-        11: [],
-        12: [],
     }
 
     for sentence in dataset:
         embeddings = _extract_embeddings(sentence, model, device)
-        for i in range(12):
+        for i in range(8):
             layers_embeddings[i + 1].append(embeddings[i])
 
     return layers_embeddings
@@ -56,15 +52,11 @@ def get_token_embeddings_from_sentence(text, model, device="cpu"):
         6: None,
         7: None,
         8: None,
-        9: None,
-        10: None,
-        11: None,
-        12: None,
     }
 
     embeddings = _extract_embeddings(text, model, device)
-    print('===>', len(embeddings), i)
-    for i in range(12):
+
+    for i in range(8):
         layers_embeddings[i + 1] = embeddings[i]
 
     return layers_embeddings

@@ -1,14 +1,36 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 """
-Compile SAE dataset from train/val text, split into sentences, extract token embeddings
-for layers 1..8 from your GPT model, and save one .npy file per layer.
+Build sharded, layer-wise embedding datasets for Sparse Autoencoder (SAE) training.
 
-Outputs:
-  sae_data/layer1_embeddings.npy
+Overview
+--------
+This utility reads the cleaned training + validation corpora, splits text into
+medium-length sentences, runs them through the custom GPT model, and extracts
+token-level hidden states for selected transformer layers (1-based indexing).
+Embeddings are streamed to disk in **shards** to avoid exhausting host memory.
+
+Why sharding?
+-------------
+Hidden-state arrays are large (tokens × d_model). To keep memory bounded, the
+script accumulates up to `--shard_tokens` tokens per layer, writes a shard
+`layer{L}_part{K}.npy`, clears the buffer, then continues.
+
+Outputs (per layer L)
+---------------------
+- {out_dir}/layerL_part0.npy
+- {out_dir}/layerL_part1.npy
   ...
-  sae_data/layer8_embeddings.npy
+Each .npy has shape [N_tokens_in_shard, d_model] and dtype `--save_dtype`.
+
+Typical usage
+-------------
+python extract_embeddings.py \
+  --train_file datasets/train_text_data.txt \
+  --val_file   datasets/val_text_data.txt \
+  --ckpt checkpoints/best_model.pth \
+  --layers 1,2,3,4,5,6,7,8 \
+  --out_dir sae_data \
+  --shard_tokens 250000 \
+  --save_dtype float16
 """
 
 import os, re, sys, argparse

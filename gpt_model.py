@@ -3,8 +3,8 @@ import torch
 import torch.nn as nn
 from typing import Dict, Any, Optional
 
-from .gpt_components.transformer_block import TransformerBlock
-from .gpt_components.layer_norm import LayerNorm
+from gpt_components.transformer_block import TransformerBlock
+from gpt_components.layer_norm import LayerNorm
 
 class InterventionPlan:
     """

@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import numpy as np
 
-# ==== EDIT THIS ====
+# ===================
 ALL_LAYERS_ASSOC_CSV = "sae_probing/output/neuron_label_assoc_all_layers.csv"
 ALL_L_PRIMARY_SECONDARY_CSV = "sae_probing/output/neuron_concept_primary_secondary_all_layers.csv"
 OUT_DIR        = "sae_probing/analysis"
@@ -80,7 +80,7 @@ def main():
     lead_table.to_csv(os.path.join(OUT_DIR, "primary_concept_counts_strength.csv"))
 
     # 6) Entanglement: primary → secondary pairs
-    print_section("Primary → Secondary pairs (top)")
+    print_section("Primary -> Secondary pairs (top)")
     pair_counts = (
         df.assign(secondary_concept=df["secondary_concept"].fillna("None"))
           .groupby(["primary_concept","secondary_concept"])
@@ -90,8 +90,9 @@ def main():
           .sort_values("count", ascending=False)
     )
     # share within each primary
-    pair_counts["share_within_primary_%"] = (
-        pair_counts.groupby("primary_concept")["count"].apply(lambda s: (s/s.sum()*100).round(1))
+    pair_counts['share_within_primary_%'] = (
+        100.0 * pair_counts['count']
+        / pair_counts.groupby('primary_concept')['count'].transform('sum')
     )
     print(pair_counts.head(25).to_string(index=False))
     pair_counts.to_csv(os.path.join(OUT_DIR, "primary_to_secondary_pairs.csv"), index=False)
@@ -121,13 +122,13 @@ def main():
     print("\nBy primary concept:\n", no_sec_by_concept.sort_values(ascending=False).to_string())
     no_sec_by_concept.to_csv(os.path.join(OUT_DIR, "no_secondary_by_concept.csv"))
 
-    # 10) Extra: secondary concept landscape
+    # 10) secondary concept landscape
     print_section("Secondary concept frequency overall")
     sec_counts = df["secondary_concept"].fillna("None").value_counts().rename("count_accross_all_layers")
     print(sec_counts.to_string())
     sec_counts.to_csv(os.path.join(OUT_DIR, "secondary_concept_counts.csv"))
 
-    # 11) Extra: AP gap (primary - secondary) trends
+    # 11) AP gap (primary - secondary) trends
     if "secondary_AP" in df.columns:
         print_section("AP gap (primary_AP - secondary_AP)")
         df["ap_gap"] = (df["primary_AP"] - df["secondary_AP"].fillna(0)).round(3)

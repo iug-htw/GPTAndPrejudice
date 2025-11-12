@@ -4,7 +4,7 @@ import pandas as pd
 import torch
 
 def top_texts_for_neuron(layer=6, neuron_id=0, top_k=10,
-                         base_dir="sae_probing", csv_path="themes_analysis.csv"):
+                         base_dir="sae_probing", csv_path="./datasets/themes_analysis.csv"):
     """
     Return a DataFrame of the top-k sentences for a given neuron (highest activation first).
 

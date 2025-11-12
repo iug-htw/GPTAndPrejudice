@@ -8,7 +8,7 @@ from sklearn.metrics import average_precision_score, roc_auc_score
 def calculate_neuron_to_concept_assoc(
     layer=1,
     base_dir="sae_probing",
-    csv_path="themes_analysis.csv",
+    csv_path="./datasets/themes_analysis.csv",
     threshold=0.0,
     eps=1e-3
 ):

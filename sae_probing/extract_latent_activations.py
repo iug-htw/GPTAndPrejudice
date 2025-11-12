@@ -4,7 +4,7 @@ import csv
 
 from utils.tokenization import text_to_token_ids
 
-CSV_PATH  = "themes_analysis.csv"          # csv with columns: id, text, + label columns
+CSV_PATH  = "./datasets/themes_analysis.csv"          # csv with columns: id, text, + label columns
 
 def exract_latent_activations(model, sae, layer, dataset_path=CSV_PATH, device="cpu"):
     # Read CSV rows

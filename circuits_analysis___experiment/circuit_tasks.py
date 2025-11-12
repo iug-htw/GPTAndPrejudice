@@ -1,5 +1,5 @@
 
-"""datasets/circuit_tasks.py
+"""circuit_tasks.py
 Generators for clean/corrupt minimal-pair prompts to probe circuits.
 They return tuples of (clean_text, corrupt_text, target_str, distractor_str).
 Use your own tokenizer to convert strings to IDs (see to_token_ids).

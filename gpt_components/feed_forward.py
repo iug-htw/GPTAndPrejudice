@@ -1,7 +1,6 @@
-import torch
 import torch.nn as nn
 
-from activation import GELU
+from .activation import GELU
 
 class FeedForward(nn.Module):
     '''

@@ -7,7 +7,7 @@ from utils.embeddings import get_token_embeddings_from_sentence
 
 def evaluate_trained_sae(sae, model, layer, device=torch.device("cpu")):
     # ----- Step 1: Load Text File -----
-    with open('val_text_data_all_txt.txt', 'r', encoding='utf-8') as f:
+    with open('datasets/val_text_data.txt', 'r', encoding='utf-8') as f:
         full_text = f.read()
 
     # ----- Step 2: Split into sentences -----
@@ -22,7 +22,6 @@ def evaluate_trained_sae(sae, model, layer, device=torch.device("cpu")):
 
     for text in filtered_sentences:
         embeddings = get_token_embeddings_from_sentence(text, model, device=device)
-        print(embeddings)
         embeddings = embeddings[layer]
         if layer in embeddings:
             sentence_embedding = np.mean(embeddings[layer], axis=0)
