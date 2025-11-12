@@ -197,6 +197,17 @@ After training, models and outputs were transferred locally for downstream evalu
 
 ---
 
+## Load the Public Model
+
+The final trained model weights are hosted on Hugging Face:
+
+🔗 **[HTW-KI-Werkstatt / gpt_and_prejudice](https://huggingface.co/HTW-KI-Werkstatt/gpt_and_prejudice)**
+
+> 💡 For an interactive example, see [`demo_huggingface_model.ipynb`](demo_huggingface_model.ipynb),  
+> which walks through loading the model from Hugging Face and generating sample completions.
+
+---
+
 ## 🔍 Evaluation Pipeline
 
 **Quantitative metrics**
@@ -255,7 +266,6 @@ From these, it computes and visualizes a wide range of interpretability diagnost
 
 > Together, these analyses form the interpretability backbone of the project — transforming per-neuron associations into coherent, layer-level patterns that link the model’s internal geometry to human-understandable concepts.
 
-
 ---
 
 ## Results Summary
@@ -271,50 +281,6 @@ All analysis outputs (per-layer CSVs and summaries) are available in:
 - sae_probing/output/
 - sae_probing/analysis/
 ```
-
----
-
-## Load the Public Model
-
-The final trained model weights are hosted on Hugging Face:
-
-🔗 **[HTW-KI-Werkstatt / gpt_and_prejudice](https://huggingface.co/HTW-KI-Werkstatt/gpt_and_prejudice)**
-
-> 💡 For an interactive example, see [`demo_huggingface_model.ipynb`](demo_huggingface_model.ipynb),  
-> which walks through loading the model from Hugging Face and generating sample completions.
-
-
----
-
-## Reproducing Locally
-
-**Requirements:** Python ≥ 3.10, PyTorch ≥ 2.1, tiktoken, evaluate, numpy, matplotlib, seaborn
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-**Workflow (local / CPU or single GPU):**
-
-```bash
-# 1. Prepare data
-jupyter notebook 1_prepare_data.ipynb
-
-# 2. Visualize training losses
-jupyter notebook 2_loss_plotter.ipynb
-
-# 3. Evaluate GPT model
-jupyter notebook 3_model_evaluation.ipynb
-
-# 4. Evaluate SAEs
-jupyter notebook 4_SAEs_evaluations.ipynb
-
-# 5. Probe concepts and analyze
-jupyter notebook 5_SAE_probing.ipynb
-```
-
-> 💡 All notebooks run comfortably on CPU.
 
 ---
 
