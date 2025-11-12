@@ -1,0 +1,20 @@
+{
+  "layer": 1,
+  "n_tokens": 5634193,
+  "input_dim": 896,
+  "hidden_dim": 2688,
+  "top_k": 50,
+  "epochs": 500,
+  "batch_size": 64,
+  "lr": 0.0005,
+  "weight_decay": 1e-06,
+  "patience": 10,
+  "val_frac": 0.1,
+  "seed": 42,
+  "device": "cuda",
+  "final_train_loss": 0.1608187925537461,
+  "best_val_loss": 0.1612541741636099,
+  "model_path": "sae_models/sae_layer1.pth",
+  "num_shards": 23,
+  "memmap_path": "sae_models/layer1_ALL.memmap"
+}

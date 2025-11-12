@@ -1,0 +1,44 @@
+{
+  "1838": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "family",
+    "secondary_count": 3
+  },
+  "1896": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "marriage",
+    "secondary_count": 3
+  },
+  "2495": {
+    "primary_category": "marriage",
+    "primary_count": 4,
+    "secondary_category": "society",
+    "secondary_count": 2
+  },
+  "2552": {
+    "primary_category": "family",
+    "primary_count": 4,
+    "secondary_category": "marriage",
+    "secondary_count": 3
+  },
+  "2764": {
+    "primary_category": "male",
+    "primary_count": 5,
+    "secondary_category": "family",
+    "secondary_count": 3
+  },
+  "2942": {
+    "primary_category": "family",
+    "primary_count": 4,
+    "secondary_category": "marriage",
+    "secondary_count": 3
+  },
+  "3078": {
+    "primary_category": "UNK",
+    "primary_count": 0,
+    "secondary_category": "emotion",
+    "secondary_count": 3
+  }
+}
