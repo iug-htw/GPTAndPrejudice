@@ -8,8 +8,8 @@ This repository contains the codebase, datasets, and analysis scripts accompanyi
 **"GPT & Prejudice: Using Sparse Autoencoders to Uncover Conceptual Structures in 19th-Century Literature"**
 *(under peer review)*
 
-[*Read full paper here*](https://doi.org/10.48550/arXiv.2510.01252)  
-*(HTW Berlin, 2025)*  
+🔗 Link to the paper: [/arXiv.2510.01252](https://doi.org/10.48550/arXiv.2510.01252)  
+🔗 Link to the model: [HTW-KI-Werkstatt/gpt_and_prejudice](https://huggingface.co/HTW-KI-Werkstatt/gpt_and_prejudice)
 
 ---
 
@@ -201,14 +201,14 @@ After training, models and outputs were transferred locally for downstream evalu
 
 The final trained model weights are hosted on Hugging Face:
 
-🔗 **[HTW-KI-Werkstatt / gpt_and_prejudice](https://huggingface.co/HTW-KI-Werkstatt/gpt_and_prejudice)**
+🔗 **[HTW-KI-Werkstatt/gpt_and_prejudice](https://huggingface.co/HTW-KI-Werkstatt/gpt_and_prejudice)**
 
 > 💡 For an interactive example, see [`demo_huggingface_model.ipynb`](demo_huggingface_model.ipynb),  
 > which walks through loading the model from Hugging Face and generating sample completions.
 
 ---
 
-## 🔍 Evaluation Pipeline
+## Evaluation Pipeline
 
 **Quantitative metrics**
 
