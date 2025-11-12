@@ -314,4 +314,6 @@ If you use this work, please cite the archived paper:
 Developed at **HTW Berlin (Hochschule für Technik und Wirtschaft), 2025**.
 This work was carried out in the context of the KIWI project (16DHBKI071) that is generously funded by the Federal Ministry of Research, Technology and Space (BMFTR).
 
+---
+
 <p align="center"><i>GPT & Prejudice: Using Sparse Autoencoders to Uncover Conceptual Structures in 19th-Century Literature</i></p>
