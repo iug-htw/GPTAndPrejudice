@@ -1,14 +1,13 @@
 import torch
 import torch.nn.functional as F
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
 import numpy as np
 import re
 
-def evaluate_trained_sae(sae, model, tokenizer, get_token_embeddings, layer,
-                         linear_prob_label="marriage", device=torch.device("cpu")):
+from utils.embeddings import get_token_embeddings_from_sentence
+
+def evaluate_trained_sae(sae, model, layer, device=torch.device("cpu")):
     # ----- Step 1: Load Text File -----
-    with open('val_text_data_all_txt.txt', 'r', encoding='utf-8') as f:
+    with open('datasets/val_text_data.txt', 'r', encoding='utf-8') as f:
         full_text = f.read()
 
     # ----- Step 2: Split into sentences -----
@@ -22,7 +21,8 @@ def evaluate_trained_sae(sae, model, tokenizer, get_token_embeddings, layer,
     hidden_states_list = []
 
     for text in filtered_sentences:
-        embeddings = get_token_embeddings(text, model, tokenizer, layers=[layer])
+        embeddings = get_token_embeddings_from_sentence(text, model, device=device)
+        embeddings = embeddings[layer]
         if layer in embeddings:
             sentence_embedding = np.mean(embeddings[layer], axis=0)
             hidden_states_list.append(sentence_embedding)

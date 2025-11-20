@@ -1,9 +1,0 @@
-{
-  "vocab_size": 50257,
-  "context_length": 256,
-  "emb_dim": 896,
-  "n_heads": 14,
-  "n_layers": 8,
-  "drop_rate": 0.2,
-  "qkv_bias": true
-}

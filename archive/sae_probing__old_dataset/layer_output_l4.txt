@@ -1,0 +1,64 @@
+--------------------------------------------------
+Layer 4 — Selective neurons:
+✅ Saved latent_activations_l4.pt with shape: torch.Size([318, 3584])
+latent_activations shape: torch.Size([318, 3584])
+      Neuron ID  Activation Count  Is Selective
+60           60               118          True
+2861       2861                53          True
+208         208                49          True
+1853       1853                44          True
+2425       2425                28          True
+1643       1643                22          True
+525         525                14          True
+2074       2074                14          True
+2030       2030                13          True
+2209       2209                13          True
+2552       2552                12          True
+1536       1536                11          True
+3385       3385                11          True
+2130       2130                11          True
+3140       3140                 8          True
+560         560                 7          True
+3046       3046                 7          True
+955         955                 6          True
+3419       3419                 6          True
+3095       3095                 5          True
+29           29                 5          True
+2414       2414                 5          True
+569         569                 5          True
+371         371                 5          True
+2068       2068                 5          True
+#selective_neurons: 25
+--------------------------------------------------
+Top-k activations collected: 250
+✅ Saved neuron mappings to neuron_theme_mapping.json
+Neuron-theme mappings: 25
+--------------------------------------------------
+Strongest Concepts:
+    neuron idx associated concept  activations count secondary concept
+0         2130               male                 10              None
+1          569             female                  8              None
+2          560               love                  6              None
+3         3419             female                  6              male
+4         1536             female                  5              male
+5         2030             female                  5            family
+6         2074           marriage                  5            wealth
+7         2414               male                  5            family
+8         3095               male                  5            family
+9         3140               male                  5           emotion
+10        1853           marriage                  4            female
+⚠️ Failed to save sae_probing/strongest_associations_l4.json: Object of type DataFrame is not JSON serializable
+--------------------------------------------------
+Concept similarity matrix:
+Saved similarity heatmap → sae_probing/layer_output_l4_similarity.png
+--------------------------------------------------
+Dual themed neurons:
+Neuron 1536: primary = female, secondary = male
+Neuron 1853: primary = marriage, secondary = female
+Neuron 2030: primary = female, secondary = family
+Neuron 2074: primary = marriage, secondary = wealth
+Neuron 2414: primary = male, secondary = family
+Neuron 3095: primary = male, secondary = family
+Neuron 3140: primary = male, secondary = emotion
+Neuron 3419: primary = female, secondary = male
+Saved dual-theme graph → sae_probing/layer_output_l4_dual_theme.png
