@@ -72,10 +72,34 @@ def main():
     flag_shares.to_csv(os.path.join(OUT_DIR, "polarity_flags_shares_per_layer.csv"))
 
     # 5) Which concepts lead (primary concept counts & strength)
-    print_section("Primary concept counts & strength (mean AP)")
     primary_counts = df["primary_concept"].value_counts().rename("count")
-    primary_strength = df.groupby("primary_concept")["primary_AP"].mean().round(3).rename("mean_primary_AP")
-    lead_table = pd.concat([primary_counts, primary_strength], axis=1).sort_values(["count","mean_primary_AP"], ascending=[False, False])
+    primary_strength = (
+        df.groupby("primary_concept")["primary_AP"]
+          .mean()
+          .round(3)
+          .rename("mean_primary_AP")
+    )
+    no_secondary_counts = (
+        df[df["secondary_concept"].isna()]["primary_concept"]
+          .value_counts()
+          .rename("count_no_secondary")
+    )
+    lead_table = pd.concat(
+        [primary_counts, primary_strength, no_secondary_counts],
+        axis=1
+    )
+    lead_table["count_no_secondary"] = (
+        lead_table["count_no_secondary"]
+        .fillna(0)
+        .astype(int)
+    )
+
+    # Sort by overall primary count, then mean AP
+    lead_table = lead_table.sort_values(
+        ["count", "mean_primary_AP"],
+        ascending=[False, False]
+    )
+
     print(lead_table.to_string())
     lead_table.to_csv(os.path.join(OUT_DIR, "primary_concept_counts_strength.csv"))
 
