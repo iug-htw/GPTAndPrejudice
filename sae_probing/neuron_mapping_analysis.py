@@ -2,15 +2,13 @@
 import os
 import pandas as pd
 import numpy as np
+import argparse
 
 # ===================
-ALL_LAYERS_ASSOC_CSV = "sae_probing/output/neuron_label_assoc_all_layers.csv"
-ALL_L_PRIMARY_SECONDARY_CSV = "sae_probing/output/neuron_concept_primary_secondary_all_layers.csv"
-OUT_DIR        = "sae_probing/analysis"
+ALL_L_PRIMARY_SECONDARY_CSV = "mappings/neuron_concept_primary_secondary_all_layers.csv"
+OUT_DIR        = "analysis"
 TOPK           = 10
 # ===================
-
-os.makedirs(OUT_DIR, exist_ok=True)
 
 def load_all_layers(path):
     df = pd.read_csv(path)
@@ -33,8 +31,12 @@ def print_section(title):
     print(title)
     print("="*len(title))
 
-def main():
-    df = load_all_layers(ALL_L_PRIMARY_SECONDARY_CSV)
+def cross_layers_mapping_analysis(base_dir="sae_probing"):
+    os.makedirs(OUT_DIR, exist_ok=True)
+    
+    data_path = os.path.join(base_dir, ALL_L_PRIMARY_SECONDARY_CSV)
+    df = load_all_layers(data_path)
+
     n_rows = len(df)
     n_layers = df["layer"].nunique()
     print_section(f"Summary ({n_rows} neurons across {n_layers} layers)")
@@ -45,7 +47,7 @@ def main():
     per_layer = df.groupby("layer").size().rename("count").reset_index()
     per_layer["growth_vs_prev"] = per_layer["count"].diff().fillna(0).astype(int)
     print(per_layer.to_string(index=False))
-    per_layer.to_csv(os.path.join(OUT_DIR, "neurons_per_layer.csv"), index=False)
+    per_layer.to_csv(os.path.join(base_dir, OUT_DIR, "neurons_per_layer.csv"), index=False)
 
     # 2) Mean primary AP by layer + peak layer
     print_section("Mean primary AP by layer (peak layer)")
@@ -54,13 +56,13 @@ def main():
     peak_value = ap_by_layer.max()
     print(ap_by_layer.to_string())
     print(f"\nPeak layer for mean AP: L{peak_layer} (mean AP = {peak_value:.3f})")
-    ap_by_layer.to_csv(os.path.join(OUT_DIR, "mean_primary_ap_by_layer.csv"))
+    ap_by_layer.to_csv(os.path.join(base_dir, OUT_DIR, "mean_primary_ap_by_layer.csv"))
 
     # 3) Polarity trends across layers
     print_section("Polarity trends across layers")
     pol_by_layer = df.groupby("layer")["polarity_score"].mean().round(3).rename("mean_polarity")
     print(pol_by_layer.to_string())
-    pol_by_layer.to_csv(os.path.join(OUT_DIR, "mean_polarity_by_layer.csv"))
+    pol_by_layer.to_csv(os.path.join(base_dir, OUT_DIR, "mean_polarity_by_layer.csv"))
 
     # 4) Share of dominant neurons (per layer) + other flags
     print_section("Polarity flags share per layer")
@@ -68,8 +70,8 @@ def main():
     flag_shares = (flag_counts.div(flag_counts.sum(axis=1), axis=0)*100).round(1)
     print("Counts:\n", flag_counts.to_string())
     print("\nShares (%):\n", flag_shares.to_string())
-    flag_counts.to_csv(os.path.join(OUT_DIR, "polarity_flags_counts_per_layer.csv"))
-    flag_shares.to_csv(os.path.join(OUT_DIR, "polarity_flags_shares_per_layer.csv"))
+    flag_counts.to_csv(os.path.join(base_dir, OUT_DIR, "polarity_flags_counts_per_layer.csv"))
+    flag_shares.to_csv(os.path.join(base_dir, OUT_DIR, "polarity_flags_shares_per_layer.csv"))
 
     # 5) Which concepts lead (primary concept counts & strength)
     primary_counts = df["primary_concept"].value_counts().rename("count")
@@ -101,7 +103,7 @@ def main():
     )
 
     print(lead_table.to_string())
-    lead_table.to_csv(os.path.join(OUT_DIR, "primary_concept_counts_strength.csv"))
+    lead_table.to_csv(os.path.join(base_dir, OUT_DIR, "primary_concept_counts_strength.csv"))
 
     # 6) Entanglement: primary → secondary pairs
     print_section("Primary -> Secondary pairs (top)")
@@ -119,20 +121,20 @@ def main():
         / pair_counts.groupby('primary_concept')['count'].transform('sum')
     )
     print(pair_counts.head(25).to_string(index=False))
-    pair_counts.to_csv(os.path.join(OUT_DIR, "primary_to_secondary_pairs.csv"), index=False)
+    pair_counts.to_csv(os.path.join(base_dir, OUT_DIR, "primary_to_secondary_pairs.csv"), index=False)
 
     # 7) Polarity by concept (how single-minded neurons are)
     print_section("Polarity by concept (mean polarity)")
     polarity_by_concept = df.groupby("primary_concept")["polarity_score"].mean().round(3).rename("mean_polarity")
     print(polarity_by_concept.sort_values(ascending=False).to_string())
-    polarity_by_concept.to_csv(os.path.join(OUT_DIR, "polarity_by_concept.csv"))
+    polarity_by_concept.to_csv(os.path.join(base_dir, OUT_DIR, "polarity_by_concept.csv"))
 
     # 8) Strongest individual units (by AP)
     print_section(f"Top {TOPK} neurons by primary AP")
     cols_show = ["layer","neuron_id","primary_concept","primary_AP","secondary_concept","secondary_AP","polarity_score","polarity_flag"]
     top_units = df.sort_values("primary_AP", ascending=False).head(TOPK)[cols_show]
     print(top_units.to_string(index=False))
-    top_units.to_csv(os.path.join(OUT_DIR, f"top_{TOPK}_neurons_by_AP.csv"), index=False)
+    top_units.to_csv(os.path.join(base_dir, OUT_DIR, f"top_{TOPK}_neurons_by_AP.csv"), index=False)
 
     # 9) Count of primary concepts with no secondary
     print_section("Count of neurons with NO secondary concept")
@@ -141,16 +143,16 @@ def main():
     # breakdown by layer/concept
     no_sec_by_layer = df[df["secondary_concept"].isna()].groupby("layer").size().rename("no_secondary_count")
     print("\nBy layer:\n", no_sec_by_layer.to_string())
-    no_sec_by_layer.to_csv(os.path.join(OUT_DIR, "no_secondary_by_layer.csv"))
+    no_sec_by_layer.to_csv(os.path.join(base_dir, OUT_DIR, "no_secondary_by_layer.csv"))
     no_sec_by_concept = df[df["secondary_concept"].isna()].groupby("primary_concept").size().rename("no_secondary_count")
     print("\nBy primary concept:\n", no_sec_by_concept.sort_values(ascending=False).to_string())
-    no_sec_by_concept.to_csv(os.path.join(OUT_DIR, "no_secondary_by_concept.csv"))
+    no_sec_by_concept.to_csv(os.path.join(base_dir, OUT_DIR, "no_secondary_by_concept.csv"))
 
     # 10) secondary concept landscape
     print_section("Secondary concept frequency overall")
     sec_counts = df["secondary_concept"].fillna("None").value_counts().rename("count_accross_all_layers")
     print(sec_counts.to_string())
-    sec_counts.to_csv(os.path.join(OUT_DIR, "secondary_concept_counts.csv"))
+    sec_counts.to_csv(os.path.join(base_dir, OUT_DIR, "secondary_concept_counts.csv"))
 
     # 11) AP gap (primary - secondary) trends
     if "secondary_AP" in df.columns:
@@ -158,13 +160,19 @@ def main():
         df["ap_gap"] = (df["primary_AP"] - df["secondary_AP"].fillna(0)).round(3)
         ap_gap_by_layer = df.groupby("layer")["ap_gap"].mean().round(3).rename("mean_ap_gap")
         print(ap_gap_by_layer.to_string())
-        ap_gap_by_layer.to_csv(os.path.join(OUT_DIR, "mean_ap_gap_by_layer.csv"))
+        ap_gap_by_layer.to_csv(os.path.join(base_dir, OUT_DIR, "mean_ap_gap_by_layer.csv"))
         ap_gap_by_concept = df.groupby("primary_concept")["ap_gap"].mean().round(3).rename("mean_ap_gap")
         print("\nBy concept:\n", ap_gap_by_concept.sort_values(ascending=False).to_string())
-        ap_gap_by_concept.to_csv(os.path.join(OUT_DIR, "mean_ap_gap_by_concept.csv"))
+        ap_gap_by_concept.to_csv(os.path.join(base_dir, OUT_DIR, "mean_ap_gap_by_concept.csv"))
 
     print_section("Done")
     print(f"Saved CSV summaries in: {OUT_DIR}")
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-dir", "--base_dir", type=str)
+
+    args = parser.parse_args()
+    base_dir = args.base_dir
+
+    cross_layers_mapping_analysis(base_dir)

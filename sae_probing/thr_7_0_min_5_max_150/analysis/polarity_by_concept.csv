@@ -1,0 +1,11 @@
+primary_concept,mean_polarity
+class,0.089
+duty,0.173
+emotion,0.153
+family,0.127
+female,0.25
+love,0.36
+male,0.396
+marriage,0.277
+society,0.296
+wealth,0.069

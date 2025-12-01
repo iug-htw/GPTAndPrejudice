@@ -1,0 +1,11 @@
+primary_concept,count,mean_primary_AP,count_no_secondary
+female,87,0.318,1
+male,50,0.3,10
+marriage,48,0.279,2
+family,28,0.286,0
+society,24,0.303,0
+emotion,17,0.253,0
+wealth,9,0.271,0
+duty,3,0.187,0
+love,1,0.389,0
+class,1,0.229,0

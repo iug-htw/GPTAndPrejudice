@@ -86,7 +86,7 @@ GPTANDPREJUDICE/
 │   ├── neuron_concept_assoc.py
 │   ├── neuron_concept_mapping.py
 │   ├── neuron_mapping_analysis.py
-│   ├── output/                      # Saved CSVs (assoc., mappings, summaries)
+│   ├── mappings/                      # Saved CSVs (assoc., mappings, summaries)
 │   └── analysis/                    # Analytical summaries (cross-layer stats)
 │
 ├── utils/                           # Helper functions for tokenization and model I/O
@@ -255,7 +255,7 @@ This multi-stage probing yields a **layer-wise concept map**, revealing how abst
 **Cross-Layer Analysis (`neuron_mapping_analysis.py`)**
 
 After concept mapping for each SAE layer, the script sae_probing/neuron_mapping_analysis.py consolidates the results across all eight layers to produce a layer-wise and concept-wise interpretability profile.
-It reads two aggregated files from sae_probing/output/:
+It reads two aggregated files from sae_probing/mappings/:
 
 ```
 neuron_label_assoc_all_layers.csv
@@ -278,7 +278,7 @@ From these, it computes and visualizes a wide range of interpretability diagnost
 All analysis outputs (per-layer CSVs and summaries) are available in:
 
 ```
-- sae_probing/output/
+- sae_probing/mappings/
 - sae_probing/analysis/
 ```
 

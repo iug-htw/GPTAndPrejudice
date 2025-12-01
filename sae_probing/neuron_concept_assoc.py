@@ -7,7 +7,8 @@ from sklearn.metrics import average_precision_score, roc_auc_score
 
 def calculate_neuron_to_concept_assoc(
     layer=1,
-    base_dir="sae_probing",
+    root_dir="sae_probing", 
+    out_dir="sae_probing",
     csv_path="./datasets/themes_analysis.csv",
     threshold=0.0,
     eps=1e-3
@@ -29,19 +30,19 @@ def calculate_neuron_to_concept_assoc(
     Laplace smoothing (eps) is applied to avoid divide-by-zero issues.
     
     Saves results to:
-        sae_probing/output/neuron_label_assoc_l{layer}.csv
+        sae_probing/{threshold_custom_dir}/mappings/neuron_label_assoc_l{layer}.csv
     """
 
     # ---- Load latent activations and selective neurons ----
     latents_pack = torch.load(
-        os.path.join(base_dir, "output", f"latent_activations_l{layer}.pt"),
+        os.path.join(root_dir, "activations", f"latent_activations_l{layer}.pt"),
         map_location="cpu"
     )
     sentence_ids = [str(x) for x in latents_pack["ids"]]
     all_latents = latents_pack["latents"].cpu().numpy()  # shape [N, H]
 
     selective_neuron_ids = torch.load(
-        os.path.join(base_dir, "output", f"selective_neuron_ids_l{layer}.pt"),
+        os.path.join(out_dir, "mappings", f"selective_neuron_ids_l{layer}.pt"),
         map_location="cpu"
     ).numpy()  # [S]
 
@@ -105,7 +106,7 @@ def calculate_neuron_to_concept_assoc(
 
     # ---- Save associations table ----
     assoc_df = pd.DataFrame(rows)
-    out_path = os.path.join(base_dir, "output", f"neuron_label_assoc_l{layer}.csv")
+    out_path = os.path.join(out_dir, "mappings", f"neuron_label_assoc_l{layer}.csv")
     assoc_df.to_csv(out_path, index=False)
     print(f"✅ Associations table saved: {out_path} ({len(assoc_df)} rows)")
 

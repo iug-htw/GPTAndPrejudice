@@ -1,12 +1,13 @@
 # extract_latents_simple.py
 import torch
 import csv
+import os
 
 from utils.tokenization import text_to_token_ids
 
 CSV_PATH  = "./datasets/themes_analysis.csv"          # csv with columns: id, text, + label columns
 
-def exract_latent_activations(model, sae, layer, dataset_path=CSV_PATH, device="cpu"):
+def exract_latent_activations(model, sae, layer, dataset_path=CSV_PATH, base_dir="sae_probing", device="cpu"):
     # Read CSV rows
     ids = []
     texts = []
@@ -70,7 +71,7 @@ def exract_latent_activations(model, sae, layer, dataset_path=CSV_PATH, device="
             "layer": layer,
         }
 
-    OUT_PATH  = f"sae_probing/output/latent_activations_l{layer}.pt"
+    OUT_PATH  = os.path.join(base_dir, f"activations/latent_activations_l{layer}.pt")
     torch.save(out, OUT_PATH)
 
     print(f"✅ Saved {OUT_PATH} with latents shape {latents_tensor.shape} and {len(ids)} ids.")

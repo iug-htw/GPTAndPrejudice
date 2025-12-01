@@ -1,0 +1,12 @@
+primary_concept,mean_ap_gap
+class,0.036
+duty,0.05
+emotion,0.047
+family,0.035
+female,0.061
+love,0.022
+male,0.072
+marriage,0.062
+scandal,0.035
+society,0.08
+wealth,0.028
