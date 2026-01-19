@@ -5,7 +5,7 @@ import numpy as np
 import argparse
 
 # ===================
-ALL_L_PRIMARY_SECONDARY_CSV = "mappings/neuron_concept_primary_secondary_all_layers.csv"
+ALL_L_PRIMARY_SECONDARY_CSV = "neuron_concept_primary_secondary_all_layers.csv"
 OUT_DIR        = "analysis"
 TOPK           = 10
 # ===================
@@ -34,7 +34,7 @@ def print_section(title):
 def cross_layers_mapping_analysis(base_dir="sae_probing"):
     os.makedirs(OUT_DIR, exist_ok=True)
     
-    data_path = os.path.join(base_dir, ALL_L_PRIMARY_SECONDARY_CSV)
+    data_path = os.path.join(base_dir, "mappings", ALL_L_PRIMARY_SECONDARY_CSV)
     df = load_all_layers(data_path)
 
     n_rows = len(df)
